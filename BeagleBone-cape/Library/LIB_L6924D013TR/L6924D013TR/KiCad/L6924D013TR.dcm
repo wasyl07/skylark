@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP L6924D013TR
+D Battery charger system with integrated power switch for Li-Ion/Li-Polymer
+K
+F https://www.st.com/resource/en/datasheet/l6924d.pdf
+$ENDCMP
+#
+#End Doc Library

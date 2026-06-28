@@ -1,0 +1,9 @@
+Manufacturer=STMicroelectronics
+PartNumber=A6983C50QTR
+PartCategory=Integrated Circuit
+PackageCategory=Other
+PinCount=17
+Version=3.1
+Released=2024-01-12 05:20:02
+Downloaded=2026-01-25 17:28:27
+3D=Y

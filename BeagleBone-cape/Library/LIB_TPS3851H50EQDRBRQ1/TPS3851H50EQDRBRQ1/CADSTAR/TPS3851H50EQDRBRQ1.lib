@@ -1,0 +1,18 @@
+.TPS3851H50EQDRBRQ1 :1 ;Automotive High-Accuracy Voltage Supervisor With Integrated Watchdog Timer
+SON65P300X300X100-9N-D
+*STM IC
+*NGS
+*PLB 1="VDD" 2="CWD" 3="'MR'" 4="GND" 5="SET1" 6="WDI" 7="'WDO'" 8="'RESET'" 9="EP"
+*MXP 9
+*DFN TPS3851H50EQDRBRQ1
+~!Manufacturer_Name (Texas Instruments)
+~!Manufacturer_Part_Number (TPS3851H50EQDRBRQ1)
+~!Mouser Part Number (595-S3851H50EQDRBRQ1)
+~!Link Mouser Price/Stock (https://www.mouser.com/Search/Refine.aspx?Keyword=595-S3851H50EQDRBRQ1)
+~!Arrow Part Number (TPS3851H50EQDRBRQ1)
+~!Link Arrow Price/Stock (https://www.arrow.com/en/products/tps3851h50eqdrbrq1/texas-instruments?utm_currency=USD&region=nac)
+~!Link Datasheet (http://www.ti.com/lit/gpn/tps3851-q1)
+~!Height (1mm)
+~!3D_Model (TPS3851H50EQDRBRQ1)
+TPS3851H50EQDRBRQ1
+1.1!U 2.1!U 3.1!U 4.1!U 9.1!U 8.1!U 7.1!U 6.1!U 5.1!U 

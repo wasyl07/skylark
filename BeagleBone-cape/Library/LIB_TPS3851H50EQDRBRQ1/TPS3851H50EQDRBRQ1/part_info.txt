@@ -1,0 +1,9 @@
+Manufacturer=Texas Instruments
+PartNumber=TPS3851H50EQDRBRQ1
+PartCategory=Integrated Circuit
+PackageCategory=Small Outline No-lead
+PinCount=9
+Version=1.1
+Released=2019-07-08 11:32:41
+Downloaded=2026-01-26 18:31:22
+3D=Y

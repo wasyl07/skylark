@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP TPS3851H50EQDRBRQ1
+D Automotive High-Accuracy Voltage Supervisor With Integrated Watchdog Timer
+K
+F http://www.ti.com/lit/gpn/tps3851-q1
+$ENDCMP
+#
+#End Doc Library

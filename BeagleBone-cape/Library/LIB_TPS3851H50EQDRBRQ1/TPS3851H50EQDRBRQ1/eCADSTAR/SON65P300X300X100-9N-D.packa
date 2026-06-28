@@ -1,0 +1,13 @@
+(unit MM)
+
+(package "TPS3851H50EQDRBRQ1"
+    (type UNDEF)
+    (uver 2)
+    (cuser "SamacSys")
+    (uuser "SamacSys")
+    (utime 2019-07-08-11:32:41)
+    (mountForm default
+        (footprintRef "SON65P300X300X100-9N-D")
+        (spec "System")
+    )
+)

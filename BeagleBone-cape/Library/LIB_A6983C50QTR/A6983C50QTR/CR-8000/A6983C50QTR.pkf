@@ -1,0 +1,10 @@
+(unit MM)
+
+(package "A6983C50QTR"
+    (type UNDEF)
+    (uver 2)
+    (mountForm default
+        (footprintRef "A6983C50QTR")
+        (spec "default")
+    )
+)

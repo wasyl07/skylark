@@ -1,0 +1,18 @@
+.A6983C50QTR :1 ;Automotive-grade 38 V, 3 A synchronous step-down converter with 25 uA quiescent current
+A6983C50QTR
+*STM IC
+*NGS
+*PLB 1="VIN_1" 2="VINLDO" 3="AGND_1" 4="EN/CLKIN" 5="PGOOD" 6="VBIAS" 7="VOUT/FB" 8="FSW" 9="VCC" 10="AGND_2" 11="BOOT" 12="VIN_2" 13="PGND_1" 14="SW_1" 15="SW_2" 16="PGND_2" 17="EP"
+*MXP 17
+*DFN A6983C50QTR
+~!Manufacturer_Name (STMicroelectronics)
+~!Manufacturer_Part_Number (A6983C50QTR)
+~!Mouser Part Number (511-A6983C50QTR)
+~!Link Mouser Price/Stock (https://www.mouser.co.uk/ProductDetail/STMicroelectronics/A6983C50QTR?qs=rQFj71Wb1eXphuNT1rEzUA%3D%3D)
+~!Arrow Part Number (A6983C50QTR)
+~!Link Arrow Price/Stock (https://www.arrow.com/en/products/a6983c50qtr/stmicroelectronics?utm_currency=USD&region=nac)
+~!Link Datasheet (https://www.st.com/resource/en/datasheet/a6983.pdf)
+~!Height (0.8mm)
+~!3D_Model (A6983C50QTR)
+A6983C50QTR
+1.1!U 2.1!U 3.1!U 4.1!U 5.1!U 6.1!U 7.1!U 8.1!U 9.1!U 10.1!U 11.1!U 12.1!U 13.1!U 14.1!U 15.1!U 16.1!U 17.1!U 

@@ -1,0 +1,11 @@
+FILE_TYPE = MULTI_PHYS_TABLE;
+
+PART 'L6924D013TR'
+CLASS = IC
+{========================================================================================}
+:"MANUFACTURER_NAME", "MANUFACTURER_PART_NUMBER"= "PART_NUMBER", "JEDEC_TYPE", "PACK_TYPE", "MOUSER_PART_NUMBER", "MOUSER_PRICE/STOCK", "ARROW_PART_NUMBER", "ARROW_PRICE/STOCK", "DESCRIPTION", "DATASHEET", "HEIGHT";
+{========================================================================================}
+ "STMicroelectronics", "L6924D013TR" (!) = "", "QFN50P300X300X100-17N-D", "Quad Flat No-Lead", "511-L6924D013TR", "https://www.mouser.co.uk/ProductDetail/STMicroelectronics/L6924D013TR?qs=sZ9INdjBHvd2z7dh9ZwpeQ%3D%3D", "L6924D013TR", "https://www.arrow.com/en/products/l6924d013tr/stmicroelectronics?region=nac", "Battery charger system with integrated power switch for Li-Ion/Li-Polymer", "https://www.st.com/resource/en/datasheet/l6924d.pdf", "1 mm"
+END_PART
+
+END.

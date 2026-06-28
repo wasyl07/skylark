@@ -1,0 +1,5 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "FoxGymSymbols")(type "KiCad")(uri "/home/adam/projects/FoxGymSensorM0/FoxGymSymbols.kicad_sym")(options "")(descr ""))
+  (lib (name "Cape_lib")(type "KiCad")(uri "${KIPRJMOD}/Cape_lib.kicad_sym")(options "")(descr ""))
+)

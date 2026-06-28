@@ -1,0 +1,40 @@
+EESchema-LIBRARY Version 2.3
+#encoding utf-8
+#SamacSys ECAD Model A6983C50QTR
+#/19063115/698834/2.50/17/2/Integrated Circuit
+DEF A6983C50QTR IC 0 30 Y Y 1 F N
+F0 "IC" 1250 300 50 H V L CNN
+F1 "A6983C50QTR" 1250 200 50 H V L CNN
+F2 "A6983C50QTR" 1250 100 50 H I L CNN
+F3 "https://www.st.com/resource/en/datasheet/a6983.pdf" 1250 0 50 H I L CNN
+F4 "Automotive-grade 38 V, 3 A synchronous step-down converter with 25 uA quiescent current" 1250 -100 50 H I L CNN "Description"
+F5 "0.8" 1250 -200 50 H I L CNN "Height"
+F6 "STMicroelectronics" 1250 -300 50 H I L CNN "Manufacturer_Name"
+F7 "A6983C50QTR" 1250 -400 50 H I L CNN "Manufacturer_Part_Number"
+F8 "511-A6983C50QTR" 1250 -500 50 H I L CNN "Mouser Part Number"
+F9 "https://www.mouser.co.uk/ProductDetail/STMicroelectronics/A6983C50QTR?qs=rQFj71Wb1eXphuNT1rEzUA%3D%3D" 1250 -600 50 H I L CNN "Mouser Price/Stock"
+F10 "A6983C50QTR" 1250 -700 50 H I L CNN "Arrow Part Number"
+F11 "https://www.arrow.com/en/products/a6983c50qtr/stmicroelectronics?utm_currency=USD&region=nac" 1250 -800 50 H I L CNN "Arrow Price/Stock"
+DRAW
+X VIN_1 1 0 0 200 R 50 50 0 0 P
+X VINLDO 2 0 -100 200 R 50 50 0 0 P
+X AGND_1 3 0 -200 200 R 50 50 0 0 P
+X EN/CLKIN 4 0 -300 200 R 50 50 0 0 P
+X PGOOD 5 0 -400 200 R 50 50 0 0 P
+X VBIAS 6 0 -500 200 R 50 50 0 0 P
+X VOUT/FB 7 0 -600 200 R 50 50 0 0 P
+X FSW 8 0 -700 200 R 50 50 0 0 P
+X VCC 9 0 -800 200 R 50 50 0 0 P
+X AGND_2 10 1400 0 200 L 50 50 0 0 P
+X BOOT 11 1400 -100 200 L 50 50 0 0 P
+X VIN_2 12 1400 -200 200 L 50 50 0 0 P
+X PGND_1 13 1400 -300 200 L 50 50 0 0 P
+X SW_1 14 1400 -400 200 L 50 50 0 0 P
+X SW_2 15 1400 -500 200 L 50 50 0 0 P
+X PGND_2 16 1400 -600 200 L 50 50 0 0 P
+X EP 17 1400 -700 200 L 50 50 0 0 P
+P 5 0 1 6 200 100 1200 100 1200 -900 200 -900 200 100 N
+ENDDRAW
+ENDDEF
+#
+#End Library

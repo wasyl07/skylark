@@ -1,0 +1,11 @@
+FILE_TYPE = MULTI_PHYS_TABLE;
+
+PART 'TPS3851H50EQDRBRQ1'
+CLASS = IC
+{========================================================================================}
+:"MANUFACTURER_NAME", "MANUFACTURER_PART_NUMBER"= "PART_NUMBER", "JEDEC_TYPE", "PACK_TYPE", "MOUSER_PART_NUMBER", "MOUSER_PRICE/STOCK", "ARROW_PART_NUMBER", "ARROW_PRICE/STOCK", "DESCRIPTION", "DATASHEET", "HEIGHT";
+{========================================================================================}
+ "Texas Instruments", "TPS3851H50EQDRBRQ1" (!) = "", "SON65P300X300X100-9N-D", "Small Outline No-lead", "595-S3851H50EQDRBRQ1", "https://www.mouser.com/Search/Refine.aspx?Keyword=595-S3851H50EQDRBRQ1", "TPS3851H50EQDRBRQ1", "https://www.arrow.com/en/products/tps3851h50eqdrbrq1/texas-instruments?utm_currency=USD&region=nac", "Automotive High-Accuracy Voltage Supervisor With Integrated Watchdog Timer", "http://www.ti.com/lit/gpn/tps3851-q1", "1 mm"
+END_PART
+
+END.
