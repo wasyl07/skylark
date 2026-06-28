@@ -1,0 +1,18 @@
+bootpart=0:1
+devtype=mmc
+bootdir=
+bootfile=zImage
+bootpartition=mmcblk0p2
+console=ttyS0,115200n8
+loadaddr=0x82000000
+fdtaddr=0x88000000
+overlayaddr=0x89000000
+fdtfile=am335x-boneblack.dtb
+overlayfile=skylark-overlay.dtbo
+set_mmc1=if test $board_name = A33515BB; then setenv bootpartition mmcblk1p2; fi
+set_bootargs=setenv bootargs console=${console} root=/dev/${bootpartition} rw rootfstype=ext4 rootwait
+loadimage=load mmc 0:1 ${loadaddr} ${bootfile}
+loadfdt=load mmc 0:1 ${fdtaddr} ${fdtfile}
+load_overlay=load mmc 0:1 ${overlayaddr} ${overlayfile}
+apply_overlay=fdt addr ${fdtaddr} && fdt resize 262144 && fdt apply ${overlayaddr}
+uenvcmd=run set_mmc1; run set_bootargs; run loadimage; run loadfdt; run load_overlay; run apply_overlay; printenv bootargs; bootz ${loadaddr} - ${fdtaddr}

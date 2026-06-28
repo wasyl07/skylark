@@ -1,0 +1,8 @@
+// SPDX-License-Identifier: GPL-2.0-only
+/dts-v1/;
+/plugin/;
+
+&{  // Target the root node
+    model = "TI AM335x BeagleBone Black Skylark";
+    compatible = "ti,am335x-boneblack-skylark", "ti,am335x-boneblack", "ti,am335x-bone", "ti,am33xx";
+};
