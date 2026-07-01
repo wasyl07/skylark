@@ -1,0 +1,40 @@
+# Use Ubuntu 22.04 as the base image
+FROM ubuntu:22.04
+
+# Enable i386 architecture for 32-bit libraries
+RUN dpkg --add-architecture i386 && \
+    apt-get update && \
+    apt-get install -y \
+        zlib1g:i386 \
+        libncurses5:i386 \
+        libbz2-1.0:i386 \
+        libx11-6:i386 \
+        libgtk-3-0:i386 \
+        g++-multilib \
+        gcc-multilib \
+        libc6-dev-i386 \
+        libstdc++-12-dev \
+        wget \
+        build-essential \
+        make
+
+# Create directories for the toolchain and workspace
+RUN mkdir -p /usr/share/ti/cgt-pru /workspace
+WORKDIR /workspace
+
+# Copy the entire TI PRU toolchain from the host into the container
+COPY ti-cgt-pru_2.3.3/include /usr/share/ti/cgt-pru/include
+COPY ti-cgt-pru_2.3.3/bin /usr/share/ti/cgt-pru/bin
+COPY ti-cgt-pru_2.3.3/lib /usr/share/ti/cgt-pru/lib
+
+# Create symlinks in /usr/bin/ for ARM Linux compatibility
+RUN ln -sf /usr/share/ti/cgt-pru/bin/* /usr/bin/
+
+# Set environment variables for the TI toolchain
+ENV PRU_CGT=/usr/share/ti/cgt-pru
+ENV PATH="/usr/share/ti/cgt-pru/bin:${PATH}"
+ENV TMPDIR="/workspace/tmp"
+RUN mkdir -p ${TMPDIR}
+
+# Default command: start a shell in /workspace
+CMD ["/bin/bash"]
