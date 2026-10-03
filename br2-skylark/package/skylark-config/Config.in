@@ -1,0 +1,12 @@
+config BR2_PACKAGE_SKYLARK_CONFIG
+	bool "skylark-config"
+	depends on BR2_INIT_SYSTEMD
+	select BR2_PACKAGE_E2FSPROGS
+	select BR2_PACKAGE_E2FSPROGS_RESIZE2FS
+	select BR2_PACKAGE_UTIL_LINUX
+	select BR2_PACKAGE_UTIL_LINUX_PARTX
+	select BR2_PACKAGE_UTIL_LINUX_BINARIES
+	help
+	  Skylark system integration: /data partition handling
+	  (grow-to-fill + first-boot init), factory reset tool and
+	  RAUC mark-good service.

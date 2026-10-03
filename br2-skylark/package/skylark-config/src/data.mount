@@ -1,0 +1,13 @@
+[Unit]
+Description=Skylark persistent data partition
+Requires=skylark-growdata.service
+After=skylark-growdata.service
+
+[Mount]
+What=/dev/disk/by-label/data
+Where=/data
+Type=ext4
+Options=defaults,noatime
+
+[Install]
+WantedBy=local-fs.target

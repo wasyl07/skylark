@@ -1,0 +1,12 @@
+#!/bin/sh
+echo "WARNING: This will erase all configuration and flight logs!"
+printf "Type 'RESET' to confirm: "
+read -r confirm
+if [ "$confirm" = "RESET" ]; then
+    # keep device keys, wipe everything else
+    rm -rf /data/ardupilot/* /data/skylark/config/* /data/skylark/network/*
+    rm -f /data/skylark/config.json /data/.initialized
+    echo "Factory reset complete. Reboot to reinitialize."
+else
+    echo "Cancelled"
+fi

@@ -1,0 +1,12 @@
+[Unit]
+Description=Skylark first boot initialization
+ConditionPathExists=!/data/.initialized
+RequiresMountsFor=/data
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/usr/lib/skylark/firstboot.sh
+
+[Install]
+WantedBy=multi-user.target

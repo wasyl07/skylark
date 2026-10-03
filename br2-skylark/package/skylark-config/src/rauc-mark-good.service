@@ -1,0 +1,13 @@
+[Unit]
+Description=Mark booted RAUC slot as good
+After=rauc.service multi-user.target
+Requires=rauc.service
+ConditionKernelCommandLine=|rauc.slot
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/usr/bin/rauc status mark-good
+
+[Install]
+WantedBy=multi-user.target

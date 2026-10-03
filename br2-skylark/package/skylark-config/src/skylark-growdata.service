@@ -1,0 +1,12 @@
+[Unit]
+Description=Grow Skylark data partition to fill the SD card
+DefaultDependencies=no
+ConditionPathExists=!/etc/skylark/.no-growdata
+Before=data.mount
+After=systemd-udev-settle.service dev-mmcblk0p4.device
+Requires=dev-mmcblk0p4.device
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/usr/lib/skylark/growdata.sh

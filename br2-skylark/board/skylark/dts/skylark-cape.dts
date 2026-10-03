@@ -1,0 +1,35 @@
+/dts-v1/;
+ /plugin/;
+
+// Override root node
+ &{/} {
+     model = "Skylark Custom Board";
+     compatible = "skylark,am335x-bone-black", "ti,am335x-bone-black", "ti,am335x-bone", "ti,am33xx";
+ };
+
+// Disable HDMI (LCDC)
+ &lcdc {
+     status = "disabled";
+ };
+
+// Disable CAN0
+ &dcan0 {
+     status = "disabled";
+ };
+
+// Enable CAN1 with pinmux
+ &dcan1 {
+     status = "okay";
+     pinctrl-names = "default";
+     pinctrl-0 = <&pinmux_comms_can_pins>;
+ };
+
+// Define CAN1 pinmux with numeric values
+ &am33xx_pinmux {
+     pinmux_comms_can_pins: pinmux_comms_can_pins {
+         pinctrl-single,pins = <
+             0x184 0x32  // CAN1_TX (P9_11): Mode 0x32 (CAN, pull-down)
+             0x180 0x12  // CAN1_RX (P9_13): Mode 0x12 (CAN, pull-down)
+         >;
+     };
+ };
