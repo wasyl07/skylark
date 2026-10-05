@@ -1,4 +1,8 @@
-# Buildroot image for the Skylark BeagleBone Black
+# Legacy single-slot image (fallback)
+
+> The primary image is the A/B (RAUC, systemd) image from `br2-skylark/`, see
+> [buildroot.md](buildroot.md). This single-slot BusyBox-init image is kept as a
+> fallback / reference only.
 
 The Linux image (MLO, U-Boot, kernel, device tree overlay, rootfs) is built with
 Buildroot in `buildroot-2025.02.15/` using `configs/beaglebone_defconfig`.
