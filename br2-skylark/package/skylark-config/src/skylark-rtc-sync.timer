@@ -1,0 +1,9 @@
+[Unit]
+Description=Periodic Skylark RTC check against NTP time
+
+[Timer]
+OnBootSec=5min
+OnUnitActiveSec=1h
+
+[Install]
+WantedBy=timers.target

@@ -1,0 +1,17 @@
+[Unit]
+Description=Set system clock from the Skylark RTC (DS1307)
+DefaultDependencies=no
+After=systemd-modules-load.service
+Before=time-set.target sysinit.target shutdown.target systemd-timesyncd.service
+Wants=time-set.target
+Conflicts=shutdown.target
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/usr/lib/skylark/rtc.sh restore
+# on shutdown: store NTP time in the RTC (only if NTP-synchronized this boot)
+ExecStop=/usr/lib/skylark/rtc.sh save
+
+[Install]
+WantedBy=sysinit.target
