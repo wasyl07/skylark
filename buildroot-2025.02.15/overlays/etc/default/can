@@ -1,0 +1,5 @@
+# CAN setup for /etc/init.d/S41can (Skylark: DCAN1 on P9.24/P9.26)
+CAN_IFACES="can0"
+CAN_BITRATE=1000000
+CAN_TXQUEUELEN=100
+CAN_RESTART_MS=100
