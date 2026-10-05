@@ -1,12 +1,18 @@
 config BR2_PACKAGE_SKYLARK_CONFIG
 	bool "skylark-config"
 	depends on BR2_INIT_SYSTEMD
+	depends on BR2_TOOLCHAIN_HEADERS_AT_LEAST_5_4 # systemd-networkd
 	select BR2_PACKAGE_E2FSPROGS
 	select BR2_PACKAGE_E2FSPROGS_RESIZE2FS
 	select BR2_PACKAGE_UTIL_LINUX
 	select BR2_PACKAGE_UTIL_LINUX_PARTX
 	select BR2_PACKAGE_UTIL_LINUX_BINARIES
+	select BR2_PACKAGE_UTIL_LINUX_HWCLOCK
+	select BR2_PACKAGE_SYSTEMD_NETWORKD
+	select BR2_PACKAGE_SYSTEMD_RESOLVED
+	select BR2_PACKAGE_SYSTEMD_TIMESYNCD
 	help
 	  Skylark system integration: /data partition handling
 	  (grow-to-fill + first-boot init), factory reset tool and
-	  RAUC mark-good service.
+	  RAUC mark-good service, networkd config (DHCP eth0, can0 at
+	  1 Mbit/s), DS1307 RTC restore and NTP->RTC sync.

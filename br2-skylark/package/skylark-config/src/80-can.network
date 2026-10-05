@@ -1,0 +1,7 @@
+# Skylark CAN (DCAN1 on P9.24/P9.26, J11). DroneCAN default 1 Mbit/s.
+[Match]
+Name=can0
+
+[CAN]
+BitRate=1000000
+RestartSec=100ms

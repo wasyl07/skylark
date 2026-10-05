@@ -21,4 +21,8 @@ echo ", +" | sfdisk --no-reread --no-tell-kernel -N ${NUM} ${DISK}
 partx -u -n ${NUM} ${DISK}
 e2fsck -fy ${PART} || [ $? -le 1 ]
 resize2fs ${PART}
+# partx/resize2fs generate change uevents for the disk and p4; let udev finish
+# them before data.mount starts, otherwise systemd may see the by-label device
+# flap later and stop (unmount) /data again.
+udevadm settle --timeout=30 || true
 echo "growdata: done"
