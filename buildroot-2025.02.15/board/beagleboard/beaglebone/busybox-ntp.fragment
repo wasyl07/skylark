@@ -1,0 +1,4 @@
+# Skylark: NTP client for RTC sync (rtc-ntp-sync), timeout for bounded queries
+CONFIG_NTPD=y
+CONFIG_FEATURE_NTPD_CONF=y
+CONFIG_TIMEOUT=y

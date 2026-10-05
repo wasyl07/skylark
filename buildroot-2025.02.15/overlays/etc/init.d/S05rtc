@@ -1,0 +1,45 @@
+#!/bin/sh
+# Set system time from the battery-backed RTC (DS1307) at boot.
+# Config: /etc/default/timesync
+
+RTC_NAME="rtc-ds1307"
+[ -r /etc/default/timesync ] && . /etc/default/timesync
+
+find_rtc() {
+	for r in /sys/class/rtc/rtc*; do
+		[ -r "$r/name" ] && grep -q "$RTC_NAME" "$r/name" && { echo "${r##*/}"; return 0; }
+	done
+	return 1
+}
+
+start() {
+	printf 'Setting system time from RTC: '
+	i=0
+	until RTC=$(find_rtc) || [ $i -ge 30 ]; do sleep 0.1; i=$((i + 1)); done
+	if [ -z "$RTC" ]; then echo "FAIL (no $RTC_NAME)"; return 1; fi
+	# since_epoch is unreadable when the RTC has no valid time (e.g. oscillator halted)
+	if ! t=$(cat "/sys/class/rtc/$RTC/since_epoch" 2>/dev/null) || [ "$t" -lt 1735689600 ]; then
+		echo "FAIL ($RTC has no valid time, waiting for NTP)"
+		return 1
+	fi
+	if hwclock -f "/dev/$RTC" -u -s; then
+		echo "OK ($RTC: $(date -u '+%F %T') UTC)"
+	else
+		echo "FAIL"
+	fi
+}
+
+stop() {
+	# Save system time to the RTC on shutdown, but only if it was NTP-synced this boot
+	[ -f /var/run/ntp-synced ] || return 0
+	RTC=$(find_rtc) || return 0
+	printf 'Saving system time to %s: ' "$RTC"
+	hwclock -f "/dev/$RTC" -u -w && echo "OK" || echo "FAIL"
+}
+
+case "$1" in
+	start) start ;;
+	stop) stop ;;
+	restart|reload) start ;;
+	*) echo "Usage: $0 {start|stop|restart}"; exit 1 ;;
+esac

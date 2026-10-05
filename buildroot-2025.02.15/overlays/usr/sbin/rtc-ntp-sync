@@ -1,0 +1,70 @@
+#!/bin/sh
+# Keep system time and the DS1307 RTC in sync with NTP whenever the network is up.
+# - queries NTP (one-shot ntpd -q) every SYNC_INTERVAL, or every RETRY_INTERVAL while offline
+# - on success the system clock is set from NTP; the RTC is rewritten only when it
+#   differs from NTP time by more than MAX_DRIFT seconds (or holds no valid time)
+# Config: /etc/default/timesync
+
+RTC_NAME="rtc-ds1307"
+NTP_SERVERS="pool.ntp.org"
+MAX_DRIFT=2
+SYNC_INTERVAL=3600
+RETRY_INTERVAL=60
+NTP_TIMEOUT=15
+[ -r /etc/default/timesync ] && . /etc/default/timesync
+
+TAG=rtc-ntp-sync
+log() { logger -t "$TAG" "$*"; [ -t 1 ] && echo "$TAG: $*"; }
+
+find_rtc() {
+	for r in /sys/class/rtc/rtc*; do
+		[ -r "$r/name" ] && grep -q "$RTC_NAME" "$r/name" && { echo "${r##*/}"; return 0; }
+	done
+	return 1
+}
+
+ntp_query() {
+	peers=""
+	for s in $NTP_SERVERS; do peers="$peers -p $s"; done
+	# -n foreground, -q quit after setting the clock; -w would only print
+	timeout "$NTP_TIMEOUT" ntpd -n -q $peers >/dev/null 2>&1
+}
+
+sync_once() {
+	have_route=$(ip route 2>/dev/null | grep -c '^default')
+	[ "$have_route" -gt 0 ] || return 1
+	ntp_query || return 1
+	touch /var/run/ntp-synced
+
+	RTC=$(find_rtc) || { log "NTP ok, but no $RTC_NAME found"; return 0; }
+	now=$(date +%s)
+	if rtc=$(cat "/sys/class/rtc/$RTC/since_epoch" 2>/dev/null); then
+		diff=$((now - rtc)); [ $diff -lt 0 ] && diff=$((-diff))
+	else
+		rtc="invalid"; diff=999999999
+	fi
+	if [ "$diff" -gt "$MAX_DRIFT" ]; then
+		if hwclock -f "/dev/$RTC" -u -w; then
+			log "RTC $RTC updated from NTP (was $rtc, off by ${diff}s)"
+		else
+			log "failed to write RTC $RTC"
+		fi
+	fi
+	return 0
+}
+
+case "$1" in
+	-1|--once) sync_once; exit $? ;;
+esac
+
+log "started (servers: $NTP_SERVERS, max drift ${MAX_DRIFT}s)"
+synced_before=0
+while :; do
+	if sync_once; then
+		[ $synced_before -eq 0 ] && log "time synchronized: $(date -u '+%F %T') UTC"
+		synced_before=1
+		sleep "$SYNC_INTERVAL"
+	else
+		sleep "$RETRY_INTERVAL"
+	fi
+done
