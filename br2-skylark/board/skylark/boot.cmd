@@ -39,7 +39,7 @@ else
 fi
 
 setenv fdtfile am335x-boneblack.dtb
-setenv bootargs "console=ttyS0,115200n8 root=/dev/mmcblk0p${bootpart} rootfstype=ext4 rootwait rw rauc.slot=${raucslot}"
+setenv bootargs "console=ttyS4,115200n8 root=/dev/mmcblk0p${bootpart} rootfstype=ext4 rootwait rw rauc.slot=${raucslot}"
 
 echo "Booting slot ${raucslot} (mmc 0:${bootpart})"
 load mmc 0:${bootpart} ${kernel_addr_r} /boot/zImage || reset
@@ -50,7 +50,13 @@ setenv overlay_addr_r 0x89000000
 if load mmc 0:${bootpart} ${overlay_addr_r} /boot/overlays/skylark-cape.dtbo; then
   fdt addr ${fdt_addr_r}
   fdt resize 65536
-  fdt apply ${overlay_addr_r} || echo "WARNING: skylark-cape.dtbo failed to apply"
+  if fdt apply ${overlay_addr_r}; then
+    echo "Applied skylark-cape.dtbo"
+  else
+    # a failed apply leaves the base FDT undefined: reload it, boot without cape
+    echo "WARNING: skylark-cape.dtbo failed to apply, booting without it"
+    load mmc 0:${bootpart} ${fdt_addr_r} /boot/${fdtfile} || reset
+  fi
 fi
 
 bootz ${kernel_addr_r} - ${fdt_addr_r}

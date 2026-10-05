@@ -1,0 +1,32 @@
+From: Skylark <skylark@localhost>
+Subject: [PATCH] arm: dts: am335x-boneblack: use UART4 (P9.11/P9.13) as console
+
+The Skylark cape uses the BeagleBone Black expansion headers; the
+console is moved from UART0 (J1 debug header) to UART4 on P9.11 (RX)
+and P9.13 (TX). Pinmux is done by board code via CONFIG_CONS_INDEX=5.
+
+---
+ arch/arm/dts/am335x-boneblack-u-boot.dtsi | 15 +++++++++++++++
+ 1 file changed, 15 insertions(+)
+ create mode 100644 arch/arm/dts/am335x-boneblack-u-boot.dtsi
+
+diff --git a/arch/arm/dts/am335x-boneblack-u-boot.dtsi b/arch/arm/dts/am335x-boneblack-u-boot.dtsi
+new file mode 100644
+--- /dev/null
++++ b/arch/arm/dts/am335x-boneblack-u-boot.dtsi
+@@ -0,0 +1,15 @@
++// SPDX-License-Identifier: GPL-2.0+
++/*
++ * Skylark: console on UART4 (P9.11 RX, P9.13 TX).
++ */
++
++/ {
++	chosen {
++		stdout-path = &uart4;
++	};
++};
++
++&uart4 {
++	bootph-all;
++	status = "okay";
++};

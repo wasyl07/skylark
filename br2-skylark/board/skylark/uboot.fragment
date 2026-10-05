@@ -10,6 +10,15 @@ CONFIG_ENV_OFFSET_REDUND=0x180000
 CONFIG_SYS_REDUNDAND_ENVIRONMENT=y
 CONFIG_ENV_SIZE=0x20000
 
+# Console on UART4 (P9.11 RX / P9.13 TX); SPL+U-Boot pinmux follow CONS_INDEX
+# (DT stdout-path: patches/uboot/0001-am335x-boneblack-console-on-uart4.patch)
+CONFIG_CONS_INDEX=5
+
+# boot.scr is a legacy (mkimage -T script) image. FIT_SIGNATURE (enabled by
+# am335x_evm_defconfig) defaults LEGACY_IMAGE_FORMAT off -> "Wrong image
+# format for source command". Re-enable it explicitly.
+CONFIG_LEGACY_IMAGE_FORMAT=y
+
 CONFIG_CMD_SETEXPR=y
 CONFIG_CMD_FS_GENERIC=y
 CONFIG_CMD_EXT4=y
