@@ -214,6 +214,8 @@ These block final sign-off of the requirements above.
 ## 5. Sign-off checklist
 
 Copy this table per board/release under test and fill in results.
+Completed records: [bringup-2026-10-05.md](bringup-2026-10-05.md) (first
+bring-up, cape rev 1, image 0.1.0).
 
 | Board S/N | Image version | Tester | Date |
 |-----------|---------------|--------|------|

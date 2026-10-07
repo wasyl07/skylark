@@ -12,6 +12,7 @@ Drone control board based on AM335 BeagleBone Black and Ardupilot
 - `docs/` - documentation
   - [buildroot.md](docs/buildroot.md) - building, A/B updates, services, flashing, serial console, CAN, RTC/NTP
   - [FUNCTIONS.md](docs/FUNCTIONS.md) - requirements
+  - [bringup-2026-10-05.md](docs/bringup-2026-10-05.md) - first bring-up: test results, cape rev 1 issues, board state
   - [prus.md](docs/prus.md) - PRU usage
 
 ## Quick start
@@ -27,4 +28,4 @@ sh scripts/verify-image.sh
 - Network: DHCP, `skylark.local` (mDNS), SSH as root
 - Updates: `rauc install update.raucb` (A/B slots, automatic fallback after 3 failed boots)
 - CAN: `can0` (DCAN1, P9.24/P9.26), 1 Mbit/s, up at boot
-- RTC: DS1307 on I2C2 (`/dev/rtc1`), synced from NTP when online
+- RTC: DS1307 on I2C2 (`/dev/rtc1`), synced from NTP when online (cape rev 1: RTC does not keep time, see bring-up record)

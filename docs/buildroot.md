@@ -230,11 +230,10 @@ time out).
 
 ### Known hardware issue (cape rev 1)
 
-The DS1307 oscillator stalls: after being set it runs a few seconds and stops.
-Likely causes: missing/low coin cell (VBAT, TP25) or a crystal Y1 that is not
-the 12.5 pF type the DS1307 needs. Until fixed, the RTC only has the right time
-while NTP keeps correcting it. Also: the I2C2 pull-ups R22/R23 go to 5 V while
-the AM335x pins are 3.3 V, and the CAT24C256 EEPROM (U1) does not answer.
+The DS1307 oscillator stalls: after being set it runs a few seconds and stops,
+so the RTC only has the right time while NTP keeps correcting it. Details and
+the other cape rev 1 issues (5 V I2C2 pull-ups, EEPROM not answering) are in
+[bringup-2026-10-05.md](bringup-2026-10-05.md#cape-rev-1-issues-found).
 
 ## Flashing
 
@@ -273,3 +272,45 @@ Once the A/B system is running, update it with RAUC instead (above).
 2. Or re-enable the eMMC system: rename `MLO.disabled` back to `MLO` on
    `/dev/mmcblk1p1` (from the SD system), or hold S2 to choose the SD card.
 3. Last resort: write `sdcard.img` to the SD card on the PC.
+
+With `CONFIG_MAGIC_SYSRQ_SERIAL` a hung kernel can be reset from the console:
+send a serial BREAK followed by `b`. Type U-Boot commands slowly (or paste them
+in short pieces): U-Boot drops characters from long bursts on the UART.
+
+## Development notes and pitfalls
+
+- **U-Boot rejects `boot.scr`** ("Wrong image format for source command") if
+  `CONFIG_LEGACY_IMAGE_FORMAT` is off. `CONFIG_FIT_SIGNATURE` (on in
+  `am335x_evm_defconfig`) turns it off by default, so `uboot.fragment` sets it
+  explicitly. U-Boot then falls back to distro boot, which finds the eMMC.
+- **Toolchain headers:** systemd-networkd needs kernel headers >= 5.4. The
+  Bootlin "stable" toolchain has 4.19, and because `skylark-config` *selects*
+  networkd, Buildroot would not stop you; the build fails inside systemd
+  (`SIOCGSTAMPNS_OLD`). `skylark-config` now depends on headers >= 5.4 so this
+  fails at config time. After changing the toolchain, `make distclean` and
+  rebuild.
+- **Changing U-Boot config:** `make uboot-reconfigure && make` (patches only
+  apply on a fresh extract: use `make uboot-dirclean` after adding a patch).
+- **Removed files stay in `output/target`.** Buildroot never deletes files a
+  package installed earlier. After removing a unit or file from
+  `skylark-config`, delete it from `output/target` (or rebuild from scratch),
+  and add a "must not exist" check to `scripts/verify-image.sh`.
+- **`/data` after growing p4:** resizing the partition triggers udev change
+  events; without `udevadm settle` systemd saw the `data` device flap and
+  unmounted `/data` a few seconds after the first boot.
+- **No scp:** dropbear has no `sftp-server`, so modern `scp` fails. Use
+  `ssh root@board 'cat > /path' < file`.
+- **SSH host key warnings** after a slot switch mean the slot was built before
+  host keys moved to `/data`; reinstalling the current bundle fixes it.
+- **The first I2C2 access after boot can time out** on cape rev 1 (see the
+  cape issues); RTC accesses are retried.
+- **Same image on SD and eMMC:** the legacy image boots by
+  `PARTUUID=534b594c-02`, which is the same on every card written from it. If
+  both carry it, disable one (rename its `extlinux.conf` or `MLO`).
+- **`select` vs `depends on`** in `Config.in`: when a project package selects a
+  Buildroot option, copy that option's `depends on` into the package.
+
+## Bring-up records
+
+- [bringup-2026-10-05.md](bringup-2026-10-05.md): first bring-up, test results
+  against [FUNCTIONS.md](FUNCTIONS.md), cape rev 1 issues, board state.
