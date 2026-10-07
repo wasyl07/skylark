@@ -2078,6 +2078,18 @@
 		(uuid "d9a37e51-0299-4b41-a7b3-8ae1c381064d")
 	)
 	(junction
+		(at 237.49 76.2)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "dea42a2c-ddeb-4acd-b1c2-7fa84ea2cf16")
+	)
+	(junction
+		(at 212.09 76.2)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "dfc2ef86-7e02-4025-9316-e400e214b7c6")
+	)
+	(junction
 		(at 186.69 76.2)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2088,6 +2100,10 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "e51ec996-1b50-4a8e-ba08-56359cbc4043")
+	)
+	(no_connect
+		(at 234.95 104.14)
+		(uuid "fdf32cbd-ee09-45a1-9588-be4fa8251d4c")
 	)
 	(wire
 		(pts
@@ -2121,6 +2137,26 @@
 	)
 	(wire
 		(pts
+			(xy 234.95 99.06) (xy 237.49 99.06)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0474b0fe-9b9b-477a-9d07-ae046d5b7ec0")
+	)
+	(wire
+		(pts
+			(xy 212.09 104.14) (xy 212.09 106.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "068fb22f-191c-478c-90aa-e627c046cbcc")
+	)
+	(wire
+		(pts
 			(xy 127 93.98) (xy 128.27 93.98)
 		)
 		(stroke
@@ -2128,6 +2164,56 @@
 			(type solid)
 		)
 		(uuid "07ab8d0b-6635-4b69-96a9-cea205bcd4e4")
+	)
+	(wire
+		(pts
+			(xy 163.83 88.9) (xy 173.99 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0db21ac7-9c94-4720-9eff-716776bae5fc")
+	)
+	(wire
+		(pts
+			(xy 212.09 76.2) (xy 219.71 76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0f7650c1-8c59-4433-a24e-768ce9851ad5")
+	)
+	(wire
+		(pts
+			(xy 163.83 86.36) (xy 166.37 86.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "137e5199-4c37-4028-8e28-7cc4ab8d76a4")
+	)
+	(wire
+		(pts
+			(xy 229.87 76.2) (xy 237.49 76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "18fb5700-dca4-4ff5-9b9b-a5c6b6d60433")
+	)
+	(wire
+		(pts
+			(xy 237.49 76.2) (xy 242.57 76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1c1cc3ac-9587-4a09-b6da-5cc4e79ab099")
 	)
 	(wire
 		(pts
@@ -2168,6 +2254,16 @@
 			(type solid)
 		)
 		(uuid "28f49d49-870b-476e-8cb8-68f24852d6c9")
+	)
+	(wire
+		(pts
+			(xy 214.63 99.06) (xy 212.09 99.06)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2a4354e7-cafe-451c-b359-dc1a91c40bf0")
 	)
 	(wire
 		(pts
@@ -2238,6 +2334,16 @@
 			(type solid)
 		)
 		(uuid "4c0329ea-746b-49a6-825e-24b0592222c2")
+	)
+	(wire
+		(pts
+			(xy 237.49 99.06) (xy 237.49 76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4ef5c62d-96c9-47fd-ac68-3e95c7c99938")
 	)
 	(wire
 		(pts
@@ -2358,6 +2464,16 @@
 			(type solid)
 		)
 		(uuid "6bf0aea7-5e42-4c71-b731-f43f0509ee54")
+	)
+	(wire
+		(pts
+			(xy 204.47 76.2) (xy 212.09 76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6de32b65-c9b2-4ffb-b64c-b4af28d9837e")
 	)
 	(wire
 		(pts
@@ -2541,6 +2657,16 @@
 	)
 	(wire
 		(pts
+			(xy 212.09 99.06) (xy 212.09 76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b9c6b64b-4654-4c04-9b7d-d82e15a6f198")
+	)
+	(wire
+		(pts
 			(xy 204.47 95.25) (xy 204.47 105.41)
 		)
 		(stroke
@@ -2578,6 +2704,16 @@
 			(type solid)
 		)
 		(uuid "c84ce17a-c99d-4748-90f5-7ca798f50665")
+	)
+	(wire
+		(pts
+			(xy 214.63 104.14) (xy 212.09 104.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d3945f36-5141-449e-851c-7471419782d7")
 	)
 	(wire
 		(pts
@@ -2631,6 +2767,16 @@
 	)
 	(wire
 		(pts
+			(xy 224.79 111.76) (xy 224.79 114.3)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ef5d654d-09c5-4262-9f58-0c4a854752f6")
+	)
+	(wire
+		(pts
 			(xy 146.05 104.14) (xy 146.05 105.41)
 		)
 		(stroke
@@ -2681,6 +2827,16 @@
 	)
 	(wire
 		(pts
+			(xy 224.79 83.82) (xy 224.79 91.44)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fcc3b8da-a700-4086-9f87-3869bab5a123")
+	)
+	(wire
+		(pts
 			(xy 182.88 81.28) (xy 186.69 81.28)
 		)
 		(stroke
@@ -2688,6 +2844,27 @@
 			(type solid)
 		)
 		(uuid "fe71af27-ce56-4722-85fc-d6cbf00a8fcd")
+	)
+	(label "BUCK_OUT"
+		(at 196.85 76.2 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "3d21d089-5bab-4614-a49b-182aaf8fb1d3")
+	)
+	(hierarchical_label "+5V"
+		(shape output)
+		(at 242.57 76.2 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "1782d954-8256-4c39-b17d-5e4538d8f35c")
 	)
 	(hierarchical_label "+24V_IN"
 		(shape input)
@@ -3440,6 +3617,73 @@
 	)
 	(symbol
 		(lib_id "power:GND")
+		(at 166.37 86.36 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "4e6e13a9-e069-455c-8f4b-19243feb506c")
+		(property "Reference" "#PWR0301"
+			(at 166.37 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 170.18 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" ""
+			(at 166.37 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 166.37 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 166.37 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "83d8c475-af83-46db-9aa5-0102ce4c6c15")
+		)
+		(instances
+			(project "BeagleBone-cape"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/bd0b971e-2693-4cc8-ae48-079dcad29646"
+					(reference "#PWR0301")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
 		(at 195.58 105.41 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -3994,6 +4238,72 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GND")
+		(at 224.79 114.3 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "8a295331-7956-4a87-b337-c7466a96595e")
+		(property "Reference" "#PWR0303"
+			(at 224.79 120.65 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 224.79 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 224.79 114.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 224.79 114.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 224.79 114.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "6fbbb8da-f76d-4673-876c-7765281c9c07")
+		)
+		(instances
+			(project "BeagleBone-cape"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/bd0b971e-2693-4cc8-ae48-079dcad29646"
+					(reference "#PWR0303")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R_Small")
 		(at 123.19 87.63 90)
 		(unit 1)
@@ -4082,6 +4392,72 @@
 			(project "BeagleBone-cape"
 				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/bd0b971e-2693-4cc8-ae48-079dcad29646"
 					(reference "R12")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 212.09 106.68 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "92175318-fee4-43d7-91e7-668f06c139ed")
+		(property "Reference" "#PWR0302"
+			(at 212.09 113.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 212.09 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 212.09 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 212.09 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 212.09 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "96596a1b-0643-4968-a780-141757b1ded3")
+		)
+		(instances
+			(project "BeagleBone-cape"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/bd0b971e-2693-4cc8-ae48-079dcad29646"
+					(reference "#PWR0302")
 					(unit 1)
 				)
 			)
@@ -4629,6 +5005,72 @@
 			(project "BeagleBone-cape"
 				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/bd0b971e-2693-4cc8-ae48-079dcad29646"
 					(reference "C15")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:PWR_FLAG")
+		(at 212.09 76.2 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "cf73649b-e7f1-4633-8c88-8dcd1b650285")
+		(property "Reference" "#FLG0301"
+			(at 212.09 74.295 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "PWR_FLAG"
+			(at 212.09 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 212.09 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 212.09 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Special symbol for telling ERC where power comes from"
+			(at 212.09 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "341b70a2-a830-4809-af8d-bca76d6c60e6")
+		)
+		(instances
+			(project "BeagleBone-cape"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/bd0b971e-2693-4cc8-ae48-079dcad29646"
+					(reference "#FLG0301")
 					(unit 1)
 				)
 			)
@@ -5323,447 +5765,5 @@
 				)
 			)
 		)
-	)
-	(wire
-		(pts
-			(xy 163.83 86.36) (xy 166.37 86.36)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "137e5199-4c37-4028-8e28-7cc4ab8d76a4")
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 166.37 86.36 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "4e6e13a9-e069-455c-8f4b-19243feb506c")
-		(property "Reference" "#PWR0301"
-			(at 166.37 92.71 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 170.18 86.36 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Footprint" ""
-			(at 166.37 86.36 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 166.37 86.36 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 166.37 86.36 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "83d8c475-af83-46db-9aa5-0102ce4c6c15")
-		)
-		(instances
-			(project "BeagleBone-cape"
-				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/bd0b971e-2693-4cc8-ae48-079dcad29646"
-					(reference "#PWR0301")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(wire
-		(pts
-			(xy 163.83 88.9) (xy 173.99 88.9)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "0db21ac7-9c94-4720-9eff-716776bae5fc")
-	)
-	(wire
-		(pts
-			(xy 204.47 76.2) (xy 212.09 76.2)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "6de32b65-c9b2-4ffb-b64c-b4af28d9837e")
-	)
-	(wire
-		(pts
-			(xy 212.09 76.2) (xy 219.71 76.2)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "0f7650c1-8c59-4433-a24e-768ce9851ad5")
-	)
-	(wire
-		(pts
-			(xy 229.87 76.2) (xy 237.49 76.2)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "18fb5700-dca4-4ff5-9b9b-a5c6b6d60433")
-	)
-	(wire
-		(pts
-			(xy 237.49 76.2) (xy 242.57 76.2)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1c1cc3ac-9587-4a09-b6da-5cc4e79ab099")
-	)
-	(hierarchical_label "+5V"
-		(shape output)
-		(at 242.57 76.2 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "1782d954-8256-4c39-b17d-5e4538d8f35c")
-	)
-	(label "BUCK_OUT"
-		(at 196.85 76.2 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "3d21d089-5bab-4614-a49b-182aaf8fb1d3")
-	)
-	(junction
-		(at 212.09 76.2)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "dfc2ef86-7e02-4025-9316-e400e214b7c6")
-	)
-	(junction
-		(at 237.49 76.2)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "dea42a2c-ddeb-4acd-b1c2-7fa84ea2cf16")
-	)
-	(symbol
-		(lib_id "power:PWR_FLAG")
-		(at 212.09 76.2 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "cf73649b-e7f1-4633-8c88-8dcd1b650285")
-		(property "Reference" "#FLG0301"
-			(at 212.09 74.295 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "PWR_FLAG"
-			(at 212.09 71.12 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 212.09 76.2 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 212.09 76.2 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Special symbol for telling ERC where power comes from"
-			(at 212.09 76.2 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "341b70a2-a830-4809-af8d-bca76d6c60e6")
-		)
-		(instances
-			(project "BeagleBone-cape"
-				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/bd0b971e-2693-4cc8-ae48-079dcad29646"
-					(reference "#FLG0301")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(wire
-		(pts
-			(xy 224.79 83.82) (xy 224.79 91.44)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "fcc3b8da-a700-4086-9f87-3869bab5a123")
-	)
-	(wire
-		(pts
-			(xy 214.63 99.06) (xy 212.09 99.06)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "2a4354e7-cafe-451c-b359-dc1a91c40bf0")
-	)
-	(wire
-		(pts
-			(xy 212.09 99.06) (xy 212.09 76.2)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b9c6b64b-4654-4c04-9b7d-d82e15a6f198")
-	)
-	(wire
-		(pts
-			(xy 234.95 99.06) (xy 237.49 99.06)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "0474b0fe-9b9b-477a-9d07-ae046d5b7ec0")
-	)
-	(wire
-		(pts
-			(xy 237.49 99.06) (xy 237.49 76.2)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "4ef5c62d-96c9-47fd-ac68-3e95c7c99938")
-	)
-	(wire
-		(pts
-			(xy 214.63 104.14) (xy 212.09 104.14)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d3945f36-5141-449e-851c-7471419782d7")
-	)
-	(wire
-		(pts
-			(xy 212.09 104.14) (xy 212.09 106.68)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "068fb22f-191c-478c-90aa-e627c046cbcc")
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 212.09 106.68 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "92175318-fee4-43d7-91e7-668f06c139ed")
-		(property "Reference" "#PWR0302"
-			(at 212.09 113.03 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 212.09 111.76 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 212.09 106.68 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 212.09 106.68 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 212.09 106.68 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "96596a1b-0643-4968-a780-141757b1ded3")
-		)
-		(instances
-			(project "BeagleBone-cape"
-				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/bd0b971e-2693-4cc8-ae48-079dcad29646"
-					(reference "#PWR0302")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(wire
-		(pts
-			(xy 224.79 111.76) (xy 224.79 114.3)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ef5d654d-09c5-4262-9f58-0c4a854752f6")
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 224.79 114.3 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "8a295331-7956-4a87-b337-c7466a96595e")
-		(property "Reference" "#PWR0303"
-			(at 224.79 120.65 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 224.79 119.38 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 224.79 114.3 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 224.79 114.3 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 224.79 114.3 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "6fbbb8da-f76d-4673-876c-7765281c9c07")
-		)
-		(instances
-			(project "BeagleBone-cape"
-				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/bd0b971e-2693-4cc8-ae48-079dcad29646"
-					(reference "#PWR0303")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(no_connect
-		(at 234.95 104.14)
-		(uuid "fdf32cbd-ee09-45a1-9588-be4fa8251d4c")
 	)
 )
