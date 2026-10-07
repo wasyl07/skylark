@@ -1,0 +1,6 @@
+# Larger TX queue: the default (10) overflows on bursts (ENOBUFS)
+[Match]
+OriginalName=can*
+
+[Link]
+TransmitQueueLength=100

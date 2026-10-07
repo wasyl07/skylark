@@ -24,12 +24,37 @@
      pinctrl-0 = <&pinmux_comms_can_pins>;
  };
 
+// Console UART4 on P9.11 (RX) / P9.13 (TX) -> /dev/ttyS4
+ &uart4 {
+     status = "okay";
+     pinctrl-names = "default";
+     pinctrl-0 = <&pinmux_console_uart4_pins>;
+ };
+
+// DS1307 RTC (U3) on I2C2 (P9.19/P9.20) @0x68 -> /dev/rtcN, name "rtc-ds1307"
+ &i2c2 {
+     #address-cells = <1>;
+     #size-cells = <0>;
+
+     rtc_ds1307: rtc@68 {
+         compatible = "dallas,ds1307";
+         reg = <0x68>;
+     };
+ };
+
 // Define CAN1 pinmux with numeric values
  &am33xx_pinmux {
+     pinmux_console_uart4_pins: pinmux_console_uart4_pins {
+         pinctrl-single,pins = <
+             0x070 0x26  // UART4_RXD (P9_11, gpmc_wait0): Mode 6, input, pull-up
+             0x074 0x0e  // UART4_TXD (P9_13, gpmc_wpn):   Mode 6, output, no pull
+         >;
+     };
+
      pinmux_comms_can_pins: pinmux_comms_can_pins {
          pinctrl-single,pins = <
-             0x184 0x32  // CAN1_TX (P9_11): Mode 0x32 (CAN, pull-down)
-             0x180 0x12  // CAN1_RX (P9_13): Mode 0x12 (CAN, pull-down)
+             0x184 0x32  // CAN1_RX (P9_24, uart1_txd): Mode 2, input, pull-up
+             0x180 0x12  // CAN1_TX (P9_26, uart1_rxd): Mode 2, pull-up
          >;
      };
  };

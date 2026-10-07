@@ -1,0 +1,6 @@
+[Unit]
+Description=Update the Skylark RTC from NTP time when it drifted
+
+[Service]
+Type=oneshot
+ExecStart=/usr/lib/skylark/rtc.sh sync

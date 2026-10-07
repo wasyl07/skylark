@@ -13,6 +13,8 @@ install -m 0644 -D "$BOARD_DIR/extlinux.conf" "$BINARIES_DIR/extlinux/extlinux.c
 find "${BUILD_DIR}/linux-"* -path "*/dts/ti/omap/am335x-boneblack.dtb" \
     -exec cp {} "${BINARIES_DIR}/am335x-boneblack.dtb" \;
 
-# Copy device tree overlay
-find "${BUILD_DIR}/linux-"* -path "*/dts/skylark-overlay.dtbo" \
-    -exec cp {} "${BINARIES_DIR}/skylark-overlay.dtbo" \;
+# Copy device tree overlay: the kernel build compiles skylark-overlay.dts
+# (from BR2_LINUX_KERNEL_CUSTOM_DTS_DIR) as skylark-overlay.dtb (with -@).
+OVL=$(find "${BUILD_DIR}"/linux-* -path "*/boot/dts/skylark-overlay.dtb" ! -path "*linux-headers*" | head -n1)
+[ -n "$OVL" ] || { echo "skylark-overlay.dtb not built" >&2; exit 1; }
+install -m 0644 -D "$OVL" "${BINARIES_DIR}/skylark-overlay.dtbo"

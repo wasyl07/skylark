@@ -1,0 +1,10 @@
+[Match]
+Name=eth0
+
+[Network]
+DHCP=yes
+MulticastDNS=yes
+LinkLocalAddressing=yes
+
+[DHCPv4]
+UseDomains=yes

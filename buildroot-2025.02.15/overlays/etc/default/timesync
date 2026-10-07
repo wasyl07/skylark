@@ -1,0 +1,19 @@
+# Time sync config: /etc/init.d/S05rtc (boot) and /usr/sbin/rtc-ntp-sync (daemon)
+
+# sysfs name of the battery-backed RTC (cape DS1307)
+RTC_NAME="rtc-ds1307"
+
+# NTP servers (space separated)
+NTP_SERVERS="0.pool.ntp.org 1.pool.ntp.org time.google.com"
+
+# Write NTP time to the RTC when they differ by more than this (seconds)
+MAX_DRIFT=2
+
+# Re-check interval after a successful NTP query (seconds)
+SYNC_INTERVAL=3600
+
+# Retry interval while there is no network / NTP (seconds)
+RETRY_INTERVAL=60
+
+# Max time for a single NTP query (seconds)
+NTP_TIMEOUT=15

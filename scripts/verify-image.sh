@@ -24,14 +24,31 @@ for f in /boot/zImage /boot/am335x-boneblack.dtb /boot/overlays/skylark-cape.dtb
          /usr/lib/systemd/system/data.mount /usr/lib/systemd/system/rauc-mark-good.service \
          /usr/lib/systemd/system/local-fs.target.wants/data.mount \
          /usr/lib/systemd/system/multi-user.target.wants/rauc-mark-good.service \
-         /usr/lib/skylark/growdata.sh /usr/bin/skylark-factory-reset /data; do
+         /usr/lib/skylark/growdata.sh /usr/bin/skylark-factory-reset /data \
+         /usr/lib/skylark/rtc.sh /etc/skylark/rtc.conf \
+         /usr/lib/systemd/system/sysinit.target.wants/skylark-rtc-restore.service \
+         /usr/lib/systemd/system/timers.target.wants/skylark-rtc-sync.timer \
+         /etc/systemd/network/20-eth0.network /etc/systemd/network/80-can.network \
+         /etc/systemd/network/80-can.link /etc/systemd/timesyncd.conf.d/skylark.conf \
+         /usr/lib/systemd/systemd-networkd /usr/lib/systemd/systemd-timesyncd /sbin/hwclock; do
     "$O/host/sbin/debugfs" -R "stat $f" "$I/rootfs.ext4" 2>/dev/null | grep -q Inode: && ok "$f" || bad "$f missing"
+done
+
+echo "== persistent SSH, no stale units"
+for l in "/etc/dropbear /data/ssh/dropbear" "/root/.ssh /data/ssh/root"; do
+    set -- $l
+    "$O/host/sbin/debugfs" -R "stat $1" "$I/rootfs.ext4" 2>/dev/null | grep -q "Fast link dest: \"$2\"" \
+        && ok "$1 -> $2" || bad "$1 is not a link to $2"
+done
+for f in /usr/lib/systemd/system/skylark-rtc-sync.path; do
+    "$O/host/sbin/debugfs" -R "stat $f" "$I/rootfs.ext4" 2>/dev/null | grep -q Inode: && bad "$f stale" || ok "no $f"
 done
 
 echo "== U-Boot config"
 UC=$(ls -d $O/build/uboot-*/.config)
 for k in CONFIG_ENV_IS_IN_MMC=y CONFIG_SYS_REDUNDAND_ENVIRONMENT=y CONFIG_ENV_OFFSET=0x100000 \
-         CONFIG_ENV_OFFSET_REDUND=0x180000 CONFIG_ENV_SIZE=0x20000 CONFIG_CMD_SETEXPR=y CONFIG_OF_LIBFDT_OVERLAY=y; do
+         CONFIG_ENV_OFFSET_REDUND=0x180000 CONFIG_ENV_SIZE=0x20000 CONFIG_CMD_SETEXPR=y CONFIG_OF_LIBFDT_OVERLAY=y \
+         CONFIG_LEGACY_IMAGE_FORMAT=y CONFIG_CONS_INDEX=5; do
     grep -qx "$k" "$UC" && ok "$k" || bad "$k ($(grep "${k%%=*}[= ]" "$UC"))"
 done
 grep -q '^# CONFIG_ENV_IS_IN_FAT is not set' "$UC" && ok "ENV not in FAT" || bad "ENV_IS_IN_FAT still set"

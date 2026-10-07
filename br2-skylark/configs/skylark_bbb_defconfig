@@ -3,10 +3,11 @@ BR2_arm=y
 BR2_cortex_a8=y
 BR2_ARM_FPU_VFPV3=y
 
-# Toolchain: Bootlin prebuilt glibc (systemd needs glibc)
+# Toolchain: Bootlin prebuilt glibc (systemd needs glibc).
+# bleeding-edge: kernel headers 5.15 (systemd-networkd needs >= 5.4; stable has 4.19)
 BR2_TOOLCHAIN_EXTERNAL=y
 BR2_TOOLCHAIN_EXTERNAL_BOOTLIN=y
-BR2_TOOLCHAIN_EXTERNAL_BOOTLIN_ARMV7_EABIHF_GLIBC_STABLE=y
+BR2_TOOLCHAIN_EXTERNAL_BOOTLIN_ARMV7_EABIHF_GLIBC_BLEEDING_EDGE=y
 
 # Build
 BR2_DL_DIR="$(BR2_EXTERNAL_SKYLARK_PATH)/../dl"
@@ -18,8 +19,7 @@ BR2_INIT_SYSTEMD=y
 BR2_TARGET_GENERIC_HOSTNAME="skylark"
 BR2_TARGET_GENERIC_ISSUE="Skylark Flight Controller"
 BR2_TARGET_GENERIC_ROOT_PASSWD="skylark"
-BR2_TARGET_GENERIC_GETTY_PORT="ttyS0"
-BR2_SYSTEM_DHCP="eth0"
+BR2_TARGET_GENERIC_GETTY_PORT="ttyS4"
 BR2_ROOTFS_OVERLAY="$(BR2_EXTERNAL_SKYLARK_PATH)/board/skylark/rootfs-overlay"
 BR2_ROOTFS_POST_BUILD_SCRIPT="$(BR2_EXTERNAL_SKYLARK_PATH)/board/skylark/post-build.sh"
 BR2_ROOTFS_POST_IMAGE_SCRIPT="$(BR2_EXTERNAL_SKYLARK_PATH)/board/skylark/post-image.sh"
@@ -76,6 +76,8 @@ BR2_PACKAGE_HOST_KMOD_XZ=y
 BR2_PACKAGE_XZ=y
 BR2_PACKAGE_LIBIIO=y
 BR2_PACKAGE_CAN_UTILS=y
+# full ip(8): 'ip -d link show can0' (busybox ip has no CAN details)
+BR2_PACKAGE_IPROUTE2=y
 BR2_PACKAGE_I2C_TOOLS=y
 
 # Networking

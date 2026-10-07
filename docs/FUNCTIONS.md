@@ -173,7 +173,7 @@ with automatic rollback.
 
 | ID     | Requirement | Pri | Acceptance check | Ver |
 |--------|-------------|-----|------------------|-----|
-| MNT-01 | A serial console shall be available on the BBB debug header (115200 8N1). | Must | Login over serial. | T |
+| MNT-01 | A serial console shall be available (UART4 on P9.11/P9.13, 115200 8N1; the J1 header pins are not used by the image). | Must | Login over serial. | T |
 | MNT-02 | SSH access over Ethernet with DHCP. | Must | `ssh root@<ip>` works. | T |
 | MNT-03 | Test points shall be present on all key signals for bring-up. | Should | TP list matches signal list. | I |
 
@@ -214,6 +214,8 @@ These block final sign-off of the requirements above.
 ## 5. Sign-off checklist
 
 Copy this table per board/release under test and fill in results.
+Completed records: [bringup-2026-10-05.md](bringup-2026-10-05.md) (first
+bring-up, cape rev 1, image 0.1.0).
 
 | Board S/N | Image version | Tester | Date |
 |-----------|---------------|--------|------|
