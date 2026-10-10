@@ -4899,6 +4899,269 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Logic_LevelTranslator:SN74LVC1T45DBV"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "U"
+				(at -6.35 8.89 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "SN74LVC1T45DBV"
+				(at 3.81 8.89 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" "Package_TO_SOT_SMD:SOT-23-6"
+				(at 0 -11.43 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "http://www.ti.com/lit/ds/symlink/sn74lvc1t45.pdf"
+				(at -22.86 -16.51 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Single-Bit Dual-Supply Bus Transceiver With Configurable Voltage Translation and 3-State Outputs, SOT-23-6"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "Level-Shifter CMOS-TTL-Translation"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "SOT?23*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "SN74LVC1T45DBV_0_1"
+				(rectangle
+					(start -7.62 7.62)
+					(end 7.62 -7.62)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.54 0) (xy -2.54 1.016) (xy -0.762 1.016)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.762 0) (xy -0.762 2.032) (xy 1.016 1.016) (xy -0.762 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.762 -1.016) (xy -2.54 -1.016) (xy -2.54 0) (xy -4.572 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.016 1.016) (xy 2.794 1.016) (xy 2.794 0) (xy 4.064 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.016 0) (xy 1.016 -1.778) (xy 1.016 -2.032) (xy -0.762 -1.016) (xy 1.016 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.794 0) (xy 2.794 -1.016) (xy 1.016 -1.016)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "SN74LVC1T45DBV_1_1"
+				(pin bidirectional line
+					(at -10.16 0 0)
+					(length 2.54)
+					(name "A"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -10.16 -5.08 0)
+					(length 2.54)
+					(name "DIR"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at -2.54 10.16 270)
+					(length 2.54)
+					(name "VCCA"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 0 -10.16 90)
+					(length 2.54)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 2.54 10.16 270)
+					(length 2.54)
+					(name "VCCB"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 10.16 0 180)
+					(length 2.54)
+					(name "B"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "Memory_EEPROM:CAT24C256"
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -8014,12 +8277,6 @@
 		(uuid "0ebaa82e-12b0-40b0-b288-2729d920b4c3")
 	)
 	(junction
-		(at 152.4 67.31)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "0f2f21f8-13a0-4103-a65f-16be4edc4d0d")
-	)
-	(junction
 		(at 535.94 44.45)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -8224,12 +8481,6 @@
 		(uuid "8da933a9-35f8-42e6-8504-d1bab7264306")
 	)
 	(junction
-		(at 149.86 64.77)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "9bd7cb49-010e-4419-a32a-fb2dae9d201d")
-	)
-	(junction
 		(at 306.07 381)
 		(diameter 1.016)
 		(color 0 0 0 0)
@@ -8427,7 +8678,7 @@
 		)
 		(stroke
 			(width 0)
-			(type default)
+			(type solid)
 		)
 		(uuid "058e332e-b678-41c8-95bf-ef50d97e8405")
 	)
@@ -8553,6 +8804,16 @@
 	)
 	(wire
 		(pts
+			(xy 50.8 360.045) (xy 50.8 365.76)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0ad3d9c1-5ada-4987-9e12-120b17d91fb4")
+	)
+	(wire
+		(pts
 			(xy 323.85 193.04) (xy 323.85 213.36)
 		)
 		(stroke
@@ -8577,7 +8838,7 @@
 		)
 		(stroke
 			(width 0)
-			(type default)
+			(type solid)
 		)
 		(uuid "0cf33f94-3005-4aab-b501-9de22762a03c")
 	)
@@ -8620,6 +8881,16 @@
 			(type solid)
 		)
 		(uuid "0f3b00e1-fc99-4687-a350-7272a0c19f46")
+	)
+	(wire
+		(pts
+			(xy 112.395 386.715) (xy 112.395 387.35)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0f87b1f2-fedb-4fba-9e6d-54d54da06f78")
 	)
 	(wire
 		(pts
@@ -8723,11 +8994,21 @@
 	)
 	(wire
 		(pts
-			(xy 340.36 335.28) (xy 340.36 330.2)
+			(xy 37.465 335.915) (xy 37.465 327.66)
 		)
 		(stroke
 			(width 0)
 			(type default)
+		)
+		(uuid "1658734b-f61a-4509-ad6b-e17d37d630c3")
+	)
+	(wire
+		(pts
+			(xy 340.36 330.2) (xy 340.36 335.28)
+		)
+		(stroke
+			(width 0)
+			(type solid)
 		)
 		(uuid "176e2d58-d836-4c8c-92fe-360e0f261903")
 	)
@@ -8813,6 +9094,16 @@
 	)
 	(wire
 		(pts
+			(xy 100.965 379.095) (xy 100.965 378.46)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1bb5f78d-9982-44c3-a36d-393089eb5cae")
+	)
+	(wire
+		(pts
 			(xy 515.62 172.72) (xy 524.51 172.72)
 		)
 		(stroke
@@ -8853,11 +9144,21 @@
 	)
 	(wire
 		(pts
-			(xy 234.95 36.83) (xy 234.95 38.1)
+			(xy 81.915 318.135) (xy 81.915 322.58)
 		)
 		(stroke
 			(width 0)
 			(type default)
+		)
+		(uuid "1d013634-4e80-4316-9433-195c46769a34")
+	)
+	(wire
+		(pts
+			(xy 234.95 34.29) (xy 234.95 38.1)
+		)
+		(stroke
+			(width 0)
+			(type solid)
 		)
 		(uuid "1d9135ee-db1e-4907-ba81-d9b67f7acadb")
 	)
@@ -8900,6 +9201,16 @@
 			(type solid)
 		)
 		(uuid "1fd1a25c-3de1-4b2f-85cb-dabc6f280d08")
+	)
+	(wire
+		(pts
+			(xy 48.26 386.08) (xy 48.26 387.985)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "20dbb9ac-83f8-4a69-8dcc-53513e5597c5")
 	)
 	(wire
 		(pts
@@ -8983,6 +9294,16 @@
 	)
 	(wire
 		(pts
+			(xy 24.765 375.92) (xy 38.1 375.92)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "247916f2-d600-4972-9c6a-3c2936570b8a")
+	)
+	(wire
+		(pts
 			(xy 303.53 210.82) (xy 308.61 210.82)
 		)
 		(stroke
@@ -8997,7 +9318,7 @@
 		)
 		(stroke
 			(width 0)
-			(type default)
+			(type solid)
 		)
 		(uuid "273319eb-831c-4094-9154-d7a8e47f4168")
 	)
@@ -9017,7 +9338,7 @@
 		)
 		(stroke
 			(width 0)
-			(type default)
+			(type solid)
 		)
 		(uuid "2a84969e-cd2f-4543-816b-5c458364aa7c")
 	)
@@ -9060,6 +9381,16 @@
 			(type solid)
 		)
 		(uuid "2ae9b40b-662a-4323-b0f5-57b5827fdc0f")
+	)
+	(wire
+		(pts
+			(xy 100.965 386.715) (xy 100.965 387.35)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2b1b1fe8-ed21-4df8-be1f-fcde4a67a76a")
 	)
 	(wire
 		(pts
@@ -9107,7 +9438,7 @@
 		)
 		(stroke
 			(width 0)
-			(type default)
+			(type solid)
 		)
 		(uuid "2f3dfbb9-303d-496a-9f79-5d8555ac89e4")
 	)
@@ -9203,6 +9534,16 @@
 	)
 	(wire
 		(pts
+			(xy 45.72 360.045) (xy 45.72 365.76)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "322ddc40-a4c3-4b75-8352-06b0a5e426c2")
+	)
+	(wire
+		(pts
 			(xy 83.82 64.77) (xy 99.06 64.77)
 		)
 		(stroke
@@ -9233,7 +9574,7 @@
 	)
 	(wire
 		(pts
-			(xy 210.82 36.83) (xy 210.82 38.1)
+			(xy 210.82 34.29) (xy 210.82 38.1)
 		)
 		(stroke
 			(width 0)
@@ -9303,6 +9644,16 @@
 	)
 	(wire
 		(pts
+			(xy 33.02 381) (xy 38.1 381)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "36c5fc41-e490-4f23-8a74-6e8c5318e2da")
+	)
+	(wire
+		(pts
 			(xy 378.46 209.55) (xy 396.24 209.55)
 		)
 		(stroke
@@ -9327,7 +9678,7 @@
 		)
 		(stroke
 			(width 0)
-			(type default)
+			(type solid)
 		)
 		(uuid "37f8b0f3-549b-4c89-8774-be578bcedd02")
 	)
@@ -9363,21 +9714,21 @@
 	)
 	(wire
 		(pts
-			(xy 252.73 31.75) (xy 252.73 33.02)
+			(xy 252.73 34.29) (xy 252.73 38.1)
 		)
 		(stroke
 			(width 0)
-			(type default)
+			(type solid)
 		)
 		(uuid "3b94f466-bfa8-4d0f-ac09-ed1e765cf64c")
 	)
 	(wire
 		(pts
-			(xy 252.73 38.1) (xy 252.73 45.72)
+			(xy 252.73 43.18) (xy 252.73 45.72)
 		)
 		(stroke
 			(width 0)
-			(type default)
+			(type solid)
 		)
 		(uuid "3d815851-1cc5-4044-a49f-836e113ea2e6")
 	)
@@ -9430,6 +9781,16 @@
 			(type solid)
 		)
 		(uuid "3fd38a23-12bb-48a3-8dab-3453f18a1c9c")
+	)
+	(wire
+		(pts
+			(xy 100.965 393.065) (xy 100.965 392.43)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4034c8f2-53ab-49d1-9b21-8205b1146030")
 	)
 	(wire
 		(pts
@@ -9557,7 +9918,7 @@
 		)
 		(stroke
 			(width 0)
-			(type default)
+			(type solid)
 		)
 		(uuid "476e7e9f-de43-4f28-b154-42275bbc43ad")
 	)
@@ -9590,16 +9951,6 @@
 			(type solid)
 		)
 		(uuid "48b98ad7-641c-4f9a-a8a9-7e995b281c37")
-	)
-	(wire
-		(pts
-			(xy 152.4 67.31) (xy 156.21 67.31)
-		)
-		(stroke
-			(width 0)
-			(type solid)
-		)
-		(uuid "48f7bb7b-1fb9-4938-989e-6162290bebb8")
 	)
 	(wire
 		(pts
@@ -9663,11 +10014,11 @@
 	)
 	(wire
 		(pts
-			(xy 228.6 36.83) (xy 228.6 38.1)
+			(xy 228.6 34.29) (xy 228.6 38.1)
 		)
 		(stroke
 			(width 0)
-			(type default)
+			(type solid)
 		)
 		(uuid "4b8d1e8d-5c5a-47af-839c-2afe2a0e8c0d")
 	)
@@ -9697,7 +10048,7 @@
 		)
 		(stroke
 			(width 0)
-			(type default)
+			(type solid)
 		)
 		(uuid "4c9ea539-1ba2-47c6-b197-51b2d7235eda")
 	)
@@ -9717,7 +10068,7 @@
 		)
 		(stroke
 			(width 0)
-			(type default)
+			(type solid)
 		)
 		(uuid "4d3f6140-6dc1-42b1-99eb-472602f5dab2")
 	)
@@ -9877,9 +10228,19 @@
 		)
 		(stroke
 			(width 0)
-			(type default)
+			(type solid)
 		)
 		(uuid "527aa771-fbf5-4878-8e01-ddc493b0c6e1")
+	)
+	(wire
+		(pts
+			(xy 112.395 393.065) (xy 112.395 392.43)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "529280c7-7bfb-4032-8748-5374b61fde23")
 	)
 	(wire
 		(pts
@@ -10037,7 +10398,7 @@
 		)
 		(stroke
 			(width 0)
-			(type default)
+			(type solid)
 		)
 		(uuid "593d9197-35ed-4a20-b999-7bae9bc01c9b")
 	)
@@ -10047,7 +10408,7 @@
 		)
 		(stroke
 			(width 0)
-			(type default)
+			(type solid)
 		)
 		(uuid "59b2ce9c-d082-4b41-83d3-e289b9df19cf")
 	)
@@ -10143,6 +10504,16 @@
 	)
 	(wire
 		(pts
+			(xy 112.395 372.745) (xy 112.395 374.015)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5e54e7ce-9404-4eae-b021-135353e3ace3")
+	)
+	(wire
+		(pts
 			(xy 542.29 264.16) (xy 548.64 264.16)
 		)
 		(stroke
@@ -10177,7 +10548,7 @@
 		)
 		(stroke
 			(width 0)
-			(type default)
+			(type solid)
 		)
 		(uuid "608ad2e3-f823-4488-98d4-0a87bd1f9114")
 	)
@@ -10187,7 +10558,7 @@
 		)
 		(stroke
 			(width 0)
-			(type default)
+			(type solid)
 		)
 		(uuid "609943f1-61f6-4aad-8f3d-a80ddf433c41")
 	)
@@ -10203,13 +10574,23 @@
 	)
 	(wire
 		(pts
-			(xy 327.66 347.98) (xy 317.5 347.98)
+			(xy 317.5 347.98) (xy 327.66 347.98)
+		)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(uuid "6187f096-a4e7-4d50-a6af-487637cf7ca1")
+	)
+	(wire
+		(pts
+			(xy 100.965 372.745) (xy 100.965 373.38)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "6187f096-a4e7-4d50-a6af-487637cf7ca1")
+		(uuid "63f7bad6-eb73-487d-90f0-1840d080301b")
 	)
 	(wire
 		(pts
@@ -10267,7 +10648,7 @@
 		)
 		(stroke
 			(width 0)
-			(type default)
+			(type solid)
 		)
 		(uuid "660caa3d-90c9-4852-b462-6fac229acc39")
 	)
@@ -10293,6 +10674,16 @@
 	)
 	(wire
 		(pts
+			(xy 37.465 327.66) (xy 38.735 327.66)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "685ce759-4ab6-4e31-8757-26d04139d01e")
+	)
+	(wire
+		(pts
 			(xy 91.44 76.2) (xy 99.06 76.2)
 		)
 		(stroke
@@ -10300,6 +10691,16 @@
 			(type solid)
 		)
 		(uuid "6a2f57a8-ffb8-4767-86ae-f970751dffaf")
+	)
+	(wire
+		(pts
+			(xy 59.055 322.58) (xy 81.915 322.58)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6a7d0899-44a3-463d-b552-28db4f529346")
 	)
 	(wire
 		(pts
@@ -10347,7 +10748,7 @@
 		)
 		(stroke
 			(width 0)
-			(type default)
+			(type solid)
 		)
 		(uuid "6ef47f61-11ad-4406-985c-0aca060ac5d5")
 	)
@@ -10370,6 +10771,16 @@
 			(type solid)
 		)
 		(uuid "71cdec55-281a-4575-89d4-3cfe0ef29a77")
+	)
+	(wire
+		(pts
+			(xy 78.105 375.92) (xy 58.42 375.92)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "71d19272-13f9-43e7-bca3-c4e659ab92ed")
 	)
 	(wire
 		(pts
@@ -10553,11 +10964,11 @@
 	)
 	(wire
 		(pts
-			(xy 246.38 31.75) (xy 246.38 33.02)
+			(xy 246.38 34.29) (xy 246.38 38.1)
 		)
 		(stroke
 			(width 0)
-			(type default)
+			(type solid)
 		)
 		(uuid "7fbf14e4-1fe3-4046-9217-9ae9c7c6f3f0")
 	)
@@ -10703,11 +11114,11 @@
 	)
 	(wire
 		(pts
-			(xy 350.52 345.44) (xy 350.52 330.2)
+			(xy 350.52 330.2) (xy 350.52 345.44)
 		)
 		(stroke
 			(width 0)
-			(type default)
+			(type solid)
 		)
 		(uuid "8a15abf4-97a3-47c6-abb1-5ee44b58291b")
 	)
@@ -10743,11 +11154,11 @@
 	)
 	(wire
 		(pts
-			(xy 252.73 45.72) (xy 256.54 45.72)
+			(xy 252.73 45.72) (xy 267.97 45.72)
 		)
 		(stroke
 			(width 0)
-			(type default)
+			(type solid)
 		)
 		(uuid "8c5fea6d-4d2d-4ccf-b0fa-810d052256f5")
 	)
@@ -10763,7 +11174,7 @@
 	)
 	(wire
 		(pts
-			(xy 217.17 36.83) (xy 217.17 38.1)
+			(xy 217.17 34.29) (xy 217.17 38.1)
 		)
 		(stroke
 			(width 0)
@@ -10793,6 +11204,16 @@
 	)
 	(wire
 		(pts
+			(xy 22.225 322.58) (xy 38.735 322.58)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9039ab61-ffda-4165-afdc-fc6fcaabd1c1")
+	)
+	(wire
+		(pts
 			(xy 125.73 264.16) (xy 125.73 271.78)
 		)
 		(stroke
@@ -10810,6 +11231,16 @@
 			(type solid)
 		)
 		(uuid "90a0c5af-88fa-4bc7-82da-273c0b5d6a1d")
+	)
+	(wire
+		(pts
+			(xy 48.895 332.74) (xy 48.895 335.915)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "90fe2248-4c07-4541-832b-30cc4833e966")
 	)
 	(wire
 		(pts
@@ -10840,6 +11271,16 @@
 			(type solid)
 		)
 		(uuid "9224de1c-91cf-4fc5-bf42-29f261870c08")
+	)
+	(wire
+		(pts
+			(xy 112.395 379.73) (xy 112.395 379.095)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9298c543-db44-4a19-8e4e-ae082fc400ac")
 	)
 	(wire
 		(pts
@@ -10897,7 +11338,7 @@
 		)
 		(stroke
 			(width 0)
-			(type default)
+			(type solid)
 		)
 		(uuid "939e327d-b875-4dad-8408-f72bbf646c46")
 	)
@@ -11063,11 +11504,11 @@
 	)
 	(wire
 		(pts
-			(xy 246.38 48.26) (xy 256.54 48.26)
+			(xy 246.38 48.26) (xy 267.97 48.26)
 		)
 		(stroke
 			(width 0)
-			(type default)
+			(type solid)
 		)
 		(uuid "9b12a55b-85c9-4df7-872f-399ae3369111")
 	)
@@ -11117,7 +11558,7 @@
 		)
 		(stroke
 			(width 0)
-			(type default)
+			(type solid)
 		)
 		(uuid "9ddc03cc-3776-457f-a73c-a0befa042544")
 	)
@@ -11283,16 +11724,6 @@
 	)
 	(wire
 		(pts
-			(xy 149.86 64.77) (xy 156.21 64.77)
-		)
-		(stroke
-			(width 0)
-			(type solid)
-		)
-		(uuid "a82b0f88-2f32-4de5-be52-72c8616e996b")
-	)
-	(wire
-		(pts
 			(xy 135.89 142.24) (xy 135.89 144.78)
 		)
 		(stroke
@@ -11387,7 +11818,7 @@
 		)
 		(stroke
 			(width 0)
-			(type default)
+			(type solid)
 		)
 		(uuid "ac48360e-e59e-46fb-848c-107659dd51b8")
 	)
@@ -11430,6 +11861,16 @@
 			(type solid)
 		)
 		(uuid "ae6b9081-b3f7-4dd6-ac09-f5bbeae181d5")
+	)
+	(wire
+		(pts
+			(xy 46.355 308.61) (xy 46.355 312.42)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ae74239c-d67b-4653-8ff7-8bfa11215a4f")
 	)
 	(wire
 		(pts
@@ -11537,7 +11978,7 @@
 		)
 		(stroke
 			(width 0)
-			(type default)
+			(type solid)
 		)
 		(uuid "b41c3358-4206-471d-9665-9a46c0645ef3")
 	)
@@ -11583,11 +12024,11 @@
 	)
 	(wire
 		(pts
-			(xy 246.38 38.1) (xy 246.38 48.26)
+			(xy 246.38 43.18) (xy 246.38 48.26)
 		)
 		(stroke
 			(width 0)
-			(type default)
+			(type solid)
 		)
 		(uuid "b5326c57-e638-4f1d-86bb-f4032ff479e5")
 	)
@@ -11877,7 +12318,7 @@
 		)
 		(stroke
 			(width 0)
-			(type default)
+			(type solid)
 		)
 		(uuid "c61e8af6-819c-4b7c-9f1c-c6637f10497e")
 	)
@@ -12117,7 +12558,7 @@
 		)
 		(stroke
 			(width 0)
-			(type default)
+			(type solid)
 		)
 		(uuid "d920a849-2787-4b08-823c-09dc4766a991")
 	)
@@ -12127,7 +12568,7 @@
 		)
 		(stroke
 			(width 0)
-			(type default)
+			(type solid)
 		)
 		(uuid "d943f291-21e6-4699-b085-7e8ee68438b9")
 	)
@@ -12230,6 +12671,16 @@
 			(type solid)
 		)
 		(uuid "dd183f08-fe06-4dcf-9a41-33b28dae9e1e")
+	)
+	(wire
+		(pts
+			(xy 51.435 308.61) (xy 51.435 312.42)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "dde27764-ed05-4bdc-be0a-c56f4c0c443a")
 	)
 	(wire
 		(pts
@@ -12443,11 +12894,11 @@
 	)
 	(wire
 		(pts
-			(xy 327.66 350.52) (xy 317.5 350.52)
+			(xy 317.5 350.52) (xy 327.66 350.52)
 		)
 		(stroke
 			(width 0)
-			(type default)
+			(type solid)
 		)
 		(uuid "ee6dd1ac-1452-46c8-9167-bf0c86d80053")
 	)
@@ -12500,6 +12951,16 @@
 			(type solid)
 		)
 		(uuid "f10afc3d-8ac0-4a71-8b4f-fc4f795525c4")
+	)
+	(wire
+		(pts
+			(xy 81.915 309.245) (xy 81.915 313.055)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f124e6db-64f5-4dc2-be3d-814739e6d1d8")
 	)
 	(wire
 		(pts
@@ -12557,7 +13018,7 @@
 		)
 		(stroke
 			(width 0)
-			(type default)
+			(type solid)
 		)
 		(uuid "f7db3654-d045-4824-b568-54307c462444")
 	)
@@ -12587,7 +13048,7 @@
 		)
 		(stroke
 			(width 0)
-			(type default)
+			(type solid)
 		)
 		(uuid "f87b3d0b-7a98-4ba0-b6ea-99cd9c781e58")
 	)
@@ -12891,13 +13352,33 @@
 		)
 		(uuid "1ecc572d-c133-4802-a879-2789b334f417")
 	)
+	(label "BHI360_INT"
+		(at 24.765 375.92 0)
+		(effects
+			(font
+				(size 1.524 1.524)
+			)
+			(justify left bottom)
+		)
+		(uuid "2016fe06-b424-40b0-973c-5d65af4ea5d8")
+	)
+	(label "BHI360_INT_3V3"
+		(at 78.105 375.92 180)
+		(effects
+			(font
+				(size 1.524 1.524)
+			)
+			(justify right bottom)
+		)
+		(uuid "2026762b-a890-4ad8-8f24-38ba9af78208")
+	)
 	(label "I2C1_3V3.SDA"
-		(at 256.54 48.26 0)
+		(at 267.97 48.26 180)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left bottom)
+			(justify right bottom)
 		)
 		(uuid "253e629d-6453-4949-99df-155b2b6a833a")
 	)
@@ -12910,6 +13391,16 @@
 			(justify left bottom)
 		)
 		(uuid "2dcad31f-ee9d-4cff-a47d-20b2cfe1fffb")
+	)
+	(label "BHI360_RESET_3V3"
+		(at 337.82 170.18 180)
+		(effects
+			(font
+				(size 1.524 1.524)
+			)
+			(justify right bottom)
+		)
+		(uuid "2e3d5ade-d83e-42f0-86ac-88dd2d9d3891")
 	)
 	(label "CANL"
 		(at 535.94 46.99 180)
@@ -12940,6 +13431,16 @@
 			(justify right bottom)
 		)
 		(uuid "3394cdca-afe6-4e34-80e2-390d090a8330")
+	)
+	(label "BHI360_RESET"
+		(at 22.225 322.58 0)
+		(effects
+			(font
+				(size 1.524 1.524)
+			)
+			(justify left bottom)
+		)
+		(uuid "34ef28dd-62cf-40ef-8d68-bacf1d8526b4")
 	)
 	(label "MMC1.DAT5"
 		(at 412.75 176.53 180)
@@ -13170,6 +13671,16 @@
 			(justify left bottom)
 		)
 		(uuid "677289dd-e6be-49a0-8f9c-e45c2535884c")
+	)
+	(label "BHI360_RESET_3V3"
+		(at 81.28 322.58 180)
+		(effects
+			(font
+				(size 1.524 1.524)
+			)
+			(justify right bottom)
+		)
+		(uuid "6830b770-8da3-4842-81fc-18d7664a78ab")
 	)
 	(label "I2C_SCL_MAG"
 		(at 148.59 64.77 180)
@@ -13402,12 +13913,12 @@
 		(uuid "915e4e7e-0540-44eb-886d-699f52fffa14")
 	)
 	(label "I2C1_3V3.SCL"
-		(at 256.54 45.72 0)
+		(at 267.97 45.72 180)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left bottom)
+			(justify right bottom)
 		)
 		(uuid "91d95bec-4414-4339-873d-3642a5fdd2fc")
 	)
@@ -13791,16 +14302,6 @@
 		)
 		(uuid "cfe2a0db-cd31-4748-a797-097dec622f52")
 	)
-	(label "BHI360_INT"
-		(at 337.82 167.64 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "d0a8e4fa-5068-4b9d-861f-df3a96889d64")
-	)
 	(label "UART_RX"
 		(at 139.7 295.91 0)
 		(effects
@@ -13891,6 +14392,16 @@
 		)
 		(uuid "dfbfc141-68f3-4ec7-81aa-a88570a10291")
 	)
+	(label "BHI360_INT_3V3"
+		(at 337.82 167.64 180)
+		(effects
+			(font
+				(size 1.524 1.524)
+			)
+			(justify right bottom)
+		)
+		(uuid "e244360d-ffbf-4329-b6d1-9420adc49861")
+	)
 	(label "CANL"
 		(at 509.27 74.93 0)
 		(effects
@@ -13951,16 +14462,6 @@
 		)
 		(uuid "ead93271-1a91-4bd2-a002-b7b020592afa")
 	)
-	(label "BHI360_RESET"
-		(at 337.82 170.18 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "ec6e8355-8434-4895-acc6-3c934ba64865")
-	)
 	(label "SERVO_3"
 		(at 412.75 204.47 180)
 		(effects
@@ -14015,7 +14516,7 @@
 		(at 287.02 172.72 0)
 		(effects
 			(font
-				(size 1.524 1.524)
+				(size 1.27 1.27)
 			)
 			(justify left bottom)
 		)
@@ -14025,7 +14526,7 @@
 		(at 337.82 172.72 180)
 		(effects
 			(font
-				(size 1.524 1.524)
+				(size 1.27 1.27)
 			)
 			(justify right bottom)
 		)
@@ -14937,7 +15438,7 @@
 	)
 	(symbol
 		(lib_id "power:+3.3V")
-		(at 228.6 36.83 0)
+		(at 228.6 34.29 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -14945,7 +15446,7 @@
 		(dnp no)
 		(uuid "09c5337d-b154-4379-bb28-f49daf88ed08")
 		(property "Reference" "#PWR0212"
-			(at 228.6 40.64 0)
+			(at 228.6 38.1 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14954,16 +15455,15 @@
 			)
 		)
 		(property "Value" "+3V3"
-			(at 228.956 33.782 90)
+			(at 227.838 30.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
 			)
 		)
 		(property "Footprint" ""
-			(at 228.6 36.83 0)
+			(at 228.6 34.29 0)
 			(effects
 				(font
 					(size 1.524 1.524)
@@ -14971,7 +15471,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 228.6 36.83 0)
+			(at 228.6 34.29 0)
 			(effects
 				(font
 					(size 1.524 1.524)
@@ -14979,7 +15479,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 228.6 36.83 0)
+			(at 228.6 34.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15842,6 +16342,70 @@
 		)
 	)
 	(symbol
+		(lib_id "power:+1V8")
+		(at 45.72 360.045 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "18fea287-b3c7-4129-a53d-818a38c468c7")
+		(property "Reference" "#PWR19331"
+			(at 45.72 353.695 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+1V8"
+			(at 44.958 355.854 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 45.72 360.045 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 45.72 360.045 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 45.72 360.045 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "89b4c84d-4d44-407b-988e-5d4801791d2b")
+		)
+		(instances
+			(project "BeagleBone-cape"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+					(reference "#PWR19331")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Connector:TestPoint")
 		(at 68.58 109.22 0)
 		(unit 1)
@@ -16116,6 +16680,72 @@
 		)
 	)
 	(symbol
+		(lib_id "power:+1V8")
+		(at 100.965 372.745 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "1edee5bb-6290-4811-92ed-59d9325ca522")
+		(property "Reference" "#PWR3238"
+			(at 100.965 366.395 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+1V8"
+			(at 103.505 371.4749 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 100.965 372.745 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 100.965 372.745 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 100.965 372.745 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "4bc74c6b-4480-4ffb-98a9-5c990ed12c6a")
+		)
+		(instances
+			(project "BeagleBone-cape"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+					(reference "#PWR3238")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 308.61 213.36 0)
 		(unit 1)
@@ -16175,6 +16805,70 @@
 			(project "BeagleBone-cape"
 				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
 					(reference "#PWR056")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 48.26 387.985 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "202e1cee-aac5-41e1-a19e-ecaa7096fa7f")
+		(property "Reference" "#PWR12661"
+			(at 48.26 394.335 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 48.26 393.065 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 48.26 387.985 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 48.26 387.985 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 48.26 387.985 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "15e08c17-7cb9-4ab5-a1be-072158ac51ab")
+		)
+		(instances
+			(project "BeagleBone-cape"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+					(reference "#PWR12661")
 					(unit 1)
 				)
 			)
@@ -16563,7 +17257,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_Small")
-		(at 252.73 35.56 0)
+		(at 252.73 40.64 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -16571,7 +17265,7 @@
 		(dnp no)
 		(uuid "2bd0d421-0d4f-4eab-a422-1e260f5bdff9")
 		(property "Reference" "R25"
-			(at 253.746 34.29 0)
+			(at 253.746 39.37 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16580,7 +17274,7 @@
 			)
 		)
 		(property "Value" "4k7"
-			(at 253.746 36.83 0)
+			(at 253.746 41.91 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16589,7 +17283,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
-			(at 252.73 35.56 0)
+			(at 252.73 40.64 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16598,7 +17292,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 252.73 35.56 0)
+			(at 252.73 40.64 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16607,7 +17301,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 252.73 35.56 0)
+			(at 252.73 40.64 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17189,6 +17883,72 @@
 			(project "BeagleBone-cape"
 				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
 					(reference "IC2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 112.395 379.73 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "32af254c-9929-42ba-8ae6-746b4722e7a7")
+		(property "Reference" "#PWR56039"
+			(at 112.395 386.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 114.3 380.9999 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 112.395 379.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 112.395 379.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 112.395 379.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "e477f9bc-4e19-4ca8-9f6b-b912391fe2ba")
+		)
+		(instances
+			(project "BeagleBone-cape"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+					(reference "#PWR56039")
 					(unit 1)
 				)
 			)
@@ -18654,6 +19414,149 @@
 		)
 	)
 	(symbol
+		(lib_id "Logic_LevelTranslator:SN74LVC1T45DBV")
+		(at 48.26 375.92 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "4cc98979-f306-4520-83c3-afcd0b68e896")
+		(property "Reference" "U7"
+			(at 66.04 369.4998 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "SN74LVC1T45DBVR"
+			(at 66.04 372.0398 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23-6"
+			(at 48.26 375.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 48.26 375.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 48.26 375.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "6c37854c-2c0d-4c3d-9fea-a8bca43133fb")
+		)
+		(pin "5"
+			(uuid "4d4f226a-051a-430a-85c0-27d26f4424bd")
+		)
+		(pin "3"
+			(uuid "dc3ccfa4-0817-4c8f-9c79-b8ed0e6a476f")
+		)
+		(pin "6"
+			(uuid "132e977a-03c1-4c2c-a616-af3d9c73fe55")
+		)
+		(pin "4"
+			(uuid "0f1c54e2-9a22-4ddb-a760-95158d8150c7")
+		)
+		(pin "2"
+			(uuid "c7d32840-8f97-4a08-b552-aafc6e712ed1")
+		)
+		(instances
+			(project "BeagleBone-cape"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+					(reference "U7")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+1V8")
+		(at 33.02 381 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "4d34bf88-23b4-4156-ab11-dc33db3a990f")
+		(property "Reference" "#PWR11518"
+			(at 26.67 381 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+1V8"
+			(at 27.94 381 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 33.02 381 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 33.02 381 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 33.02 381 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "a516575c-b326-4097-b2ae-6c079cadee50")
+		)
+		(instances
+			(project "BeagleBone-cape"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+					(reference "#PWR11518")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 154.94 74.93 0)
 		(unit 1)
@@ -19173,7 +20076,7 @@
 	)
 	(symbol
 		(lib_id "power:+1V8")
-		(at 210.82 36.83 0)
+		(at 210.82 34.29 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -19181,7 +20084,7 @@
 		(dnp no)
 		(uuid "587b1269-c0bd-4a91-8c6a-72fbd9f1ab9d")
 		(property "Reference" "#PWR01"
-			(at 210.82 40.64 0)
+			(at 210.82 38.1 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19190,7 +20093,7 @@
 			)
 		)
 		(property "Value" "+1V8"
-			(at 210.058 33.02 0)
+			(at 210.058 30.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19198,7 +20101,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 210.82 36.83 0)
+			(at 210.82 34.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19207,7 +20110,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 210.82 36.83 0)
+			(at 210.82 34.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19216,7 +20119,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+1V8\""
-			(at 210.82 36.83 0)
+			(at 210.82 34.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19496,6 +20399,72 @@
 			(project "BeagleBone-cape"
 				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
 					(reference "TP5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3V3")
+		(at 81.915 309.245 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "5be19291-6e66-4116-bd21-dd483a6aac88")
+		(property "Reference" "#PWR38437"
+			(at 81.915 302.895 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3V3"
+			(at 84.455 307.9749 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 81.915 309.245 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 81.915 309.245 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 81.915 309.245 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "44c0a964-c912-4cfe-a30f-93a214cbf10f")
+		)
+		(instances
+			(project "BeagleBone-cape"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+					(reference "#PWR38437")
 					(unit 1)
 				)
 			)
@@ -19923,6 +20892,75 @@
 			(project "BeagleBone-cape"
 				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
 					(reference "J11")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Small")
+		(at 112.395 376.555 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "5fb5ba80-a7cf-44c5-a76c-c4f5ffe25fab")
+		(property "Reference" "C41"
+			(at 115.57 375.2912 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100n"
+			(at 115.57 377.8312 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
+			(at 112.395 376.555 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 112.395 376.555 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 112.395 376.555 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "320d00f1-65c8-443c-a42b-b4daa8f77bd7")
+		)
+		(pin "2"
+			(uuid "f529d535-da8a-4b47-9425-2eed89263b7b")
+		)
+		(instances
+			(project "BeagleBone-cape"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+					(reference "C41")
 					(unit 1)
 				)
 			)
@@ -20469,6 +21507,72 @@
 		)
 	)
 	(symbol
+		(lib_id "power:+3V3")
+		(at 112.395 372.745 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "6aac28c7-7e1e-44b6-a6c9-c7722e3b51f3")
+		(property "Reference" "#PWR58739"
+			(at 112.395 366.395 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3V3"
+			(at 114.3 371.4749 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 112.395 372.745 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 112.395 372.745 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 112.395 372.745 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "35864872-792d-4545-bad9-53306e6d1889")
+		)
+		(instances
+			(project "BeagleBone-cape"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+					(reference "#PWR58739")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GNDD")
 		(at 139.7 302.26 0)
 		(unit 1)
@@ -20528,6 +21632,70 @@
 			(project "BeagleBone-cape"
 				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
 					(reference "#PWR072")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 48.895 335.915 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "6c1d1b50-0b49-4db4-860f-b8d4be0c7b25")
+		(property "Reference" "#PWR49708"
+			(at 48.895 342.265 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 48.895 340.995 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 48.895 335.915 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 48.895 335.915 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 48.895 335.915 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "d3846ed5-b0ab-4e34-8495-2777411dc807")
+		)
+		(instances
+			(project "BeagleBone-cape"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+					(reference "#PWR49708")
 					(unit 1)
 				)
 			)
@@ -20595,6 +21763,72 @@
 			(project "BeagleBone-cape"
 				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
 					(reference "#PWR029")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 100.965 379.095 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "6e6c6ad6-f655-46d2-a87d-09c12afe488d")
+		(property "Reference" "#PWR7320"
+			(at 100.965 385.445 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 103.505 380.3649 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 100.965 379.095 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 100.965 379.095 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 100.965 379.095 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "1321a772-e27a-4658-a418-e8537912912a")
+		)
+		(instances
+			(project "BeagleBone-cape"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+					(reference "#PWR7320")
 					(unit 1)
 				)
 			)
@@ -20792,6 +22026,70 @@
 			(project "BeagleBone-cape"
 				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
 					(reference "#PWR86")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 37.465 335.915 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "70c5c0f6-385a-4090-a412-45155a9b4875")
+		(property "Reference" "#PWR010"
+			(at 37.465 342.265 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 37.465 340.995 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 37.465 335.915 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 37.465 335.915 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 37.465 335.915 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "98f5c7e8-3479-4688-967b-e8f57844ad74")
+		)
+		(instances
+			(project "BeagleBone-cape"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+					(reference "#PWR010")
 					(unit 1)
 				)
 			)
@@ -21385,6 +22683,75 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:C_Small")
+		(at 100.965 375.92 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "818f156d-9930-40ae-91fb-b7cc53d86d38")
+		(property "Reference" "C40"
+			(at 103.505 374.6562 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100n"
+			(at 103.505 377.1962 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
+			(at 100.965 375.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 100.965 375.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 100.965 375.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "6255f942-528c-4405-a53e-e4fd281646a6")
+		)
+		(pin "1"
+			(uuid "ed1045af-8164-4922-a824-96d4b511d088")
+		)
+		(instances
+			(project "BeagleBone-cape"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+					(reference "C40")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Connector:TestPoint")
 		(at 62.23 196.85 0)
 		(unit 1)
@@ -21453,7 +22820,7 @@
 	)
 	(symbol
 		(lib_id "power:+3.3V")
-		(at 252.73 31.75 0)
+		(at 252.73 34.29 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -21461,7 +22828,7 @@
 		(dnp no)
 		(uuid "8210d349-2c97-4c68-bbbe-cb4836f1faed")
 		(property "Reference" "#PWR0211"
-			(at 252.73 35.56 0)
+			(at 252.73 38.1 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -21470,7 +22837,7 @@
 			)
 		)
 		(property "Value" "+3V3"
-			(at 253.086 28.702 90)
+			(at 249.174 30.4799 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -21479,7 +22846,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 252.73 31.75 0)
+			(at 252.73 34.29 0)
 			(effects
 				(font
 					(size 1.524 1.524)
@@ -21487,7 +22854,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 252.73 31.75 0)
+			(at 252.73 34.29 0)
 			(effects
 				(font
 					(size 1.524 1.524)
@@ -21495,7 +22862,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 252.73 31.75 0)
+			(at 252.73 34.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -22110,7 +23477,7 @@
 	)
 	(symbol
 		(lib_id "power:+1V8")
-		(at 217.17 36.83 0)
+		(at 217.17 34.29 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -22118,7 +23485,7 @@
 		(dnp no)
 		(uuid "8ac3f647-6db2-46d8-af59-c2628707133e")
 		(property "Reference" "#PWR065"
-			(at 217.17 40.64 0)
+			(at 217.17 38.1 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -22127,7 +23494,7 @@
 			)
 		)
 		(property "Value" "+1V8"
-			(at 216.408 33.02 0)
+			(at 216.408 30.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -22135,7 +23502,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 217.17 36.83 0)
+			(at 217.17 34.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -22144,7 +23511,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 217.17 36.83 0)
+			(at 217.17 34.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -22153,7 +23520,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+1V8\""
-			(at 217.17 36.83 0)
+			(at 217.17 34.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -22355,121 +23722,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector_Generic:Conn_01x02")
-		(at 161.29 64.77 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "8ca4f98d-e6ae-4768-a4e8-c0cd9305d36b")
-		(property "Reference" "J7"
-			(at 163.83 64.7699 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "MAG_I2C_TP"
-			(at 163.83 67.3099 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Connector_Wire:SolderWire-0.1sqmm_1x02_P3.6mm_D0.4mm_OD1mm"
-			(at 161.29 64.77 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 161.29 64.77 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 161.29 64.77 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Part 1" ""
-			(at 161.29 64.77 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Part 2" ""
-			(at 161.29 64.77 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Part 2 " ""
-			(at 161.29 64.77 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LSCS Part Number" ""
-			(at 161.29 64.77 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Link" ""
-			(at 161.29 64.77 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "676b53d5-652c-463c-bea5-69c0f04c74b3")
-		)
-		(pin "1"
-			(uuid "4c5c30c9-2ac5-4668-aea7-3494cdabdd7f")
-		)
-		(instances
-			(project "BeagleBone-cape"
-				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
-					(reference "J7")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Connector:TestPoint")
 		(at 462.28 34.29 0)
 		(unit 1)
@@ -22531,6 +23783,70 @@
 			(project "BeagleBone-cape"
 				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
 					(reference "TP31")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+1V8")
+		(at 46.355 308.61 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "8e7f0131-2ebc-4eb8-8ca3-06515788a740")
+		(property "Reference" "#PWR9114"
+			(at 46.355 302.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+1V8"
+			(at 45.085 304.165 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 46.355 308.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 46.355 308.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 46.355 308.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "902f2e07-e0c8-4c29-b8e7-030b1136b0b1")
+		)
+		(instances
+			(project "BeagleBone-cape"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+					(reference "#PWR9114")
 					(unit 1)
 				)
 			)
@@ -23171,7 +24487,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_Small")
-		(at 246.38 35.56 0)
+		(at 246.38 40.64 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -23179,7 +24495,7 @@
 		(dnp no)
 		(uuid "9183746a-92ec-4365-a9b2-c0a26874b669")
 		(property "Reference" "R26"
-			(at 247.396 34.29 0)
+			(at 247.396 39.37 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -23188,7 +24504,7 @@
 			)
 		)
 		(property "Value" "4k7"
-			(at 247.396 36.83 0)
+			(at 247.396 41.91 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -23197,7 +24513,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
-			(at 246.38 35.56 0)
+			(at 246.38 40.64 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -23206,7 +24522,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 246.38 35.56 0)
+			(at 246.38 40.64 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -23215,7 +24531,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 246.38 35.56 0)
+			(at 246.38 40.64 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -23713,6 +25029,72 @@
 			(project "BeagleBone-cape"
 				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
 					(reference "R21")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 112.395 393.065 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "9b7893fa-3823-474b-beae-427d5499d792")
+		(property "Reference" "#PWR13923"
+			(at 112.395 399.415 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 114.3 394.3349 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 112.395 393.065 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 112.395 393.065 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 112.395 393.065 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "0c3eb80a-7ffe-4796-a347-1481124442a7")
+		)
+		(instances
+			(project "BeagleBone-cape"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+					(reference "#PWR13923")
 					(unit 1)
 				)
 			)
@@ -24597,7 +25979,7 @@
 	)
 	(symbol
 		(lib_id "power:+3.3V")
-		(at 246.38 31.75 0)
+		(at 246.38 34.29 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -24605,7 +25987,7 @@
 		(dnp no)
 		(uuid "a63b797f-784b-4e2a-8dce-e8a75d78dfca")
 		(property "Reference" "#PWR0210"
-			(at 246.38 35.56 0)
+			(at 246.38 38.1 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -24614,16 +25996,15 @@
 			)
 		)
 		(property "Value" "+3V3"
-			(at 246.736 28.702 90)
+			(at 245.618 30.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
 			)
 		)
 		(property "Footprint" ""
-			(at 246.38 31.75 0)
+			(at 246.38 34.29 0)
 			(effects
 				(font
 					(size 1.524 1.524)
@@ -24631,7 +26012,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 246.38 31.75 0)
+			(at 246.38 34.29 0)
 			(effects
 				(font
 					(size 1.524 1.524)
@@ -24639,7 +26020,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 246.38 31.75 0)
+			(at 246.38 34.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -24785,6 +26166,72 @@
 			(project "BeagleBone-cape"
 				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
 					(reference "#PWR0105")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 100.965 393.065 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "af556836-1dde-4226-b9da-f45ffdb75928")
+		(property "Reference" "#PWR56516"
+			(at 100.965 399.415 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 103.505 394.3349 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 100.965 393.065 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 100.965 393.065 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 100.965 393.065 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "e39428e4-5b42-4f5b-9bc1-35841a6b2816")
+		)
+		(instances
+			(project "BeagleBone-cape"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+					(reference "#PWR56516")
 					(unit 1)
 				)
 			)
@@ -25253,6 +26700,144 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:C_Small")
+		(at 112.395 389.89 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "b61c8fa8-9800-4672-a128-88490857538a")
+		(property "Reference" "C43"
+			(at 115.57 388.6262 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100n"
+			(at 115.57 391.1662 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
+			(at 112.395 389.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 112.395 389.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 112.395 389.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "bb6c2cb6-5c95-415e-a7e9-a44a74a1d598")
+		)
+		(pin "1"
+			(uuid "81f46061-88c0-4acf-b888-787305b95740")
+		)
+		(instances
+			(project "BeagleBone-cape"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+					(reference "C43")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Small")
+		(at 100.965 389.89 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "b727057b-d2fd-4be1-ba99-3b93aabd9e0d")
+		(property "Reference" "C42"
+			(at 103.505 388.6262 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100n"
+			(at 103.505 391.1662 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
+			(at 100.965 389.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 100.965 389.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 100.965 389.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "711ca905-a2f0-4205-b258-dd940660a886")
+		)
+		(pin "2"
+			(uuid "9d476482-43cf-42f7-8d79-02a037010c18")
+		)
+		(instances
+			(project "BeagleBone-cape"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+					(reference "C42")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Connector:TestPoint")
 		(at 541.02 229.87 0)
 		(unit 1)
@@ -25534,6 +27119,137 @@
 			(project "BeagleBone-cape"
 				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
 					(reference "J9")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3V3")
+		(at 51.435 308.61 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "bef19ccd-7496-4792-bf43-865d7d710696")
+		(property "Reference" "#PWR36098"
+			(at 51.435 302.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3V3"
+			(at 48.26 304.1649 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 51.435 308.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 51.435 308.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 51.435 308.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "c7adedae-ec3f-4810-b804-4b2ec7f94e9a")
+		)
+		(instances
+			(project "BeagleBone-cape"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+					(reference "#PWR36098")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+1V8")
+		(at 100.965 386.715 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "c2590747-7803-46e8-a872-e57aa9203cd0")
+		(property "Reference" "#PWR64554"
+			(at 100.965 380.365 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+1V8"
+			(at 103.505 385.4449 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 100.965 386.715 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 100.965 386.715 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 100.965 386.715 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "a2d404bc-60bf-4c95-a6d7-8223f6620647")
+		)
+		(instances
+			(project "BeagleBone-cape"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+					(reference "#PWR64554")
 					(unit 1)
 				)
 			)
@@ -26221,6 +27937,72 @@
 		)
 	)
 	(symbol
+		(lib_id "power:+3V3")
+		(at 112.395 386.715 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "c96813fe-1c14-46e1-aef3-73d66094e9f3")
+		(property "Reference" "#PWR57789"
+			(at 112.395 380.365 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3V3"
+			(at 114.3 385.4449 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 112.395 386.715 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 112.395 386.715 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 112.395 386.715 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "2ca13501-a094-4f01-8d1d-8b858538a369")
+		)
+		(instances
+			(project "BeagleBone-cape"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+					(reference "#PWR57789")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 468.63 265.43 0)
 		(unit 1)
@@ -26821,6 +28603,70 @@
 		)
 	)
 	(symbol
+		(lib_id "power:+3V3")
+		(at 50.8 360.045 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "ce87892e-4086-4ca2-b7e0-cc5cc6fcd9fd")
+		(property "Reference" "#PWR17959"
+			(at 50.8 353.695 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3V3"
+			(at 50.546 355.727 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 50.8 360.045 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 50.8 360.045 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 50.8 360.045 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "c38f2c3b-efa7-42e4-9629-0708abd0d6a0")
+		)
+		(instances
+			(project "BeagleBone-cape"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+					(reference "#PWR17959")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:C_Small")
 		(at 194.31 161.29 0)
 		(unit 1)
@@ -27063,6 +28909,86 @@
 			(project "BeagleBone-cape"
 				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
 					(reference "U5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Logic_LevelTranslator:SN74LVC1T45DBV")
+		(at 48.895 322.58 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "d1fa7a07-a0ab-4494-9805-0d8d14a80ad3")
+		(property "Reference" "U8"
+			(at 52.3083 311.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "SN74LVC1T45DBVR"
+			(at 52.3083 313.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23-6"
+			(at 48.895 322.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 48.895 322.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 48.895 322.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "3"
+			(uuid "d82280eb-99b0-4ebc-948f-0e80e053e400")
+		)
+		(pin "4"
+			(uuid "dc5cc67a-f304-42af-91c3-d70c2e9f0c65")
+		)
+		(pin "6"
+			(uuid "97f2379f-d83e-4cfc-8d34-34a97f536aac")
+		)
+		(pin "2"
+			(uuid "3d61d832-0d45-4881-afba-133d7859c3ff")
+		)
+		(pin "5"
+			(uuid "99ab7ca5-5457-4349-91ef-8674b657ca22")
+		)
+		(pin "1"
+			(uuid "3be65f69-18b7-4df6-9801-3f4e75a6e7a1")
+		)
+		(instances
+			(project "BeagleBone-cape"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+					(reference "U8")
 					(unit 1)
 				)
 			)
@@ -29067,7 +30993,7 @@
 	)
 	(symbol
 		(lib_id "power:+3.3V")
-		(at 234.95 36.83 0)
+		(at 234.95 34.29 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -29075,7 +31001,7 @@
 		(dnp no)
 		(uuid "f7101a41-dfd9-4afd-b839-0c65b3293400")
 		(property "Reference" "#PWR0213"
-			(at 234.95 40.64 0)
+			(at 234.95 38.1 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -29084,7 +31010,7 @@
 			)
 		)
 		(property "Value" "+3V3"
-			(at 235.306 33.782 90)
+			(at 231.394 30.7339 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -29093,7 +31019,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 234.95 36.83 0)
+			(at 234.95 34.29 0)
 			(effects
 				(font
 					(size 1.524 1.524)
@@ -29101,7 +31027,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 234.95 36.83 0)
+			(at 234.95 34.29 0)
 			(effects
 				(font
 					(size 1.524 1.524)
@@ -29109,7 +31035,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 234.95 36.83 0)
+			(at 234.95 34.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -29265,6 +31191,75 @@
 			(project "BeagleBone-cape"
 				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
 					(reference "#PWR95")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_Small")
+		(at 81.915 315.595 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "f90e4088-5006-4b96-b9f7-73fd06ebf540")
+		(property "Reference" "R28"
+			(at 84.455 314.3249 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10k"
+			(at 84.455 316.8649 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
+			(at 81.915 315.595 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 81.915 315.595 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 81.915 315.595 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "c6598342-4559-4ce1-9d47-67d5dff2b596")
+		)
+		(pin "2"
+			(uuid "44c069b7-c490-4e4f-9325-825b97c2e55f")
+		)
+		(instances
+			(project "BeagleBone-cape"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+					(reference "R28")
 					(unit 1)
 				)
 			)
