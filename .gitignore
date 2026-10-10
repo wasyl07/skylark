@@ -1,6 +1,9 @@
 /output/
 /dl/
 /BeagleBone-cape/BeagleBone-cape-backups/
+*backups/
+*.bak
+*-bak
 
 # KiCad lock files
 ~*.lck
