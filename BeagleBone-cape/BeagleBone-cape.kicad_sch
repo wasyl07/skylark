@@ -8601,6 +8601,10 @@
 		(uuid "fdcb793a-22b4-4e07-a8e2-1d4a0b53aa70")
 	)
 	(no_connect
+		(at 381 166.37)
+		(uuid "d7504ed4-0cb6-4551-9a27-7fefdc04172e")
+	)
+	(no_connect
 		(at 381 163.83)
 		(uuid "2a9e4f67-c014-46dc-93f3-4e6fbf30c8b5")
 	)
@@ -8631,10 +8635,6 @@
 	(no_connect
 		(at 393.7 163.83)
 		(uuid "9f82b581-4ece-4b46-9a14-33bb61c192f2")
-	)
-	(no_connect
-		(at 381 166.37)
-		(uuid "a7ba6e08-6035-4f9f-939e-5ca7182e2b4f")
 	)
 	(no_connect
 		(at 134.62 76.2)
@@ -10421,6 +10421,16 @@
 			(type solid)
 		)
 		(uuid "5a6266da-7841-45fe-82a8-f6850af9fa4e")
+	)
+	(wire
+		(pts
+			(xy 361.95 166.37) (xy 381 166.37)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5aa56f35-aa44-440f-88ff-cce97742cda7")
 	)
 	(wire
 		(pts
@@ -13396,7 +13406,7 @@
 		(at 337.82 170.18 180)
 		(effects
 			(font
-				(size 1.524 1.524)
+				(size 1.27 1.27)
 			)
 			(justify right bottom)
 		)
@@ -13511,6 +13521,16 @@
 			(justify left bottom)
 		)
 		(uuid "4880d586-85e0-43f2-bb36-4ff848f788be")
+	)
+	(label "BUZZER"
+		(at 337.82 203.2 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "4af0d4dd-5c27-4305-a8fe-cf64a41773e3")
 	)
 	(label "I2C2.SDA"
 		(at 325.12 69.85 0)
@@ -13643,7 +13663,7 @@
 		(uuid "60b055b6-d8eb-4817-a8fd-a95fd1a56b29")
 	)
 	(label "GPIO7"
-		(at 337.82 203.2 180)
+		(at 287.02 203.2 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -13853,7 +13873,7 @@
 		(uuid "87fb368c-ef74-4ef8-842b-487b673e6746")
 	)
 	(label "GPIO20"
-		(at 287.02 203.2 0)
+		(at 337.82 187.96 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -14051,16 +14071,6 @@
 			(justify right bottom)
 		)
 		(uuid "afece140-cc8f-4300-9138-facf75e079f1")
-	)
-	(label "BUZZER"
-		(at 337.82 187.96 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "b0ca3fe8-8734-429c-9fe9-980b216ac6fd")
 	)
 	(label "AIN0"
 		(at 287.02 200.66 0)
@@ -14396,7 +14406,7 @@
 		(at 337.82 167.64 180)
 		(effects
 			(font
-				(size 1.524 1.524)
+				(size 1.27 1.27)
 			)
 			(justify right bottom)
 		)

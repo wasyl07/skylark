@@ -5,5 +5,8 @@
 *.bak
 *-bak
 
+# KiCad MCP local state
+.kicad-mcp/
+
 # KiCad lock files
 ~*.lck

@@ -13,7 +13,7 @@ Drone control board based on AM335 BeagleBone Black and Ardupilot
   - [buildroot.md](docs/buildroot.md) - building, A/B updates, services, flashing, serial console, CAN, RTC/NTP
   - [FUNCTIONS.md](docs/FUNCTIONS.md) - requirements
   - [bringup-2026-10-05.md](docs/bringup-2026-10-05.md) - first bring-up: test results, cape rev 1 issues, board state
-  - [prus.md](docs/prus.md) - PRU usage
+  - [prus.md](docs/prus.md) - PRU usage: PRU1 servo/ESC PWM firmware design and ArduPilot interface
 
 ## Quick start
 

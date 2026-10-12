@@ -14,8 +14,8 @@ custom cape hardware, and PRU-based real-time peripherals.
 |  |   ArduPilot      |    |   Linux Kernel   |    |  PRU        | |
 |  |   (Copter/Plane) |    |   (Buildroot)    |    |  Firmware   | |
 |  |                  |    |                  |    |             | |
-|  |  - IIO backend   |<-->|  - BHI360 driver |    |  - Servo    | |
-|  |  - PRU servo HAL |    |  - BMM350 driver |    |  - CAN      | |
+|  |  - IIO backend   |<-->|  - BHI360 driver |    |  - PRU1:    | |
+|  |  - PRU servo HAL |    |  - BMM350 driver |    |    servo PWM| |
 |  |                  |    |  - IIO subsystem |    |             | |
 |  +------------------+    +------------------+    +-------------+ |
 |           |                      |                     |         |
@@ -1002,10 +1002,14 @@ kmodules/kmod-bmm350/
 &am33xx_pinmux {
     skylark_pins: skylark_pins {
         pinctrl-single,pins = <
-            /* PRU0 outputs (servo PWM) */
-            AM33XX_IOPAD(0x990, PIN_OUTPUT | MUX_MODE5)  /* P9_31 pru0_pru_r30_0 */
-            AM33XX_IOPAD(0x994, PIN_OUTPUT | MUX_MODE5)  /* P9_29 pru0_pru_r30_1 */
-            /* ... more servo pins ... */
+            /* Servo/ESC PWM: PRU1 R30 outputs (cape nets, see docs/prus.md §2).
+               Better as a pinmux hog; tda19988 must be disabled (claims lcd_data*). */
+            AM33XX_IOPAD(0x8b8, PIN_OUTPUT_PULLDOWN | MUX_MODE5) /* P8_39 SERVO_0 pru1_r30_6 */
+            AM33XX_IOPAD(0x8b4, PIN_OUTPUT_PULLDOWN | MUX_MODE5) /* P8_42 SERVO_1 pru1_r30_5 */
+            AM33XX_IOPAD(0x8b0, PIN_OUTPUT_PULLDOWN | MUX_MODE5) /* P8_41 SERVO_2 pru1_r30_4 */
+            AM33XX_IOPAD(0x8ac, PIN_OUTPUT_PULLDOWN | MUX_MODE5) /* P8_44 SERVO_3 pru1_r30_3 */
+            AM33XX_IOPAD(0x8a8, PIN_OUTPUT_PULLDOWN | MUX_MODE5) /* P8_43 MOTOR_L pru1_r30_2 */
+            AM33XX_IOPAD(0x8a0, PIN_OUTPUT_PULLDOWN | MUX_MODE5) /* P8_45 MOTOR_R pru1_r30_0 */
             
             /* SPI0 for BHI360 */
             AM33XX_IOPAD(0x950, PIN_INPUT | MUX_MODE0)   /* P9_22 spi0_sclk */
@@ -1054,14 +1058,16 @@ kmodules/kmod-bmm350/
     status = "okay";
 };
 
-&pru0 {
-    status = "okay";
-    firmware-name = "skylark-pru0-servo.fw";
-};
-
+/* Servo/ESC PWM runs on PRU1 (the cape wires the outputs to PRU1 R30).
+   PRU0 is unassigned. CAN uses hardware DCAN1, not a PRU. */
 &pru1 {
     status = "okay";
-    firmware-name = "skylark-pru1-can.fw";
+    firmware-name = "skylark-pru1-pwm.fw";
+};
+
+/* HDMI encoder claims lcd_data0..15 (our PRU1 pins) */
+&tda19988 {
+    status = "disabled";
 };
 ```
 
@@ -1069,92 +1075,86 @@ kmodules/kmod-bmm350/
 
 ## Phase 3: PRU Firmware (Weeks 10-16)
 
-### 3.1 PRU0 Servo PWM Firmware (Weeks 10-13)
+### 3.1 PRU1 Servo/ESC PWM Firmware (Weeks 10-13)
 
-**Goal**: Real-time PWM generation for up to 8 servo channels.
+**Goal**: Deterministic PWM for the 6 cape outputs (SERVO_0..3, MOTOR_L/R), driven by
+ArduPilot through the existing `RCOutput_AioPRU` shared-memory interface.
+Full design: [docs/prus.md](prus.md).
 
-**Requirements**:
-- 50Hz update rate (20ms period)
-- 1-2ms pulse width range
-- < 1µs jitter
-- Shared memory interface for position updates
+**Core assignment (checked against the cape netlist)**: the PWM nets go to P8_39/42/41/44/43/45
+= `lcd_data6/5/4/3/2/0`. In mux mode 5 these are **PRU1** `R30` bits 6/5/4/3/2/0. These pads
+have no PRU0 function, so the servo firmware runs on **PRU1**. PRU0 is unassigned.
 
-**Shared Memory Layout**:
-```c
-// Shared RAM at 0x00010000
-struct pru_servo_shared {
-    uint32_t magic;              // 0x00: 'SERV' validation
-    uint32_t version;            // 0x04: Protocol version
-    uint32_t flags;              // 0x08: Control flags
-    uint32_t update_counter;     // 0x0C: Incremented by ARM on update
-    uint32_t ack_counter;        // 0x10: Incremented by PRU on read
-    uint32_t pulse_us[8];        // 0x14-0x30: Pulse widths (1000-2000µs)
-    uint32_t failsafe_us[8];     // 0x34-0x50: Failsafe positions
-    uint32_t timeout_ms;         // 0x54: Failsafe timeout (default 500ms)
-    uint32_t last_update_time;   // 0x58: Timestamp of last ARM update
-} __attribute__((packed));
+**Requirements** (FUNCTIONS.md OUT-01..06):
+- 6 outputs, per-channel period 25-400 Hz (servos 50 Hz, ESCs up to 400 Hz)
+- Pulse 400-2600 µs, 5 ns resolution (1 µs on the ArduPilot API), < 1 µs jitter under ARM load
+- Outputs low from power-on until ArduPilot writes (no pulses during boot)
+- Failsafe values applied by the PRU itself when ArduPilot stops updating for > 500 ms
+- Updates applied only at period boundaries (no runt pulses); optional per-frame commit
 
-// Flags
-#define FLAG_ARMED      (1 << 0)
-#define FLAG_FAILSAFE   (1 << 1)
+**Interface to ArduPilot** (existing mechanism, no new transport):
+- PRU1 data RAM (`0x4A302000`), mapped by ArduPilot via `/dev/mem`, the same as
+  `RCOutput_AioPRU` on BBBmini/BBBlue. Offsets 0x000-0x06B keep the AioPRU layout
+  (`channelenable`, `{time_high, time_t}[12]`, `time`, `max_cycle_time`, 200 MHz ticks).
+- Skylark extension at 0x100: magic/ABI/fw version, status, heartbeat, failsafe timeout,
+  commit sequence, `failsafe_high[12]` (table in prus.md §3.1).
+- Firmware is loaded by remoteproc at boot (`skylark-pru1-pwm.fw`), not by ArduPilot.
+- rpmsg is not used: ArduPilot has no rpmsg RCOutput backend, and it would add a kernel round
+  trip per update.
+
+**Firmware design summary**:
+- C, TI CGT 2.3.3 + pru-software-support (both already Buildroot host packages)
+- Single polled loop on the IEP counter (200 MHz, wrap-safe compares), no interrupts. The estimate
+  is about 0.5 µs worst-case edge error with 6 slots; the firmware reports the measured
+  `max_cycle_time`.
+- Per-slot scheduler: latch new width/period at period start, `rise_at += period` (no drift)
+- States: WAIT_HOST (all low) -> RUN -> FAILSAFE (on heartbeat timeout) -> RUN
+- Hardware-free `pwm_core.c` unit-tested on the PC with simulated time
+
+**Package** (`br2-skylark/package/skylark-pru-firmware/`):
 ```
-
-**PRU Firmware Package** (`package/skylark-pru-firmware/`):
-```
-package/skylark-pru-firmware/
-├── Config.in
-├── skylark-pru-firmware.mk
+skylark-pru-firmware/
+├── Config.in                      # selects host-ti-cgt-pru, pru-software-support
+├── skylark-pru-firmware.mk        # builds fw, installs /lib/firmware + service + tool
 └── src/
     ├── Makefile
-    ├── servo/
-    │   ├── main.c
-    │   └── resource_table.h
-    └── can/
-        ├── main.c
-        └── resource_table.h
+    ├── AM335x_PRU.cmd
+    ├── include/skylark_pru_pwm_abi.h   # shared with ArduPilot (copied verbatim)
+    ├── pru1-pwm/{main.c,pwm_core.c,pwm_core.h,board_skylark.h,resource_table.c}
+    ├── tools/skylark-pwm.c        # target CLI: status / set / failsafe test
+    └── tests/test_pwm_core.c      # host unit tests
 ```
 
-**Tasks**:
-1. Define shared memory interface
-2. Implement PRU0 firmware in C
-3. Create Linux userspace library for servo control
-4. Add systemd service for PRU firmware loading
-5. Test with oscilloscope for timing accuracy
-6. Integrate with ArduPilot servo HAL
+**Deliverables / tasks**:
+- [ ] 3.1.1 Freeze ABI v1 header `skylark_pru_pwm_abi.h` (prus.md §3.1)
+- [ ] 3.1.2 `pwm_core` + host unit tests (wrap, mid-frame change, failsafe entry/exit, commit)
+- [ ] 3.1.3 PRU1 `main.c` + resource table, build in Docker and in Buildroot package
+- [ ] 3.1.4 Overlay: pinmux hog (6 pads, mode 5, 0x05), disable `tda19988`,
+      `&pru1 firmware-name`; verify in `/sys/kernel/debug/pinctrl`
+- [ ] 3.1.5 `skylark-pru.service` (find rproc by name `4a338000.pru`, start, wait for magic,
+      ordered before ArduPilot, stopped after it)
+- [ ] 3.1.6 `skylark-pwm` CLI for bench tests without ArduPilot
+- [ ] 3.1.7 Bench verification on hardware (prus.md §6): boot-time silence, SYSBOOT boot test with
+      servos/ESCs powered, width/rate accuracy, jitter under `stress-ng`, failsafe timing
+- [ ] 3.1.8 Remove the PRU0 GPIO-toggle example from `docker/` once the package builds
 
-### 3.2 PRU1 CAN Interface (Weeks 13-16)
+**Exit criteria**: all OUT-01..06 checks in prus.md §6 pass on the cape; ABI v1 tagged `pru/v1.0.0`.
 
-**Goal**: Software CAN controller on PRU1 for DroneCAN/UAVCAN.
+### 3.2 CAN: hardware DCAN1 (PRU CAN dropped)
 
-**Note**: This is complex; consider using hardware DCAN if available on cape.
-
-**Shared Memory Layout**:
-```c
-struct pru_can_shared {
-    uint32_t magic;              // 'CAN1'
-    uint32_t version;
-    uint32_t bitrate;            // CAN bitrate (500000, 1000000)
-    uint32_t status;             // CAN controller status
-    
-    // TX ring buffer
-    uint32_t tx_head;
-    uint32_t tx_tail;
-    struct can_frame tx_buf[32];
-    
-    // RX ring buffer
-    uint32_t rx_head;
-    uint32_t rx_tail;
-    struct can_frame rx_buf[32];
-} __attribute__((packed));
-```
+The cape routes CAN through a TCAN3413 to DCAN1 (P9_24/P9_26), which is already up as `can0` at
+1 Mbit/s (docs/buildroot.md). A bit-banged CAN controller on a PRU is no longer planned, and
+PRU1 is used for PWM. Remaining CAN work is ArduPilot/DroneCAN on SocketCAN (Phase 4.3).
 
 **Tasks**:
-1. Study CAN 2.0B protocol timing requirements
-2. Implement bit-banged CAN TX on PRU
-3. Implement CAN RX with bit stuffing
-4. Create SocketCAN-compatible interface on Linux side
-5. Test with CAN analyzer
-6. Integrate with DroneCAN node
+- [ ] 3.2.1 ArduPilot `CAN_P1_DRIVER` on SocketCAN `can0` (Linux HAL `CANSocketIface`)
+- [ ] 3.2.2 DroneCAN GPS / ESC detection test (FUNCTIONS.md CAN-05)
+
+### 3.3 PRU0 (unassigned, future)
+
+No cape signal reaches a PRU0 pin. Candidates for a later revision:
+- RC input (SBUS/PPM capture), which needs a cape change to a PRU0 R31 pin (e.g. P9_25/P9_27)
+- Output watchdog that independently checks PRU1 is alive (risk: a halted PRU latches R30)
 
 ---
 
@@ -1234,20 +1234,28 @@ $(eval $(generic-package))
 
 ### 4.2 PRU Servo HAL (Weeks 17-19)
 
-**Goal**: ArduPilot HAL for PRU-based servo output.
+**Goal**: ArduPilot drives the PRU1 PWM firmware (3.1) through the existing
+`RCOutput_AioPRU` backend. No new RCOutput class is needed.
 
-**New Files**:
+**Changes in the ArduPilot fork**:
 ```
-libraries/AP_HAL_Linux/
-├── RCOutput_PRU.h
-├── RCOutput_PRU.cpp
+libraries/AP_HAL/AP_HAL_Boards.h          # HAL_BOARD_SUBTYPE_LINUX_SKYLARK
+libraries/AP_HAL_Linux/hwdef/skylark/     # hwdef.dat (board), defaults.parm
+libraries/AP_HAL_Linux/HAL_Linux_Class.cpp  # SKYLARK -> RCOutput_AioPRU
+libraries/AP_HAL_Linux/RCOutput_AioPRU.*  # AP_HAL_LINUX_AIOPRU_EXTERNAL_FW path
+libraries/AP_HAL_Linux/skylark_pru_pwm_abi.h  # copy of the PRU ABI header
 ```
 
 **Tasks**:
-1. Implement RCOutput_PRU class
-2. Add to Skylark board HAL
-3. Test servo response to RC input
-4. Verify failsafe behavior
+- [ ] 4.2.1 `AP_HAL_LINUX_AIOPRU_EXTERNAL_FW`: map data RAM only, check magic/ABI/RUNNING,
+      no IRAM load or PRU reset (remoteproc owns the core)
+- [ ] 4.2.2 Heartbeat on `push()` / uncorked `write()`; commit-mode sequence for `cork()/push()`
+- [ ] 4.2.3 Implement `set_failsafe_pwm()` -> `failsafe_high[]`
+- [ ] 4.2.4 Fix upstream `disable_ch()` bug (`&= !(1U<<ch)` -> `&= ~(1U<<ch)`); send upstream
+- [ ] 4.2.5 Channel map SERVO1..6 = SERVO_0..3, MOTOR_L, MOTOR_R (prus.md §2)
+- [ ] 4.2.6 Tests: servo response to RC input / MAVLink `DO_SET_SERVO`; kill/stop ArduPilot ->
+      failsafe within 500 ms; restart -> outputs resume
+- [ ] 4.2.7 systemd: `ardupilot.service` `Requires=`/`After=` `skylark-pru.service`
 
 ### 4.3 Board Definition & Configuration (Weeks 19-20)
 
@@ -1268,8 +1276,8 @@ IMU_BACKEND     IIO
 # Compass
 COMPASS_BACKEND IIO
 
-# Servo output
-RCOUTPUT_BACKEND PRU
+# Servo output: RCOutput_AioPRU on PRU1, firmware loaded by remoteproc
+define AP_HAL_LINUX_AIOPRU_EXTERNAL_FW 1
 
 # Serial ports
 SERIAL_ORDER     UART0 UART1 UART2 UART4
@@ -1278,8 +1286,9 @@ UART1_DEVICE     /dev/ttyO1   # GPS
 UART2_DEVICE     /dev/ttyO2   # Telemetry
 UART4_DEVICE     /dev/ttyO4   # RC input (SBUS)
 
-# CAN
-CAN_BACKEND      PRU
+# CAN: hardware DCAN1 via SocketCAN (can0)
+env WITH_CAN 1
+define HAL_NUM_CAN_IFACES 1
 
 # Default parameters
 define DEFAULT_SERIAL0_BAUD     115200
@@ -1619,7 +1628,9 @@ Week  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 
 | Risk                                   | Impact | Probability | Mitigation                                    |
 |----------------------------------------|--------|-------------|-----------------------------------------------|
 | BHI360 NDA delays datasheet access     | High   | Medium      | Start with public info; parallel BMI160 work  |
-| PRU CAN timing too tight               | Medium | Medium      | Fall back to hardware DCAN on cape            |
+| Servo/ESC pull-ups on SYSBOOT pins (lcd_data0-6) change boot mode | High | Low | Boot test with outputs powered; cape: series R / buffer |
+| Halted PRU1 latches a PWM output high   | High   | Low         | Service ordering; PRU-side failsafe; future PRU0 watchdog |
+| HDMI (tda19988) claims PRU1 servo pads  | Medium | High        | Disable tda19988 + lcdc in cape overlay        |
 | ArduPilot IIO latency issues           | High   | Low         | Profile early; use kernel-side buffering      |
 | A/B update brick scenario              | High   | Low         | Extensive rollback testing; recovery SD image |
 | Hardware revision incompatibility      | Medium | Medium      | Version detection in DT; compatibility matrix |
@@ -1631,8 +1642,9 @@ Week  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 
 1. **BHI360 Firmware**: Does Bosch provide a pre-built firmware blob, or does custom
    sensor hub programming require additional tooling?
 
-2. **PRU-CAN vs DCAN**: Is bit-banged CAN on PRU reliable enough for DroneCAN, or
-   should the cape include a dedicated CAN transceiver with hardware controller?
+2. **PRU-CAN vs DCAN**: Resolved. The cape uses hardware DCAN1 + TCAN3413, and PRU1 does PWM.
+   Still open for PWM: ESC protocol, failsafe values per output and servo connector order.
+   These are tracked with answer fields in [prus.md §7 "Pending decisions"](prus.md) (O-1..O-3).
 
 3. **IIO Trigger Source**: Use hardware interrupt from BHI360 FIFO watermark, or
    software hrtimer trigger at fixed rate?
