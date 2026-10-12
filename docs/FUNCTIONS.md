@@ -63,7 +63,7 @@ with automatic rollback.
 
 | ID     | Requirement | Pri | Acceptance check | Ver |
 |--------|-------------|-----|------------------|-----|
-| IMU-01 | The board shall measure 3-axis acceleration and 3-axis angular rate (BHI360). | Must | Rotating/tilting the board changes readings on the correct axes with correct sign. | T |
+| IMU-01 | The board shall measure 3-axis acceleration and 3-axis angular rate (LSM6DSV16X). | Must | Rotating/tilting the board changes readings on the correct axes with correct sign. | T |
 | IMU-02 | IMU data shall reach the flight stack at ≥ **400 Hz (proposed)**. | Must | Measure sample rate in ArduPilot logs. | T |
 | IMU-03 | IMU samples shall be timestamped and delivered without gaps or duplicates under full flight load. | Must | 10 min log, no missed/duplicated samples. | T |
 | IMU-04 | Software shall be able to reset the IMU and detect when new data is ready (interrupt). | Must | Reset line and data-ready interrupt observed working. | T |
@@ -73,7 +73,7 @@ with automatic rollback.
 
 | ID     | Requirement | Pri | Acceptance check | Ver |
 |--------|-------------|-----|------------------|-----|
-| MAG-01 | The board shall measure the 3-axis magnetic field (BMM350). | Must | Rotating the board 360° gives a full heading circle. | T |
+| MAG-01 | The board shall measure the 3-axis magnetic field (IIS2MDC). | Must | Rotating the board 360° gives a full heading circle. | T |
 | MAG-02 | Compass data shall reach the flight stack at ≥ **50 Hz (proposed)**. | Must | Measure rate in logs. | T |
 | MAG-03 | Compass shall pass ArduPilot compass calibration. | Must | Calibration completes with fitness "good". | T |
 | MAG-04 | The board shall support an external compass (e.g. on GPS mast). | Later | — | — |
@@ -295,15 +295,15 @@ For testers; where each function lives on the board.
 | Function        | Part            | BBB connection                                   |
 |-----------------|-----------------|--------------------------------------------------|
 | Power 24→5 V    | IC1 A6983C50, F1| P9_7/P9_8 (VBUS/SYS_5V)                          |
-| IMU             | U2 BHI360       | I2C1 (P9_17/P9_18), INT P9_14, RESET P9_16       |
-| Magnetometer    | IC4 BMM350      | BHI360 auxiliary I2C (not directly on BBB)       |
-| Barometer       | IC3 BMP390      | I2C1                                             |
+| IMU             | U9 LSM6DSV16X   | SPI1 (CS0 P9_28, D0/MISO P9_29, D1/MOSI P9_30, SCLK P9_31), INT1 P9_14, INT2 P9_16 |
+| Magnetometer    | U10 IIS2MDC     | I2C1 (P9_17/P9_18), addr 0x1E, DRDY P9_15        |
+| Barometer       | IC3 BMP390      | I2C1, addr 0x76 (3.3 V)                          |
 | Airspeed (J8)   | external        | I2C2 (P9_19/P9_20)                               |
 | RTC             | U3 DS1307 + CR2032 | I2C2, addr 0x68                               |
 | Servo 0–3       | J1–J4           | P8_39, P8_42, P8_41, P8_44 (PRU1 outputs)        |
 | Motor L / R     | J9 / J10        | P8_43 / P8_45 (PRU1 outputs)                     |
 | CAN             | IC2 TCAN3413, J11 | DCAN1: TX P9_26, RX P9_24                      |
 | MAVLink (J13)   | —               | UART2: TX P9_21, RX P9_22                        |
-| LED blue / red  | D1 / D2         | P9_42 / P9_41                                    |
+| LED blue / red  | D1 / D2         | P9_41 / P9_23                                    |
 | Ext. LED L / R  | J5 / J6         | P8_18 / P8_17                                    |
-| Buzzer          | BZ1 via Q2      | P9_30                                            |
+| Buzzer          | BZ1 via Q2      | P9_42 (eCAP0)                                    |
