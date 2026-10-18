@@ -1,5 +1,11 @@
 # Cape design issues
 
+**2026-10-18 update (schematic + PCB pass):** items 4, 6, 10, 12, 13, 17, 18, 34, 37 and 38
+(schematic part) are DONE in the committed schematic/PCB. Items 33 and 30 are partly done.
+Remaining: PCB routing (52 unconnected pads, see 19 and 38), R27/R18 courtyard overlap,
+and the open redesigns #21-24. Current DRC on the committed PCB (5ae1013d): 83 violations,
+52 unconnected, not yet reviewed. ERC: 67 items, all cosmetic or pre-existing.
+
 Open issues found while reviewing the Skylark cape (KiCad project `BeagleBone-cape/`).
 Reviews done 2026-10-10 and 2026-10-12 against KiCad 9.0.9, the BBB System Reference
 Manual (Table 10 P8 / Table 11 P9), the AM335x mux tables, and the device datasheets
@@ -52,7 +58,7 @@ IC3 pin 5 (SDO) is tied to GND, which selects 0x76. If firmware/devicetree expec
 0x77, move SDO to +1V8. (No clash: the BHI360 on the same bus is at 0x28 because
 its HSDO pin is tied to GND.)
 
-### 4. Cape EEPROM (U1) section is a half-removed stub — OPEN (updated 2026-10-12)
+### 4. Cape EEPROM (U1) section is a half-removed stub — DONE (2026-10-18: removed U1, SW1, TP1 and their wiring)
 U1 (CAT24C256), SW1 and TP1 are now marked DNP but are still `in_bom`/`on_board`
 with no footprint, and the pull-up resistors around them were deleted: ERC shows 12
 unconnected wire stubs at x 306-362 mm, y 381-396 mm on the root sheet.
@@ -116,7 +122,7 @@ only if the BHI360 firmware maps it as an event input, and it blocks Fuser2
 debugging. The BMM350 can also be polled (data-ready register), so the INT line is
 optional. Decide and rename the net.
 
-### 10. `PGOOD` does not leave the power sheet — OPEN
+### 10. `PGOOD` does not leave the power sheet — DONE (2026-10-18: PGOOD output pin on the Power sheet, R27 10k pull-up to +3V3, net on P8.12)
 `pwr.kicad_sch` has a hierarchical label PGOOD, but the Power sheet symbol on the
 root sheet has only +5V and +24V_IN pins (ERC `hier_label_mismatch`). IC1 PGOOD
 reaches R18 (1M to BUCK_OUT) only. Either route it to a GPIO (through a divider or
@@ -132,13 +138,13 @@ TP21, plus a dangling via at (163.38, 88.23) on the PCB. If it is ever wired to
 a header pin it needs another SN74LVC1T45 (BMP390 INT is push-pull, active high;
 pins limited to VDDIO+0.3 V).
 
-### 12. Missing PWR_FLAGs — OPEN
+### 12. Missing PWR_FLAGs — DONE (2026-10-18: six PWR_FLAGs on the root sheet; power_pin_not_driven cleared)
 ERC still reports 6 `power_pin_not_driven` (2026-10-12): #PWR02, #PWR026, #PWR077
 (GND/+5V/+3V3 symbols on the root sheet), #PWR0103 (VBUS), #PWR0107 (GNDA) and U3
 VBAT (coin cell). The power sheet has its own PWR_FLAGs; add them on the root
 sheet for +3V3 (from P9.3/4), GNDA, VBUS/SYS_5V and the coin-cell net.
 
-### 13. Footprint fields empty / parts without footprints — OPEN
+### 13. Footprint fields empty / parts without footprints — DONE (2026-10-18: footprints set for IC2, IC3, U9, U10, C44-C49; IC3 symbol moved to Cape_lib)
 IC2, IC3, IC4 and U2 have empty Footprint fields in the schematic; the PCB uses
 caplib footprints for them (DRC `footprint_symbol_mismatch` x4). U1, SW1 and TP1
 have no footprint (DRC `missing_footprint` x3, see #4). "Update PCB from
@@ -177,20 +183,20 @@ VIH below 3.3 V. Pin order: see #28.
   KiCad's coarse bounding boxes (~0.3 mm real glyph clearance).
 - Connector labels that do not match the schematic: see #27.
 
-### 17. Dangling copper — OPEN (updated 2026-10-12)
+### 17. Dangling copper — DONE (2026-10-18: stubs and dangling via removed; IMU-area +3V3/INT1 copper and old In2 pour cleared)
 DRC now reports:
 - `+3V3` stub at (141.90, 83.35), 0.15 mm.
 - `+1V8` stub at (145.48, 83.19), 0.01 mm.
 - `/I2C_SCL_MAG` stub at (163.22, 79.64), 0.64 mm.
 - Dangling via on `/INT` (BMP390 INT) at (163.38, 88.23), see #11.
 
-### 18. GND zone island — OPEN
+### 18. GND zone island — DONE (2026-10-18: removed by zone refill, no isolated copper)
 DRC still reports 3 unconnected GND items at (100.0, 79.04) — the corner where the
 RJ45 notch meets the left edge (F.Cu/In1.Cu GND zone). Re-check after refilling
 zones in the GUI (headless ZONE_FILLER segfaults); add a stitching via or remove
 the island.
 
-### 19. DRC summary — OPEN (updated 2026-10-12)
+### 19. DRC summary — OPEN (updated 2026-10-18: 83 violations, 52 unconnected on the committed PCB; not yet reviewed)
 DRC with schematic parity: 0 clearance errors (the C42 one is gone), 3 unconnected
 (the #18 GND island), 3 dangling tracks + 1 dangling via (#17), 11
 `lib_footprint_mismatch` warnings (board copies edited for silk/outlines), 7 parity
@@ -339,7 +345,7 @@ no MPN/LCSC at all: C19-C21, C40-C43, D1, D2, F1, IC1 (LCSC), IC4 (LCSC), U2 (LC
 U4-U8, Q1, R10, R11, R25-R28, all J connectors, P8/P9. Rename the field,
 complete the part data, then regenerate everything after the fixes above.
 
-### 30. Value / part-number mismatches — OPEN
+### 30. Value / part-number mismatches — PARTLY DONE (2026-10-18: IC3 MPN BMP388 -> BMP390, C48 value/MPN fixed; C14-C16 "40u", L1 Isat, R10/R11 values still open)
 - IC3: value BMP390, but Manufacturer_Part_Number = **BMP388**.
 - C14-C16: value "40u" (copied from the A6983 typical-application COUT), but the MPN
   EFVM016ADA470M0545 indicates 47 uF and is a non-ceramic part. The A6983 internal
@@ -369,7 +375,7 @@ power-good LED.
 
 ### Low
 
-### 33. Schematic hygiene — OPEN
+### 33. Schematic hygiene — PARTLY DONE (2026-10-18: P8.40 no-connect, labels, title blocks; 67 ERC items left, 42 are label_dangling on unused headers)
 ERC 2026-10-12: 198 items, of which 48 `label_dangling` (mostly labels on unused
 header pins, acceptable), 13 `unconnected_wire_endpoint` (12 EEPROM stubs, #4,
 and a 19 mm horizontal wire at (361.95, 166.37)), P8.40 `pin_not_connected` (add a
@@ -378,7 +384,7 @@ GPIO3/UART_TX, GND/STB, plus those in #6, #9, #25), 44 `endpoint_off_grid`, 72
 `lib_symbol_mismatch`. Title blocks (title, revision, date) are empty on both
 sheets.
 
-### 34. A6983 VBIAS tied to GND — OPEN
+### 34. A6983 VBIAS tied to GND — DONE (2026-10-18: VBIAS on BUCK_OUT)
 With VBIAS on AGND the quiescent current from VIN is 20-70 uA. With VBIAS on the
 5 V output it is 1-6 uA (A6983 electrical characteristics). The pin tolerates up to VIN+0.3 V;
 tie it to BUCK_OUT. Minor, matters only for standby drain.
@@ -398,7 +404,7 @@ them to another layer (or delete the VBUS test-point trace) so the GND plane is
 solid under the buck and the header. B.Cu signals reference In2, which is split
 into +5V and +1V8.
 
-### 37. Design rules do not enforce fab limits on outer layers — OPEN
+### 37. Design rules do not enforce fab limits on outer layers — DONE (2026-10-18: outer track 0.10 mm, edge clearance 0.3 mm, zone clearance 0.2 mm)
 Project rules have min track 0.01 mm, min clearance 0, copper-to-edge 0.00127 mm.
 The `.kicad_dru` outer-layer track rule is also 0.01 mm. 0.10 mm tracks exist
 (fine for JLC 4-layer, 0.09 mm), but nothing would catch a narrower one. Set outer
@@ -406,7 +412,7 @@ min track to 0.09-0.1 mm and copper-to-edge to >= 0.3 mm. The +5V, BUCK_OUT and
 +1V8 zones have a 0.05 mm zone clearance; the 0.2 mm netclass clearance wins today,
 but set the zones to 0.2 mm explicitly.
 
-### 38. IMU swap to LSM6DSV16X (SPI1) + IIS2MDC (I2C1) — DONE in schematic, PCB to do
+### 38. IMU swap to LSM6DSV16X (SPI1) + IIS2MDC (I2C1) — schematic DONE; PCB placed and cleared, routing OPEN (2026-10-18)
 Reason: no ArduPilot driver for the BHI360, the BMM350 was hidden behind it, 800 Hz
 output cap, and BMM350/BHI360/ICM parts are broker-only. Both new parts are stocked by
 authorized distributors (2026-10-12) and have ArduPilot drivers (LSM6DSV, IIS2MDC).
