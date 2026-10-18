@@ -4,6 +4,13 @@
 	(generator_version "9.0")
 	(uuid "60041eb9-62e2-4865-b653-d6bf6d2f7a26")
 	(paper "A4")
+	(title_block
+		(title "Skylark BeagleBone Black cape - power")
+		(date "2026-10-18")
+		(rev "2 (draft)")
+		(company "Skylark")
+		(comment 1 "24 V input, A6983 5 V buck, LTC4412 ideal diode")
+	)
 	(lib_symbols
 		(symbol "Cape_lib:A6983C50QTR"
 			(exclude_from_sim no)
@@ -3617,73 +3624,6 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 166.37 86.36 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "4e6e13a9-e069-455c-8f4b-19243feb506c")
-		(property "Reference" "#PWR0301"
-			(at 166.37 92.71 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 170.18 86.36 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Footprint" ""
-			(at 166.37 86.36 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 166.37 86.36 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 166.37 86.36 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "83d8c475-af83-46db-9aa5-0102ce4c6c15")
-		)
-		(instances
-			(project "BeagleBone-cape"
-				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/bd0b971e-2693-4cc8-ae48-079dcad29646"
-					(reference "#PWR0301")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
 		(at 195.58 105.41 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -5765,5 +5705,15 @@
 				)
 			)
 		)
+	)
+	(label "BUCK_OUT"
+		(at 166.37 86.36 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "db49975d-6d5d-465f-87bb-89b97f1fcf0e")
 	)
 )
