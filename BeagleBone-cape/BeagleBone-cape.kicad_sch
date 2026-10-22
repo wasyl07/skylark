@@ -8942,16 +8942,6 @@
 		)
 		(uuid "6f738cb2-073b-4399-b775-1a540387c7dd")
 	)
-	(label "GPIO15"
-		(at 299.72 180.34 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "6f7a81e1-b1dc-46c4-9121-bca992f5fcb7")
-	)
 	(label "SPI1.D0"
 		(at 248.92 187.96 0)
 		(effects
@@ -9232,7 +9222,7 @@
 		)
 		(uuid "a128f7c1-d4fd-4a1b-b320-a71183736201")
 	)
-	(label "CAN-"
+	(label "CANL"
 		(at 551.18 74.93 180)
 		(effects
 			(font
@@ -9381,16 +9371,6 @@
 			(justify left bottom)
 		)
 		(uuid "bc945351-64a4-4561-a076-42e8b6338e61")
-	)
-	(label "GPIO14"
-		(at 299.72 182.88 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "be2ee675-680e-4a39-bc04-10d9cd671473")
 	)
 	(label "SERVO_2"
 		(at 513.08 232.41 180)
@@ -9702,7 +9682,7 @@
 		)
 		(uuid "f33cf5b1-ec6f-4302-8a10-fb8385e64925")
 	)
-	(label "CAN+"
+	(label "CANH"
 		(at 551.18 91.44 180)
 		(effects
 			(font
@@ -12972,72 +12952,6 @@
 			(project "BeagleBone-cape"
 				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
 					(reference "C17")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:PWR_FLAG")
-		(at 340.36 388.62 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "59cc5231-6d3c-42df-a374-0d228e7a5c9b")
-		(property "Reference" "#FLG0106"
-			(at 340.36 386.715 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "PWR_FLAG"
-			(at 340.36 383.54 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 340.36 388.62 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 340.36 388.62 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Special symbol for telling ERC where power comes from"
-			(at 340.36 388.62 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "fb285354-718b-4400-9336-2a1c74cf52c9")
-		)
-		(instances
-			(project "BeagleBone-cape"
-				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
-					(reference "#FLG0106")
 					(unit 1)
 				)
 			)
@@ -19299,6 +19213,72 @@
 			(project "BeagleBone-cape"
 				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
 					(page "3")
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:PWR_FLAG")
+		(at 340.36 388.62 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "59cc5231-6d3c-42df-a374-0d228e7a5c9b")
+		(property "Reference" "#FLG0106"
+			(at 340.36 386.715 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "PWR_FLAG"
+			(at 340.36 383.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 340.36 388.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 340.36 388.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Special symbol for telling ERC where power comes from"
+			(at 340.36 388.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "fb285354-718b-4400-9336-2a1c74cf52c9")
+		)
+		(instances
+			(project "BeagleBone-cape"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+					(reference "#FLG0106")
+					(unit 1)
 				)
 			)
 		)

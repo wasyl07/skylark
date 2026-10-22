@@ -4,7 +4,7 @@
 (schematic part) are DONE in the committed schematic/PCB. Items 33 and 30 are partly done.
 Remaining: PCB routing (52 unconnected pads, see 19 and 38), R27/R18 courtyard overlap,
 and the open redesigns #21-24. Current DRC on the committed PCB (5ae1013d): 83 violations,
-52 unconnected, not yet reviewed. ERC: 67 items, all cosmetic or pre-existing.
+52 unconnected, not yet reviewed. ERC (2026-10-22): 62 items, all cosmetic or pre-existing.
 
 Open issues found while reviewing the Skylark cape (KiCad project `BeagleBone-cape/`).
 Reviews done 2026-10-10 and 2026-10-12 against KiCad 9.0.9, the BBB System Reference
@@ -197,15 +197,16 @@ zones in the GUI (headless ZONE_FILLER segfaults); add a stitching via or remove
 the island.
 
 ### 19. DRC summary — PARTLY DONE (2026-10-22 analysis pass)
-Current DRC on the working-tree PCB (kicad-cli, schematic parity): 52 violations, 3 unconnected
-(routing to-do, see #38), 42 clearance, 3 silk_overlap, 1 silk_over_copper, 6 lib_footprint_mismatch.
+Current DRC on the working-tree PCB (kicad-cli, schematic parity, 2026-10-22): 14 violations,
+3 unconnected (routing to-do, see #38), 4 clearance, 3 silk_overlap, 1 silk_over_copper,
+6 lib_footprint_mismatch.
 Removed on 2026-10-22: dangling +24V via pair at (121.92/122.52, 87.16) with its stub; dangling
 SPI1.SCLK stubs at (153.45, 87.53-87.57) F.Cu and (153.54, 87.70) In2.Cu.
+Netclass default clearance 0.20 -> 0.127 mm in BeagleBone-cape.kicad_pro; this
+cleared the 38 SMD pad-pitch errors on U1/U2/U4 (JLCPCB 5 mil minimum).
 Still open:
-- Clearance (42): U2/U4/U1 SPI1 pad pitch is 0.15 mm against the 0.20 mm netclass rule. Decide:
-  widen the rule for these nets or move the pads/fab minimum check (see #38).
-- Via [/PGOOD] at (118.31, 84.27): 0.00 mm to zones [+3V3] on B.Cu and [+5V] on In2.Cu. Probably a
-  stale zone fill. Refill all zones in KiCad, then re-check; if still 0 mm, move the via.
+- Via [/PGOOD] at (118.31, 84.27): 0.00 mm to zones [+3V3] on B.Cu and [+5V] on In2.Cu (4 clearance
+  errors). Probably a stale zone fill. Fill all zones in KiCad, then re-check; if still 0 mm, move the via.
 - Silk overlaps: R25/C4, R26/TP17, R26 silk over mask. Cosmetic, check visually.
 - lib_footprint_mismatch (6): footprint copies differ from libraries (P8/P9 headers, D2, Q1, U6, Y1).
 
@@ -305,8 +306,9 @@ diode.
 - R7 (120 ohm) is fixed. If the cape is not at the end of the bus it adds a third
   terminator. Use a solder jumper (CAN-03 is still open).
 - The nets are named FDCAN_TX/RX, but AM335x DCAN1 is classic CAN 2.0B only (the
-  TCAN3413 supports FD, the SoC does not). ERC also reports merged names
-  FDCAN_RX/GPIO15, FDCAN_TX/GPIO14, CAN-/CANL, CAN+/CANH.
+  TCAN3413 supports FD, the SoC does not). Merged net names
+  (FDCAN_RX/GPIO15, FDCAN_TX/GPIO14, CAN-/CANL, CAN+/CANH) were unified on 2026-10-22: GPIO14/15
+  labels removed, CAN-/CAN+ renamed CANL/CANH. Run Update PCB from Schematic to rename the PCB nets.
 - Verified OK: P9.24 = dcan1_rx and P9.26 = dcan1_tx (mode 2) into TCAN3413
   RXD/TXD; VCC/VIO = 3.3 V; STB tied low (always normal mode); SZNUP2105L ESD on
   the bus.
@@ -382,7 +384,7 @@ power-good LED.
 
 ### Low
 
-### 33. Schematic hygiene — PARTLY DONE (2026-10-18: P8.40 no-connect, labels, title blocks; 67 ERC items left, 42 are label_dangling on unused headers)
+### 33. Schematic hygiene — PARTLY DONE (2026-10-18: P8.40 no-connect, labels, title blocks; 2026-10-22: multiple_net_names fixed; ERC 62 items, 40 are label_dangling on unused headers, 2 pin_to_pin (#FLG0106 is the only GND driver, shares the net with U2/U4 SDx), rest lib_symbol_mismatch)
 ERC 2026-10-12: 198 items, of which 48 `label_dangling` (mostly labels on unused
 header pins, acceptable), 13 `unconnected_wire_endpoint` (12 EEPROM stubs, #4,
 and a 19 mm horizontal wire at (361.95, 166.37)), P8.40 `pin_not_connected` (add a
