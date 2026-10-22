@@ -2194,7 +2194,7 @@
 	)
 	(wire
 		(pts
-			(xy 163.83 86.36) (xy 166.37 86.36)
+			(xy 163.83 86.36) (xy 176.53 86.36)
 		)
 		(stroke
 			(width 0)
@@ -2861,6 +2861,16 @@
 			(justify left bottom)
 		)
 		(uuid "3d21d089-5bab-4614-a49b-182aaf8fb1d3")
+	)
+	(label "BUCK_OUT"
+		(at 176.53 86.36 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "db49975d-6d5d-465f-87bb-89b97f1fcf0e")
 	)
 	(hierarchical_label "+5V"
 		(shape output)
@@ -5705,15 +5715,5 @@
 				)
 			)
 		)
-	)
-	(label "BUCK_OUT"
-		(at 166.37 86.36 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "db49975d-6d5d-465f-87bb-89b97f1fcf0e")
 	)
 )
