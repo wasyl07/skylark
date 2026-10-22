@@ -39,12 +39,11 @@ As routed the two nets are shorted on F.Cu. Reroute or swap the nets so INT1 goe
 and INT2 to P9.16 (or swap the header pins in the schematic), then re-run DRC.
 
 ### 21. 24 V input has no protection and too little input capacitance — PARTLY DONE (schematic, 2026-10-22)
-Schematic now: J12 -> F1 (2 A 63 V, 1206, Littelfuse 0466002.NRHF) -> `VIN_F` -> Q3 (AOD4185L
-P-FET reverse protection, gate zener D8 BZT52C12, R29 100k) -> +24V; D7 SMBJ33CA bidirectional TVS
+Schematic now: J12 -> F1 (2 A 63 V, 1206, Littelfuse 0466002.NRHF) -> `VIN_F` -> Q3 (LRC S-LP03N060TZHG,
+-60 V 2.8 A 170 mR P-FET in SOT-223, LCSC C5200150, reverse protection, gate zener D8 BZT52C12, R29 100k) -> +24V; D7 SMBJ33CA bidirectional TVS
 on `VIN_F`; C12 10 uF 50 V 1206; C31 100 uF 50 V electrolytic after Q3 (place next to J12).
 Still open: EN/UVLO divider (depends on cell count, PWR-01 TBD); the TVS clamps ~53 V at full
-pulse current (above the 42 V abs max, the bulk cap absorbs most hot-plug ringing); Q3 is only
-rated -40 V (SQD50P06-15L is a -60 V drop-in, no LCSC number found); F1 is a fast fuse, check
+pulse current (above the 42 V abs max, the bulk cap absorbs most hot-plug ringing); Q3's datasheet Vgs max is unconfirmed (the 12 V zener D8 limits Vgs); F1 is a fast fuse, check
 I2t against inrush and that it does not limit the 3 A output at low input voltage; PCB not
 updated. Original analysis:
 Power sheet: J12 -> F1 (1812, no rating, no part) -> +24V -> A6983 VIN. There is
@@ -321,7 +320,7 @@ BMI270 (different footprint and pinout, not a drop-in).
 ## PCB follow-up for the 2026-10-22 schematic changes
 
 Run Update PCB from Schematic (adds Q3, D7, D8, R29, C31, C32, C33, C34, R28, JP1; swaps F1
-1812 -> 1206, C12 0603 -> 1206, J11 2P -> 3P; renames `/FDCAN_*` -> `/CAN_*` and `CAN-/CAN+` ->
+1812 -> 1206, Q3 TO-252 -> SOT-223 (pins G=1, D=2/tab, S=3), C12 0603 -> 1206, J11 2P -> 3P; renames `/FDCAN_*` -> `/CAN_*` and `CAN-/CAN+` ->
 `CANL/CANH`; creates nets `/Power/VIN_F`, `Net-(D8-A)`, `Net-(JP1-B)`). Then:
 - D7, Q3, D8, R29, C31 between J12/F1 and the buck; reroute F1 -> Q3 drain and Q3 source ->
   +24V (Q3 needs copper area on its tab); C33/C34 beside C14-C16; C32 at the servo connectors;

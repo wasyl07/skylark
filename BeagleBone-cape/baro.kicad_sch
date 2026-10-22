@@ -1192,7 +1192,7 @@
 	)
 	(wire
 		(pts
-			(xy 104.14 104.14) (xy 118.11 104.14)
+			(xy 104.14 104.14) (xy 137.16 104.14)
 		)
 		(stroke
 			(width 0)
@@ -1229,16 +1229,6 @@
 			(type solid)
 		)
 		(uuid "f9abe49f-9fba-4aca-80ae-92ff9a08e442")
-	)
-	(wire
-		(pts
-			(xy 118.11 104.14) (xy 137.16 104.14)
-		)
-		(stroke
-			(width 0)
-			(type solid)
-		)
-		(uuid "ff6d5de3-8077-4dad-916d-49d4cce4c6bd")
 	)
 	(hierarchical_label "I2C1.SDA"
 		(shape input)
