@@ -935,12 +935,6 @@
 		(uuid "70719e39-401a-423d-a6e0-733fbc8cda78")
 	)
 	(junction
-		(at 151.13 73.66)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "0032abf8-1d26-49c1-a798-1d906c76211d")
-	)
-	(junction
 		(at 152.4 76.2)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -963,18 +957,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "51da5da6-a65c-400a-8c27-0cf05245178d")
-	)
-	(junction
-		(at 149.86 82.55)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "68f678e9-e95e-4f71-9751-5ee73907440f")
-	)
-	(junction
-		(at 118.11 104.14)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "8480449e-68ff-47e1-bc04-5718a1cf4064")
 	)
 	(junction
 		(at 152.4 121.92)
@@ -1000,16 +982,6 @@
 	)
 	(wire
 		(pts
-			(xy 118.11 102.87) (xy 118.11 104.14)
-		)
-		(stroke
-			(width 0)
-			(type solid)
-		)
-		(uuid "0dcb5d76-a053-46c3-9990-8d090d33adce")
-	)
-	(wire
-		(pts
 			(xy 149.86 82.55) (xy 149.86 83.82)
 		)
 		(stroke
@@ -1017,16 +989,6 @@
 			(type solid)
 		)
 		(uuid "130fc3d3-5ee4-42b2-b4c3-198ba2617aa1")
-	)
-	(wire
-		(pts
-			(xy 149.86 73.66) (xy 149.86 76.2)
-		)
-		(stroke
-			(width 0)
-			(type solid)
-		)
-		(uuid "25cd0f17-c858-4c54-8e32-4c66a1b48bf7")
 	)
 	(wire
 		(pts
@@ -1070,16 +1032,6 @@
 	)
 	(wire
 		(pts
-			(xy 118.11 96.52) (xy 118.11 97.79)
-		)
-		(stroke
-			(width 0)
-			(type solid)
-		)
-		(uuid "411274f1-b347-4706-b94c-c72d276223c6")
-	)
-	(wire
-		(pts
 			(xy 152.4 76.2) (xy 156.21 76.2)
 		)
 		(stroke
@@ -1117,16 +1069,6 @@
 			(type default)
 		)
 		(uuid "53db65b5-cf2b-41cb-8714-7e73f141e6ba")
-	)
-	(wire
-		(pts
-			(xy 149.86 81.28) (xy 149.86 82.55)
-		)
-		(stroke
-			(width 0)
-			(type solid)
-		)
-		(uuid "7544930b-60b4-4560-996f-f6046366f2e1")
 	)
 	(wire
 		(pts
@@ -1287,16 +1229,6 @@
 			(type solid)
 		)
 		(uuid "f9abe49f-9fba-4aca-80ae-92ff9a08e442")
-	)
-	(wire
-		(pts
-			(xy 149.86 73.66) (xy 151.13 73.66)
-		)
-		(stroke
-			(width 0)
-			(type solid)
-		)
-		(uuid "fbe89ac6-61b1-43c3-95f0-e1923b83d5ba")
 	)
 	(wire
 		(pts
@@ -1659,7 +1591,7 @@
 				(hide yes)
 			)
 		)
-		(property "LSCS Part Number" "C14663"
+		(property "LCSC" "C14663"
 			(at 156.21 81.28 0)
 			(effects
 				(font
@@ -1696,71 +1628,6 @@
 			(project "BeagleBone-cape"
 				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/2d4b562a-5282-4d05-bf33-b22b7d23c06c"
 					(reference "C2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:+3V3")
-		(at 118.11 96.52 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "3268f0f0-41cd-4605-b978-39e5eae16bcd")
-		(property "Reference" "#PWR064"
-			(at 118.11 100.33 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "+3V3"
-			(at 117.348 92.71 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 118.11 96.52 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 118.11 96.52 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+1V8\""
-			(at 118.11 96.52 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "611ce874-70d2-400f-9ba9-a2100722b218")
-		)
-		(instances
-			(project "BeagleBone-cape"
-				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/2d4b562a-5282-4d05-bf33-b22b7d23c06c"
-					(reference "#PWR064")
 					(unit 1)
 				)
 			)
@@ -1826,103 +1693,6 @@
 			(project "BeagleBone-cape"
 				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/2d4b562a-5282-4d05-bf33-b22b7d23c06c"
 					(reference "#PWR0113")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R_Small")
-		(at 118.11 100.33 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board no)
-		(dnp yes)
-		(fields_autoplaced yes)
-		(uuid "43ee0b3c-c7d4-41bc-b035-bbae7d2694fd")
-		(property "Reference" "R8"
-			(at 120.65 99.0599 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "4k7"
-			(at 120.65 101.5999 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
-			(at 118.11 100.33 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 118.11 100.33 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Resistor, small symbol"
-			(at 118.11 100.33 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LSCS Part Number" "C99782"
-			(at 118.11 100.33 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Link" "https://www.lcsc.com/product-detail/C99782.html"
-			(at 118.11 100.33 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer_Part_Number" "RC0603FR-074K7L"
-			(at 118.11 100.33 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "a91c1df1-cbbe-4547-860d-bd49e56d0587")
-		)
-		(pin "1"
-			(uuid "58e78117-1fc2-4f62-9e57-6c98e2075b9e")
-		)
-		(instances
-			(project "BeagleBone-cape"
-				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/2d4b562a-5282-4d05-bf33-b22b7d23c06c"
-					(reference "R8")
 					(unit 1)
 				)
 			)
@@ -2192,102 +1962,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R_Small")
-		(at 149.86 78.74 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board no)
-		(dnp yes)
-		(uuid "c70d1c5f-6c28-4a90-99eb-c47335d514ba")
-		(property "Reference" "R9"
-			(at 144.272 77.47 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "4k7"
-			(at 144.272 80.01 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
-			(at 149.86 78.74 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 149.86 78.74 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Resistor, small symbol"
-			(at 149.86 78.74 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LSCS Part Number" "C99782"
-			(at 149.86 78.74 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Link" "https://www.lcsc.com/product-detail/C99782.html"
-			(at 149.86 78.74 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer_Part_Number" "RC0603FR-074K7L"
-			(at 149.86 78.74 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "f0fd8a94-d660-4739-8b60-30f0866b1729")
-		)
-		(pin "1"
-			(uuid "a2e3097b-13e0-4df2-accc-076515661606")
-		)
-		(instances
-			(project "BeagleBone-cape"
-				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/2d4b562a-5282-4d05-bf33-b22b7d23c06c"
-					(reference "R9")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:+3V3")
 		(at 151.13 72.39 0)
 		(unit 1)
@@ -2407,7 +2081,7 @@
 				(hide yes)
 			)
 		)
-		(property "LSCS Part Number" "C14663"
+		(property "LCSC" "C14663"
 			(at 171.45 81.28 0)
 			(effects
 				(font
@@ -2575,7 +2249,7 @@
 				(hide yes)
 			)
 		)
-		(property "LSCS Part Number" "C779278"
+		(property "LCSC" "C779278"
 			(at 137.16 101.6 0)
 			(effects
 				(font

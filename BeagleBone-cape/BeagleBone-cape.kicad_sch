@@ -12,256 +12,6 @@
 		(comment 1 "P8/P9 headers, sensors, CAN, RTC, servo/motor outputs")
 	)
 	(lib_symbols
-		(symbol "+5V_1"
-			(power)
-			(pin_numbers
-				(hide yes)
-			)
-			(pin_names
-				(offset 0)
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "#PWR"
-				(at 0 -3.81 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Value" "+5V"
-				(at 0 3.556 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "Power symbol creates a global label with name \"+5V\""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "global power"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "+5V_1_0_1"
-				(polyline
-					(pts
-						(xy -0.762 1.27) (xy 0 2.54)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 2.54) (xy 0.762 1.27)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 0) (xy 0 2.54)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "+5V_1_1_1"
-				(pin power_in line
-					(at 0 0 90)
-					(length 0)
-					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
-		(symbol "+5V_2"
-			(power)
-			(pin_numbers
-				(hide yes)
-			)
-			(pin_names
-				(offset 0)
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "#PWR"
-				(at 0 -3.81 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Value" "+5V"
-				(at 0 3.556 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "Power symbol creates a global label with name \"+5V\""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "global power"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "+5V_2_0_1"
-				(polyline
-					(pts
-						(xy -0.762 1.27) (xy 0 2.54)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 2.54) (xy 0.762 1.27)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 0) (xy 0 2.54)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "+5V_2_1_1"
-				(pin power_in line
-					(at 0 0 90)
-					(length 0)
-					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "Cape_lib:TCAN3413DDFR"
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -3513,6 +3263,15 @@
 					(hide yes)
 				)
 			)
+			(property "Sim.Pins" "1=K 2=A"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
 			(property "ki_keywords" "LED diode light-emitting-diode"
 				(at 0 0 0)
 				(effects
@@ -3645,21 +3404,19 @@
 			(in_bom yes)
 			(on_board yes)
 			(property "Reference" "R"
-				(at 0.762 0.508 0)
+				(at 0 0 90)
 				(effects
 					(font
-						(size 1.27 1.27)
+						(size 1.016 1.016)
 					)
-					(justify left)
 				)
 			)
 			(property "Value" "R_Small"
-				(at 0.762 -1.016 0)
+				(at 1.778 0 90)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left)
 				)
 			)
 			(property "Footprint" ""
@@ -4007,256 +3764,6 @@
 					(at 2.54 5.08 270)
 					(length 2.54)
 					(name "K"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
-		(symbol "R_Small_1"
-			(pin_numbers
-				(hide yes)
-			)
-			(pin_names
-				(offset 0.254)
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "R"
-				(at 0 0 90)
-				(effects
-					(font
-						(size 1.016 1.016)
-					)
-				)
-			)
-			(property "Value" "R_Small"
-				(at 1.778 0 90)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "~"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "Resistor, small symbol"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "R resistor"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_fp_filters" "R_*"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "R_Small_1_0_1"
-				(rectangle
-					(start -0.762 1.778)
-					(end 0.762 -1.778)
-					(stroke
-						(width 0.2032)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "R_Small_1_1_1"
-				(pin passive line
-					(at 0 2.54 270)
-					(length 0.762)
-					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 0 -2.54 90)
-					(length 0.762)
-					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
-		(symbol "R_Small_2"
-			(pin_numbers
-				(hide yes)
-			)
-			(pin_names
-				(offset 0.254)
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "R"
-				(at 0 0 90)
-				(effects
-					(font
-						(size 1.016 1.016)
-					)
-				)
-			)
-			(property "Value" "R_Small"
-				(at 1.778 0 90)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "~"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "Resistor, small symbol"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "R resistor"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_fp_filters" "R_*"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "R_Small_2_0_1"
-				(rectangle
-					(start -0.762 1.778)
-					(end 0.762 -1.778)
-					(stroke
-						(width 0.2032)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "R_Small_2_1_1"
-				(pin passive line
-					(at 0 2.54 270)
-					(length 0.762)
-					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 0 -2.54 90)
-					(length 0.762)
-					(name "~"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -4788,128 +4295,6 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "power:+3.3V"
-			(power)
-			(pin_names
-				(offset 0)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "#PWR"
-				(at 0 -3.81 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Value" "+3.3V"
-				(at 0 3.556 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "Power symbol creates a global label with name \"+3.3V\""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "power-flag"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "+3.3V_0_1"
-				(polyline
-					(pts
-						(xy -0.762 1.27) (xy 0 2.54)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 2.54) (xy 0.762 1.27)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 0) (xy 0 2.54)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "+3.3V_1_1"
-				(pin power_in line
-					(at 0 0 90)
-					(length 0)
-					(hide yes)
-					(name "+3V3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "power:+3V3"
 			(power)
 			(pin_numbers
@@ -5037,8 +4422,12 @@
 		)
 		(symbol "power:+5V"
 			(power)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
 				(offset 0)
+				(hide yes)
 			)
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -5087,7 +4476,7 @@
 					(hide yes)
 				)
 			)
-			(property "ki_keywords" "power-flag"
+			(property "ki_keywords" "global power"
 				(at 0 0 0)
 				(effects
 					(font
@@ -5138,8 +4527,7 @@
 				(pin power_in line
 					(at 0 0 90)
 					(length 0)
-					(hide yes)
-					(name "+5V"
+					(name "~"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -5260,8 +4648,12 @@
 		)
 		(symbol "power:GNDA"
 			(power)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
 				(offset 0)
+				(hide yes)
 			)
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -5310,7 +4702,7 @@
 					(hide yes)
 				)
 			)
-			(property "ki_keywords" "power-flag"
+			(property "ki_keywords" "global power"
 				(at 0 0 0)
 				(effects
 					(font
@@ -5337,8 +4729,7 @@
 				(pin power_in line
 					(at 0 0 270)
 					(length 0)
-					(hide yes)
-					(name "GNDA"
+					(name "~"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -5452,6 +4843,608 @@
 					)
 					(fill
 						(type none)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "Device:C_Polarized_Small"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0.254)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "C"
+				(at 0.254 1.778 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "C_Polarized_Small"
+				(at 0.254 -2.032 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Polarized capacitor, small symbol"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "cap capacitor"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "CP_*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "C_Polarized_Small_0_1"
+				(rectangle
+					(start -1.524 0.6858)
+					(end 1.524 0.3048)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -1.524 -0.3048)
+					(end 1.524 -0.6858)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.27 1.524) (xy -0.762 1.524)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.016 1.27) (xy -1.016 1.778)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "C_Polarized_Small_1_1"
+				(pin passive line
+					(at 0 2.54 270)
+					(length 1.8542)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -2.54 90)
+					(length 1.8542)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "Jumper:SolderJumper_2_Bridged"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom no)
+			(on_board yes)
+			(property "Reference" "JP"
+				(at 0 2.032 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "SolderJumper_2_Bridged"
+				(at 0 -2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Solder Jumper, 2-pole, closed/bridged"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "solder jumper SPST"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "SolderJumper*Bridged*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "SolderJumper_2_Bridged_0_1"
+				(rectangle
+					(start -0.508 0.508)
+					(end 0.508 -0.508)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.254 1.016) (xy -0.254 -1.016)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start -0.254 -1.016)
+					(mid -1.2656 0)
+					(end -0.254 1.016)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start -0.254 -1.016)
+					(mid -1.2656 0)
+					(end -0.254 1.016)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(arc
+					(start 0.254 1.016)
+					(mid 1.2656 0)
+					(end 0.254 -1.016)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 0.254 1.016)
+					(mid 1.2656 0)
+					(end 0.254 -1.016)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.254 1.016) (xy 0.254 -1.016)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "SolderJumper_2_Bridged_1_1"
+				(pin passive line
+					(at -3.81 0 0)
+					(length 2.54)
+					(name "A"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 3.81 0 180)
+					(length 2.54)
+					(name "B"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "Connector:Screw_Terminal_01x03"
+			(pin_names
+				(offset 1.016)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "J"
+				(at 0 5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "Screw_Terminal_01x03"
+				(at 0 -5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Generic screw terminal, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "screw terminal"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "TerminalBlock*:*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "Screw_Terminal_01x03_1_1"
+				(rectangle
+					(start -1.27 3.81)
+					(end 1.27 -3.81)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.5334 2.8702) (xy 0.3302 2.032)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.5334 0.3302) (xy 0.3302 -0.508)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.5334 -2.2098) (xy 0.3302 -3.048)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.3556 3.048) (xy 0.508 2.2098)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.3556 0.508) (xy 0.508 -0.3302)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.3556 -2.032) (xy 0.508 -2.8702)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 0 2.54)
+					(radius 0.635)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 0 0)
+					(radius 0.635)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 0 -2.54)
+					(radius 0.635)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at -5.08 2.54 0)
+					(length 3.81)
+					(name "Pin_1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 0 0)
+					(length 3.81)
+					(name "Pin_2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 -2.54 0)
+					(length 3.81)
+					(name "Pin_3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
 					)
 				)
 			)
@@ -5861,16 +5854,6 @@
 			(type solid)
 		)
 		(uuid "11a32558-1bce-4b42-ab8f-e34db6ad68a1")
-	)
-	(wire
-		(pts
-			(xy 502.92 74.93) (xy 502.92 82.55)
-		)
-		(stroke
-			(width 0)
-			(type solid)
-		)
-		(uuid "11fed4ee-c402-4699-b417-1282ccca2ec5")
 	)
 	(wire
 		(pts
@@ -6784,16 +6767,6 @@
 	)
 	(wire
 		(pts
-			(xy 521.97 74.93) (xy 521.97 81.28)
-		)
-		(stroke
-			(width 0)
-			(type solid)
-		)
-		(uuid "5827a6ad-3873-47db-9f3e-eb9d4c89b63b")
-	)
-	(wire
-		(pts
 			(xy 565.15 27.94) (xy 565.15 49.53)
 		)
 		(stroke
@@ -7624,16 +7597,6 @@
 	)
 	(wire
 		(pts
-			(xy 502.92 74.93) (xy 521.97 74.93)
-		)
-		(stroke
-			(width 0)
-			(type solid)
-		)
-		(uuid "afc7ae09-0ee8-4231-87b9-f0ed9b9a1f41")
-	)
-	(wire
-		(pts
 			(xy 238.76 156.21) (xy 238.76 157.48)
 		)
 		(stroke
@@ -8274,16 +8237,6 @@
 	)
 	(wire
 		(pts
-			(xy 521.97 86.36) (xy 521.97 91.44)
-		)
-		(stroke
-			(width 0)
-			(type solid)
-		)
-		(uuid "ea32c3e2-1bfb-4a82-8cda-85854a03ddfb")
-	)
-	(wire
-		(pts
 			(xy 529.59 210.82) (xy 530.86 210.82)
 		)
 		(stroke
@@ -8652,7 +8605,7 @@
 		)
 		(uuid "1d523cb6-e3b8-4db0-98a1-3e8d7d6d0ae6")
 	)
-	(label "FDCAN_RX"
+	(label "CAN_RX"
 		(at 491.49 52.07 0)
 		(effects
 			(font
@@ -8712,7 +8665,7 @@
 		)
 		(uuid "322540bf-0d4a-41f5-9c9c-e36bd33dafc8")
 	)
-	(label "FDCAN_RX"
+	(label "CAN_RX"
 		(at 311.15 180.34 180)
 		(effects
 			(font
@@ -9142,7 +9095,7 @@
 		)
 		(uuid "92912d2f-7358-4b5c-b842-48a3431720fd")
 	)
-	(label "FDCAN_TX"
+	(label "CAN_TX"
 		(at 491.49 44.45 0)
 		(effects
 			(font
@@ -9312,7 +9265,7 @@
 		)
 		(uuid "b3c8ecc3-aaba-4455-b06b-0303805edc9e")
 	)
-	(label "FDCAN_TX"
+	(label "CAN_TX"
 		(at 311.15 182.88 180)
 		(effects
 			(font
@@ -9776,7 +9729,7 @@
 		)
 	)
 	(symbol
-		(lib_id "power:+3.3V")
+		(lib_id "power:+3V3")
 		(at 288.29 147.32 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -9904,7 +9857,7 @@
 		)
 	)
 	(symbol
-		(lib_id "power:+3.3V")
+		(lib_id "power:+3V3")
 		(at 262.89 147.32 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -10083,7 +10036,7 @@
 				(hide yes)
 			)
 		)
-		(property "LSCS Part Number" ""
+		(property "LCSC" ""
 			(at 273.05 180.34 0)
 			(effects
 				(font
@@ -10300,7 +10253,7 @@
 				(hide yes)
 			)
 		)
-		(property "LSCS Part Number" ""
+		(property "LCSC" ""
 			(at 347.98 179.07 0)
 			(effects
 				(font
@@ -10596,7 +10549,7 @@
 		)
 	)
 	(symbol
-		(lib_id "power:+3.3V")
+		(lib_id "power:+3V3")
 		(at 228.6 34.29 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -10805,7 +10758,7 @@
 				)
 			)
 		)
-		(property "Value" "Servo 2"
+		(property "Value" "Servo 1"
 			(at 527.685 203.2 0)
 			(effects
 				(font
@@ -10840,7 +10793,7 @@
 				(hide yes)
 			)
 		)
-		(property "LSCS Part Number" ""
+		(property "LCSC" ""
 			(at 524.51 208.28 0)
 			(effects
 				(font
@@ -11060,7 +11013,7 @@
 				(hide yes)
 			)
 		)
-		(property "LSCS Part Number" "C32346"
+		(property "LCSC" "C32346"
 			(at 331.47 76.2 90)
 			(effects
 				(font
@@ -11154,7 +11107,7 @@
 				(hide yes)
 			)
 		)
-		(property "LSCS Part Number" ""
+		(property "LCSC" ""
 			(at 510.54 264.16 0)
 			(effects
 				(font
@@ -11321,7 +11274,6 @@
 		)
 	)
 	(symbol
-		(lib_name "R_Small_2")
 		(lib_id "Device:R_Small")
 		(at 234.95 40.64 0)
 		(unit 1)
@@ -11375,7 +11327,7 @@
 				(hide yes)
 			)
 		)
-		(property "LSCS Part Number" "C99782"
+		(property "LCSC" "C99782"
 			(at 234.95 40.64 0)
 			(effects
 				(font
@@ -11502,7 +11454,7 @@
 				)
 			)
 		)
-		(property "Value" "420"
+		(property "Value" "470"
 			(at 515.62 134.62 90)
 			(effects
 				(font
@@ -11537,7 +11489,7 @@
 				(hide yes)
 			)
 		)
-		(property "LSCS Part Number" ""
+		(property "LCSC" "C23179"
 			(at 515.62 137.16 90)
 			(effects
 				(font
@@ -11546,8 +11498,17 @@
 				(hide yes)
 			)
 		)
-		(property "Link" ""
+		(property "Link" "https://www.lcsc.com/product-detail/C23179.html"
 			(at 515.62 137.16 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Part_Number" "0603WAF4700T5E"
+			(at 515.62 137.16 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11639,7 +11600,6 @@
 		)
 	)
 	(symbol
-		(lib_name "R_Small_1")
 		(lib_id "Device:R_Small")
 		(at 364.49 67.31 0)
 		(unit 1)
@@ -11693,7 +11653,7 @@
 				(hide yes)
 			)
 		)
-		(property "LSCS Part Number" "C14675"
+		(property "LCSC" "C14675"
 			(at 364.49 67.31 0)
 			(effects
 				(font
@@ -11925,7 +11885,7 @@
 				(hide yes)
 			)
 		)
-		(property "LSCS Part Number" "C30111221"
+		(property "LCSC" "C30111221"
 			(at 501.65 44.45 0)
 			(effects
 				(font
@@ -12109,7 +12069,6 @@
 		)
 	)
 	(symbol
-		(lib_name "+5V_1")
 		(lib_id "power:+5V")
 		(at 543.56 254 0)
 		(unit 1)
@@ -12243,7 +12202,6 @@
 		)
 	)
 	(symbol
-		(lib_name "+5V_2")
 		(lib_id "power:+5V")
 		(at 345.44 48.26 0)
 		(unit 1)
@@ -12510,7 +12468,6 @@
 		)
 	)
 	(symbol
-		(lib_name "+5V_1")
 		(lib_id "power:+5V")
 		(at 485.14 242.57 0)
 		(unit 1)
@@ -12695,7 +12652,7 @@
 				(hide yes)
 			)
 		)
-		(property "LSCS Part Number" ""
+		(property "LCSC" ""
 			(at 199.39 391.16 0)
 			(effects
 				(font
@@ -12729,7 +12686,6 @@
 		)
 	)
 	(symbol
-		(lib_name "+5V_1")
 		(lib_id "power:+5V")
 		(at 309.88 388.62 0)
 		(unit 1)
@@ -12915,7 +12871,7 @@
 				(hide yes)
 			)
 		)
-		(property "LSCS Part Number" "C14663"
+		(property "LCSC" "C14663"
 			(at 342.9 53.34 0)
 			(effects
 				(font
@@ -12958,7 +12914,6 @@
 		)
 	)
 	(symbol
-		(lib_name "+5V_2")
 		(lib_id "power:+5V")
 		(at 364.49 62.23 0)
 		(unit 1)
@@ -13358,8 +13313,8 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector:Screw_Terminal_01x02")
-		(at 497.84 85.09 180)
+		(lib_id "Connector:Screw_Terminal_01x03")
+		(at 497.84 82.55 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -13368,7 +13323,7 @@
 		(fields_autoplaced yes)
 		(uuid "5ef33eeb-9bbf-4ba9-a034-e51cfad84371")
 		(property "Reference" "J11"
-			(at 497.84 76.2 0)
+			(at 497.84 73.66 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13376,15 +13331,15 @@
 			)
 		)
 		(property "Value" "CAN"
-			(at 497.84 78.74 0)
+			(at 497.84 76.2 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Footprint" "TerminalBlock:TerminalBlock_Xinya_XY308-2.54-2P_1x02_P2.54mm_Horizontal"
-			(at 497.84 85.09 0)
+		(property "Footprint" "TerminalBlock:TerminalBlock_Xinya_XY308-2.54-3P_1x03_P2.54mm_Horizontal"
+			(at 497.84 82.55 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13393,7 +13348,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 497.84 85.09 0)
+			(at 497.84 82.55 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13401,8 +13356,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Generic screw terminal, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 497.84 85.09 0)
+		(property "Description" "Generic screw terminal, single row, 01x03. CAN: 1 = CANH, 2 = CANL, 3 = GND"
+			(at 497.84 82.55 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13410,8 +13365,8 @@
 				(hide yes)
 			)
 		)
-		(property "LSCS Part Number" ""
-			(at 497.84 85.09 0)
+		(property "LCSC" ""
+			(at 497.84 82.55 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13420,7 +13375,7 @@
 			)
 		)
 		(property "Link" ""
-			(at 497.84 85.09 0)
+			(at 497.84 82.55 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13433,6 +13388,9 @@
 		)
 		(pin "1"
 			(uuid "f68cde06-ea63-4061-8356-7d58c4cdd7bd")
+		)
+		(pin "3"
+			(uuid "692fd529-5a21-4697-a88c-6f0f13170f8f")
 		)
 		(instances
 			(project "BeagleBone-cape"
@@ -13840,7 +13798,6 @@
 		)
 	)
 	(symbol
-		(lib_name "+5V_1")
 		(lib_id "power:+5V")
 		(at 532.13 226.06 0)
 		(unit 1)
@@ -13907,7 +13864,6 @@
 		)
 	)
 	(symbol
-		(lib_name "+5V_1")
 		(lib_id "power:+5V")
 		(at 139.7 290.83 0)
 		(unit 1)
@@ -14039,7 +13995,6 @@
 		)
 	)
 	(symbol
-		(lib_name "R_Small_2")
 		(lib_id "Device:R_Small")
 		(at 228.6 40.64 0)
 		(unit 1)
@@ -14093,7 +14048,7 @@
 				(hide yes)
 			)
 		)
-		(property "LSCS Part Number" "C99782"
+		(property "LCSC" "C99782"
 			(at 228.6 40.64 0)
 			(effects
 				(font
@@ -14136,7 +14091,6 @@
 		)
 	)
 	(symbol
-		(lib_name "+5V_1")
 		(lib_id "power:+5V")
 		(at 139.7 266.7 0)
 		(unit 1)
@@ -14256,7 +14210,7 @@
 				(hide yes)
 			)
 		)
-		(property "LSCS Part Number" "C233494"
+		(property "LCSC" "C233494"
 			(at 535.94 83.82 90)
 			(effects
 				(font
@@ -14366,7 +14320,7 @@
 		)
 	)
 	(symbol
-		(lib_id "power:+3.3V")
+		(lib_id "power:+3V3")
 		(at 252.73 34.29 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -14484,7 +14438,7 @@
 				(hide yes)
 			)
 		)
-		(property "LSCS Part Number" "C82045"
+		(property "LCSC" "C82045"
 			(at 482.6 257.81 0)
 			(effects
 				(font
@@ -14782,7 +14736,7 @@
 				(hide yes)
 			)
 		)
-		(property "LSCS Part Number" ""
+		(property "LCSC" ""
 			(at 156.21 295.91 0)
 			(effects
 				(font
@@ -15008,7 +14962,7 @@
 				(hide yes)
 			)
 		)
-		(property "LSCS Part Number" "C14663"
+		(property "LCSC" "C14663"
 			(at 490.22 53.34 0)
 			(effects
 				(font
@@ -15434,7 +15388,7 @@
 				(hide yes)
 			)
 		)
-		(property "LSCS Part Number" "C26858"
+		(property "LCSC" "C26858"
 			(at 347.98 72.39 0)
 			(effects
 				(font
@@ -15614,7 +15568,7 @@
 				(hide yes)
 			)
 		)
-		(property "LSCS Part Number" ""
+		(property "LCSC" ""
 			(at 529.59 172.72 0)
 			(effects
 				(font
@@ -15648,7 +15602,6 @@
 		)
 	)
 	(symbol
-		(lib_name "+5V_1")
 		(lib_id "power:+5V")
 		(at 504.19 226.06 0)
 		(unit 1)
@@ -15834,7 +15787,7 @@
 				(hide yes)
 			)
 		)
-		(property "LSCS Part Number" ""
+		(property "LCSC" ""
 			(at 505.46 121.92 0)
 			(effects
 				(font
@@ -15885,7 +15838,7 @@
 				)
 			)
 		)
-		(property "Value" "420"
+		(property "Value" "100"
 			(at 515.62 119.38 90)
 			(effects
 				(font
@@ -15920,7 +15873,7 @@
 				(hide yes)
 			)
 		)
-		(property "LSCS Part Number" ""
+		(property "LCSC" "C105588"
 			(at 515.62 121.92 90)
 			(effects
 				(font
@@ -15929,8 +15882,17 @@
 				(hide yes)
 			)
 		)
-		(property "Link" ""
+		(property "Link" "https://www.lcsc.com/product-detail/C105588.html"
 			(at 515.62 121.92 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Part_Number" "RC0603FR-07100RL"
+			(at 515.62 121.92 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15954,7 +15916,6 @@
 		)
 	)
 	(symbol
-		(lib_name "+5V_1")
 		(lib_id "power:+5V")
 		(at 516.89 254 0)
 		(unit 1)
@@ -16072,7 +16033,7 @@
 				(hide yes)
 			)
 		)
-		(property "LSCS Part Number" ""
+		(property "LCSC" ""
 			(at 496.57 208.28 0)
 			(effects
 				(font
@@ -16175,7 +16136,7 @@
 		)
 	)
 	(symbol
-		(lib_id "power:+3.3V")
+		(lib_id "power:+3V3")
 		(at 246.38 34.29 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -16303,7 +16264,6 @@
 		)
 	)
 	(symbol
-		(lib_name "R_Small_2")
 		(lib_id "Device:R_Small")
 		(at 261.62 388.62 0)
 		(unit 1)
@@ -16357,7 +16317,7 @@
 				(hide yes)
 			)
 		)
-		(property "LSCS Part Number" "C98220"
+		(property "LCSC" "C98220"
 			(at 261.62 388.62 0)
 			(effects
 				(font
@@ -16517,7 +16477,7 @@
 				(hide yes)
 			)
 		)
-		(property "LSCS Part Number" ""
+		(property "LCSC" ""
 			(at 505.46 137.16 0)
 			(effects
 				(font
@@ -16602,7 +16562,7 @@
 				(hide yes)
 			)
 		)
-		(property "LSCS Part Number" ""
+		(property "LCSC" ""
 			(at 537.21 264.16 0)
 			(effects
 				(font
@@ -16827,7 +16787,7 @@
 				(hide yes)
 			)
 		)
-		(property "LSCS Part Number" ""
+		(property "LCSC" ""
 			(at 529.59 160.02 0)
 			(effects
 				(font
@@ -16861,7 +16821,6 @@
 		)
 	)
 	(symbol
-		(lib_name "R_Small_2")
 		(lib_id "Device:R_Small")
 		(at 468.63 261.62 0)
 		(unit 1)
@@ -16915,7 +16874,7 @@
 				(hide yes)
 			)
 		)
-		(property "LSCS Part Number" "C98220"
+		(property "LCSC" "C98220"
 			(at 468.63 261.62 0)
 			(effects
 				(font
@@ -17274,7 +17233,7 @@
 				(hide yes)
 			)
 		)
-		(property "LSCS Part Number" ""
+		(property "LCSC" ""
 			(at 524.51 234.95 0)
 			(effects
 				(font
@@ -17365,7 +17324,7 @@
 				(hide yes)
 			)
 		)
-		(property "LSCS Part Number" "C76871"
+		(property "LCSC" "C76871"
 			(at 487.68 247.65 0)
 			(effects
 				(font
@@ -17462,7 +17421,7 @@
 				(hide yes)
 			)
 		)
-		(property "LSCS Part Number" ""
+		(property "LCSC" ""
 			(at 156.21 271.78 0)
 			(effects
 				(font
@@ -17700,7 +17659,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_Small")
-		(at 521.97 83.82 0)
+		(at 521.97 78.74 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -17708,7 +17667,7 @@
 		(dnp no)
 		(uuid "d8f59190-fcbf-4046-92d2-97b6058d0b84")
 		(property "Reference" "R7"
-			(at 522.986 82.55 0)
+			(at 522.986 77.47 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17717,7 +17676,7 @@
 			)
 		)
 		(property "Value" "120"
-			(at 522.986 85.09 0)
+			(at 522.986 80.01 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17726,7 +17685,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
-			(at 521.97 83.82 0)
+			(at 521.97 78.74 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17735,7 +17694,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 521.97 83.82 0)
+			(at 521.97 78.74 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17744,7 +17703,7 @@
 			)
 		)
 		(property "Description" "Resistor, small symbol"
-			(at 521.97 83.82 0)
+			(at 521.97 78.74 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17752,8 +17711,8 @@
 				(hide yes)
 			)
 		)
-		(property "LSCS Part Number" "C22787"
-			(at 521.97 83.82 0)
+		(property "LCSC" "C22787"
+			(at 521.97 78.74 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17762,7 +17721,7 @@
 			)
 		)
 		(property "Link" "https://www.lcsc.com/product-detail/C22787.html"
-			(at 521.97 83.82 0)
+			(at 521.97 78.74 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17771,7 +17730,7 @@
 			)
 		)
 		(property "Manufacturer_Part_Number" "0603WAF1200T5E"
-			(at 521.97 83.82 0)
+			(at 521.97 78.74 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17811,7 +17770,7 @@
 				)
 			)
 		)
-		(property "Value" "Servo 1"
+		(property "Value" "Servo 2"
 			(at 499.745 229.616 0)
 			(effects
 				(font
@@ -17846,7 +17805,7 @@
 				(hide yes)
 			)
 		)
-		(property "LSCS Part Number" ""
+		(property "LCSC" ""
 			(at 496.57 234.95 0)
 			(effects
 				(font
@@ -17883,7 +17842,6 @@
 		)
 	)
 	(symbol
-		(lib_name "+5V_1")
 		(lib_id "power:+5V")
 		(at 504.19 199.39 0)
 		(unit 1)
@@ -18333,7 +18291,7 @@
 				(hide yes)
 			)
 		)
-		(property "LSCS Part Number" "C14663"
+		(property "LCSC" "C14663"
 			(at 350.52 53.34 0)
 			(effects
 				(font
@@ -18455,7 +18413,7 @@
 				(hide yes)
 			)
 		)
-		(property "LSCS Part Number" "C2979167"
+		(property "LCSC" "C2979167"
 			(at 363.22 49.53 90)
 			(effects
 				(font
@@ -18563,7 +18521,7 @@
 		)
 	)
 	(symbol
-		(lib_id "power:+3.3V")
+		(lib_id "power:+3V3")
 		(at 234.95 34.29 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -18747,7 +18705,7 @@
 				(hide yes)
 			)
 		)
-		(property "LSCS Part Number" "C14663"
+		(property "LCSC" "C14663"
 			(at 543.56 53.34 0)
 			(effects
 				(font
@@ -18855,7 +18813,6 @@
 		)
 	)
 	(symbol
-		(lib_name "+5V_1")
 		(lib_id "power:+5V")
 		(at 532.13 199.39 0)
 		(unit 1)
@@ -19278,6 +19235,592 @@
 			(project "BeagleBone-cape"
 				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
 					(reference "#FLG0106")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_Small")
+		(at 480.06 247.65 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "e084b9fc-787c-44b3-ad9f-68a1040f6ccc")
+		(property "Reference" "R28"
+			(at 473.71 246.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "1k"
+			(at 473.71 248.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
+			(at 480.06 247.65 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 480.06 247.65 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor, small symbol"
+			(at 480.06 247.65 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C21190"
+			(at 480.06 247.65 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Link" "https://www.lcsc.com/product-detail/C21190.html"
+			(at 480.06 247.65 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Part_Number" "0603WAF1001T5E"
+			(at 480.06 247.65 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Name" "UNI-ROYAL"
+			(at 480.06 247.65 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "00ccc73a-fead-477c-96fd-240d22d51265")
+		)
+		(pin "2"
+			(uuid "d423d5c4-4d5a-4333-b569-21f74c52a735")
+		)
+		(instances
+			(project "BeagleBone-cape"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+					(reference "R28")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 480.06 245.11) (xy 485.14 245.11)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "161b8930-a854-4739-b6b3-d9f2861e4054")
+	)
+	(wire
+		(pts
+			(xy 480.06 250.19) (xy 485.14 250.19)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c608374a-70ed-454a-9919-728e97903187")
+	)
+	(junction
+		(at 485.14 245.11)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "120bf9bf-90ca-4446-a326-d65d1bed64bf")
+	)
+	(junction
+		(at 485.14 250.19)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "0e53f3c9-246c-44cd-a62b-13a93bf777b3")
+	)
+	(symbol
+		(lib_id "Device:C_Polarized_Small")
+		(at 487.68 220.98 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "36b935dd-4a0f-4ffa-be4a-8d95bba698e9")
+		(property "Reference" "C32"
+			(at 490.22 219.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "470u 16V"
+			(at 490.22 222.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:CP_Elec_8x10"
+			(at 487.68 220.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 487.68 220.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Polarized capacitor, small symbol"
+			(at 487.68 220.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C79121"
+			(at 487.68 220.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Link" "https://www.lcsc.com/product-detail/C79121.html"
+			(at 487.68 220.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Part_Number" "EEE-FK1C471P"
+			(at 487.68 220.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Name" "Panasonic"
+			(at 487.68 220.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "e75740d7-ff62-486b-972b-0083328a1fc2")
+		)
+		(pin "2"
+			(uuid "12d02b4a-7e38-4f2b-98b6-0386b6c09df6")
+		)
+		(instances
+			(project "BeagleBone-cape"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+					(reference "C32")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+5V")
+		(at 487.68 215.9 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "981d2a44-a35f-4547-bf1f-7cd22fb17513")
+		(property "Reference" "#PWR0304"
+			(at 487.68 212.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+5V"
+			(at 487.68 212.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 487.68 215.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 487.68 215.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
+			(at 487.68 215.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "433c8dd1-31bc-494f-b79e-606112c2746a")
+		)
+		(instances
+			(project "BeagleBone-cape"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+					(reference "#PWR0304")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 487.68 215.9) (xy 487.68 218.44)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "17453b1b-ad52-4b2b-97a0-c5dbdee3f9d1")
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 487.68 226.06 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "e138a1ac-9290-407f-a69e-86f2fa905656")
+		(property "Reference" "#PWR0305"
+			(at 487.68 229.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 487.68 231.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 487.68 226.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 487.68 226.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\""
+			(at 487.68 226.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "0ec012ec-d68d-4aec-bdd7-f194a9de570e")
+		)
+		(instances
+			(project "BeagleBone-cape"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+					(reference "#PWR0305")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 487.68 223.52) (xy 487.68 226.06)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3b54f9f1-adcf-4525-8fe3-155eef6d4c17")
+	)
+	(wire
+		(pts
+			(xy 521.97 74.93) (xy 521.97 76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c8faf6b1-2715-4acb-be99-da6e94b2452f")
+	)
+	(wire
+		(pts
+			(xy 521.97 81.28) (xy 521.97 82.55)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a0e7bc46-0c08-4f44-9744-5812fc378aa5")
+	)
+	(symbol
+		(lib_id "Jumper:SolderJumper_2_Bridged")
+		(at 521.97 86.36 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(dnp no)
+		(uuid "e1bbca56-e197-4ea5-8d56-ca919b8ee7e0")
+		(property "Reference" "JP1"
+			(at 524.51 85.09 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "CAN_TERM"
+			(at 524.51 87.63 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Jumper:SolderJumper-2_P1.3mm_Bridged_RoundedPad1.0x1.5mm"
+			(at 521.97 86.36 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 521.97 86.36 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Solder Jumper, 2-pole, closed/bridged. Cut to remove the 120R CAN termination (CAN-03)"
+			(at 521.97 86.36 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f9168cae-d2c0-4eae-85a2-df7f90d33fb4")
+		)
+		(pin "2"
+			(uuid "3557aa10-711e-4309-a190-2d1fd4e10613")
+		)
+		(instances
+			(project "BeagleBone-cape"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+					(reference "JP1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 521.97 90.17) (xy 521.97 91.44)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6e660839-a78f-47bf-8d09-9431a15cb8a2")
+	)
+	(wire
+		(pts
+			(xy 502.92 82.55) (xy 508 82.55)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "429a1178-bbe8-4bbe-9cda-bb25c35df7ea")
+	)
+	(wire
+		(pts
+			(xy 508 82.55) (xy 508 74.93)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "723c924a-b8f8-4cd0-8910-c0723ccb515f")
+	)
+	(wire
+		(pts
+			(xy 508 74.93) (xy 521.97 74.93)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "29b2b450-79e8-4a13-954b-7960b28ac8d1")
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 502.92 80.01 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "8cacf23a-547c-49b5-a0f6-3092cec893ad")
+		(property "Reference" "#PWR0306"
+			(at 502.92 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 502.92 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 502.92 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 502.92 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\""
+			(at 502.92 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "3bd63c02-72fe-44c1-b75b-2983c3b92c61")
+		)
+		(instances
+			(project "BeagleBone-cape"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+					(reference "#PWR0306")
 					(unit 1)
 				)
 			)

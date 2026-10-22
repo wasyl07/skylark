@@ -689,8 +689,8 @@
         },
         {
           "group_by": false,
-          "label": "LSCS Part Number",
-          "name": "LSCS Part Number",
+          "label": "LCSC",
+          "name": "LCSC",
           "show": true
         }
       ],

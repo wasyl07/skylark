@@ -2151,7 +2151,7 @@
 				(hide yes)
 			)
 		)
-		(property "LSCS Part Number" "C14663"
+		(property "LCSC" "C14663"
 			(at 200.66 38.1 0)
 			(effects
 				(font
@@ -2247,7 +2247,7 @@
 				(hide yes)
 			)
 		)
-		(property "LSCS Part Number" "C14663"
+		(property "LCSC" "C14663"
 			(at 72.39 43.18 0)
 			(effects
 				(font
@@ -2343,7 +2343,7 @@
 				(hide yes)
 			)
 		)
-		(property "LSCS Part Number" "C14663"
+		(property "LCSC" "C14663"
 			(at 82.55 43.18 0)
 			(effects
 				(font
@@ -2504,7 +2504,7 @@
 				(hide yes)
 			)
 		)
-		(property "LSCS Part Number" "C19702"
+		(property "LCSC" "C19702"
 			(at 105.41 43.18 0)
 			(effects
 				(font
@@ -2655,7 +2655,7 @@
 				(hide yes)
 			)
 		)
-		(property "LSCS Part Number" "C6119835"
+		(property "LCSC" "C6119835"
 			(at 74.93 60.96 0)
 			(effects
 				(font
@@ -3528,7 +3528,7 @@
 				(hide yes)
 			)
 		)
-		(property "LSCS Part Number" "C14663"
+		(property "LCSC" "C14663"
 			(at 190.5 38.1 0)
 			(effects
 				(font
@@ -3955,7 +3955,7 @@
 				(hide yes)
 			)
 		)
-		(property "LSCS Part Number" "C14663"
+		(property "LCSC" "C14663"
 			(at 274.32 38.1 0)
 			(effects
 				(font
@@ -4312,7 +4312,7 @@
 				(hide yes)
 			)
 		)
-		(property "LSCS Part Number" "C14663"
+		(property "LCSC" "C14663"
 			(at 261.62 38.1 0)
 			(effects
 				(font
