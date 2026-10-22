@@ -2840,12 +2840,6 @@
 		(uuid "b3a069bc-ddda-46f7-b52a-efe801aa4c2d")
 	)
 	(junction
-		(at 90.17 76.2)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "c671d5c4-0887-4194-b1c4-7061445e1337")
-	)
-	(junction
 		(at 35.56 76.2)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -3257,16 +3251,6 @@
 	)
 	(wire
 		(pts
-			(xy 90.17 76.2) (xy 90.17 88.9)
-		)
-		(stroke
-			(width 0)
-			(type solid)
-		)
-		(uuid "6112b973-f3e4-4195-aa84-0d8fe50ab1f6")
-	)
-	(wire
-		(pts
 			(xy 127 93.98) (xy 127 96.52)
 		)
 		(stroke
@@ -3497,17 +3481,7 @@
 	)
 	(wire
 		(pts
-			(xy 90.17 76.2) (xy 97.79 76.2)
-		)
-		(stroke
-			(width 0)
-			(type solid)
-		)
-		(uuid "aafa4f13-7a70-4fee-92e6-0b8b47e1b796")
-	)
-	(wire
-		(pts
-			(xy 76.2 76.2) (xy 90.17 76.2)
+			(xy 76.2 76.2) (xy 97.79 76.2)
 		)
 		(stroke
 			(width 0)
@@ -3584,16 +3558,6 @@
 			(type solid)
 		)
 		(uuid "c725a1b0-06c9-49f9-b14a-d66cf1658279")
-	)
-	(wire
-		(pts
-			(xy 90.17 93.98) (xy 90.17 105.41)
-		)
-		(stroke
-			(width 0)
-			(type solid)
-		)
-		(uuid "c84ce17a-c99d-4748-90f5-7ca798f50665")
 	)
 	(wire
 		(pts
@@ -6029,111 +5993,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:C_Small")
-		(at 90.17 91.44 180)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "9e8785af-0752-4d0b-9d3c-c8353e18b474")
-		(property "Reference" "C12"
-			(at 91.694 90.1635 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "10u 50V"
-			(at 91.694 92.7035 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder"
-			(at 90.17 91.44 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 90.17 91.44 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Unpolarized capacitor, small symbol"
-			(at 90.17 91.44 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC" "C13585"
-			(at 90.17 91.44 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Link" "https://www.lcsc.com/product-detail/C13585.html"
-			(at 90.17 91.44 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer_Part_Number" "CL31A106KBHNNNE"
-			(at 90.17 91.44 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer_Name" "Samsung Electro-Mechanics"
-			(at 90.17 91.44 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "4953fd3e-7f2c-4d9c-9918-6c24060ec4e6")
-		)
-		(pin "2"
-			(uuid "3861baf9-0fa6-4016-8e1e-29ba689e8806")
-		)
-		(instances
-			(project "BeagleBone-cape"
-				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/bd0b971e-2693-4cc8-ae48-079dcad29646"
-					(reference "C12")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:GND")
 		(at 111.76 105.41 0)
 		(unit 1)
@@ -7223,72 +7082,6 @@
 			(project "BeagleBone-cape"
 				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/bd0b971e-2693-4cc8-ae48-079dcad29646"
 					(reference "C11")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 90.17 105.41 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "f01efbc6-901f-4d9b-8f2c-eb970b5e4f6d")
-		(property "Reference" "#PWR049"
-			(at 90.17 111.76 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 90.17 110.49 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 90.17 105.41 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 90.17 105.41 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 90.17 105.41 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "0dab7f2f-dad5-4f96-ab1f-852609fd784c")
-		)
-		(instances
-			(project "BeagleBone-cape"
-				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/bd0b971e-2693-4cc8-ae48-079dcad29646"
-					(reference "#PWR049")
 					(unit 1)
 				)
 			)
